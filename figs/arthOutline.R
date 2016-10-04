@@ -36,3 +36,33 @@ addArth <- function(arth, x, y, width, col) {
     
     polygon(a, col = col, border = NA)
 }
+
+## function to add DNA image to plot
+addDNA <- function(x, y, width, col) {
+    xx <- seq(1-0.2, 4, length = 100) * pi
+    y1 <- sin(xx) * 1.5
+    y2 <- sin(xx - pi/1.25) * 1.5
+    
+    x0 <- seq(1, 3.8, by = 0.2) * pi
+    ybar0 <- sin(x0) * 1.5
+    ybar1 <- sin(x0 - pi/1.25) * 1.5
+    
+    asp <- width / diff(range(xx))
+    xx <- xx * asp
+    x0 <- x0 * asp
+    
+    yasp <- asp * diff(range(par('usr')[3:4])) / diff(range(par('usr')[1:2]))
+    y1 <- y1 * yasp
+    y2 <- y2 * yasp
+    ybar0 <- ybar0 * yasp
+    ybar1 <- ybar1 * yasp
+    
+    x0 <- x0 - mean(xx) + x
+    xx <- xx - mean(xx) + x
+    
+    
+    lines(xx, y1 + y, col = col, lwd = 3)
+    lines(xx, y2 + y, col = col, lwd = 3)
+    segments(x0 = x0, y0 = ybar0 + y, y1 = ybar1 + y, col = col)
+}
+
