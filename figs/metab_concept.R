@@ -26,7 +26,10 @@ addArth <- function(arth, x, y, width, col) {
                 'fly' = arthOutline('fly.jpg'),
                 'moth' = arthOutline('moth.jpg', 400),
                 'beetle' = arthOutline('beetle.jpg'))
+    
     yasp <- diff(range(par('usr')[3:4])) / diff(range(par('usr')[1:2]))
+    if(arth %in% c('fly', 'beetle')) yasp <- yasp * 1.5
+    
     a[, 2] <- a[, 2] * yasp
     
     asp <- width / diff(range(a[, 1]))
@@ -94,5 +97,31 @@ cylinder <- function(x, y, width, col) {
     polygon(xytop, col = col)
 }
 
-plot(1, xlim = c(-4, 4), ylim = c(-2, 2))
-cylinder(0, 0, 2, col = 'gray')
+
+
+par(mar = rep(0, 4))
+plot(1, xlim = c(0, 8), ylim = c(0, 10), type = 'n')
+cylinder(6, 2, 2, 'gray')
+addArth('fly', 1, 9.5, 1, col = 'red')
+addArth('fly', 1.5, 7.5, 1, col = hsv(1))
+addArth('moth', 3, 9, 2.5, col = hsv(0.8))
+addArth('moth', 1, 5.5, 2.5, col = hsv(0.72))
+addArth('beetle', 3, 6.5, 0.75, col = hsv(0.5))
+
+par(mar = rep(0, 4))
+plot(1, type = 'n', xlim = c(-4, 4), ylim = c(-1, 8))
+for(i in 1:7) {
+    if(i < 3) {
+        col <- 'gray80'
+    } else if(i < 4) {
+        col <- 'gray45'
+    } else if(i < 5) {
+        col <- 'gray30'
+    } else {
+        col <- 'gray60'
+    }
+    
+    addDNA(0, i, 2, col = col)
+}
+
+
