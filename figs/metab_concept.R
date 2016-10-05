@@ -1,6 +1,7 @@
 library(jpeg)
 library(raster)
 library(rgeos)
+library(ape)
 
 setwd('~/Dropbox/Research/grants/macrosystems/figs')
 
@@ -66,3 +67,32 @@ addDNA <- function(x, y, width, col) {
     segments(x0 = x0, y0 = ybar0 + y, y1 = ybar1 + y, col = col)
 }
 
+
+cylinder <- function(x, y, width, col) {
+    elip <- function(x, y, r, a, b) {
+        cbind(cos(r)*a*b/sqrt((b*cos(r))^2+(a*sin(r))^2) + x, 
+              sin(r)*a*b/sqrt((b*cos(r))^2+(a*sin(r))^2) + y)
+    }
+    
+    width <- width
+    
+    rt <- seq(0, 2*pi, length = 100)
+    rb <- seq(pi, 2*pi, length = 100)
+    a <- width/2
+    b <- a/2
+    
+    height <- width * 1.5
+    
+    xy <- rbind(cbind(x-a, y+height/2), elip(x, y-height/2, rb, a, b), cbind(x+a, y+height/2))
+    xytop <- elip(x, y + height/2, rt, a, b)
+    
+    yasp <- diff(range(par('usr')[3:4])) / diff(range(par('usr')[1:2]))
+    xy[, 2] <- xy[, 2] * yasp
+    xytop[, 2] <- xytop[, 2] * yasp
+    
+    polygon(xy, col = col)
+    polygon(xytop, col = col)
+}
+
+plot(1, xlim = c(-4, 4), ylim = c(-2, 2))
+cylinder(0, 0, 2, col = 'gray')
