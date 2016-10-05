@@ -21,7 +21,7 @@ arthOutline <- function(f, maxCol = 100) {
 }
 
 ## funciton to add arthropod to a plot by name
-addArth <- function(arth, x, y, width, col) {
+addArth <- function(arth, x, y, width, col, alpha = 1) {
     a <- switch(arth,
                 'fly' = arthOutline('fly.jpg'),
                 'moth' = arthOutline('moth.jpg', 400),
@@ -35,10 +35,14 @@ addArth <- function(arth, x, y, width, col) {
     asp <- width / diff(range(a[, 1]))
     a <- a * asp
     
-    a[, 1] <- a[, 1] - mean(a[, 1]) + x
-    a[, 2] <- a[, 2] - mean(a[, 2]) + y
-    
-    polygon(a, col = col, border = NA)
+    ai <- a
+    for(i in 1:length(x)) {
+        ai[, 1] <- a[, 1] - mean(a[, 1]) + x[i]
+        ai[, 2] <- a[, 2] - mean(a[, 2]) + y[i]
+        
+        polygon(ai, col = rgb(t(col2rgb(col)), maxColorValue = 255, alpha = alpha*255), 
+                border = ifelse(alpha == 1, NA, col))
+    }
 }
 
 ## function to add DNA image to plot
@@ -65,8 +69,8 @@ addDNA <- function(x, y, width, col) {
     xx <- xx - mean(xx) + x
     
     
-    lines(xx, y1 + y, col = col, lwd = 3)
-    lines(xx, y2 + y, col = col, lwd = 3)
+    lines(xx, y1 + y, col = col, lwd = 2)
+    lines(xx, y2 + y, col = col, lwd = 2)
     segments(x0 = x0, y0 = ybar0 + y, y1 = ybar1 + y, col = col)
 }
 
@@ -98,30 +102,77 @@ cylinder <- function(x, y, width, col) {
 }
 
 
+## metabarcoding top panel
 
-par(mar = rep(0, 4))
-plot(1, xlim = c(0, 8), ylim = c(0, 10), type = 'n')
-cylinder(6, 2, 2, 'gray')
-addArth('fly', 1, 9.5, 1, col = 'red')
-addArth('fly', 1.5, 7.5, 1, col = hsv(1))
-addArth('moth', 3, 9, 2.5, col = hsv(0.8))
-addArth('moth', 1, 5.5, 2.5, col = hsv(0.72))
-addArth('beetle', 3, 6.5, 0.75, col = hsv(0.5))
+pdf('subfig_metabTop.pdf', width = 8, height = 5)
+layout(matrix(1:2, nrow = 1), widths = 5, 1)
 
-par(mar = rep(0, 4))
-plot(1, type = 'n', xlim = c(-4, 4), ylim = c(-1, 8))
+xmax <- 15
+ymax <- 5
+
+par(mar = rep(0.1, 4))
+plot(1, xlim = c(0, xmax), ylim = c(1, ymax), type = 'n', axes = FALSE)
+
+## figure of arthropods going in
+
+r <- -c(1/2, seq(3/8, 5/8, length = 2), seq(3/8, 5/8, length = 3), seq(3/8, 5/8, length = 4)) * pi
+a <- c(0, rep(0.05*ymax, 2), rep(0.05*ymax*2, 3), rep(0.05*ymax*3, 4))
+xy <- cbind(a*cos(r) + xmax/10, a*sin(r) + 0.9*ymax)
+set.seed(123)
+taxaXY <- sample(c(rep('beetle', 2), rep('fly', 3), rep('moth', 4)))
+
+cylinder(6, 8, 3, 'gray')
+addArth('fly', xy[taxaXY == 'fly', 1], xy[taxaXY == 'fly', 2], 2, col = hsv(1), alpha = 0.3)
+addArth('moth', xy[taxaXY == 'moth', 1][1:2], xy[taxaXY == 'moth', 2][1:2], 3.5, col = hsv(0.85), alpha = 0.3)
+addArth('moth', xy[taxaXY == 'moth', 1][3:4], xy[taxaXY == 'moth', 2][3:4], 3.5, col = hsv(0.77), alpha = 0.3)
+addArth('beetle', xy[taxaXY == 'beetle', 1], xy[taxaXY == 'beetle', 2], 2.5, col = hsv(0.475), alpha = 0.3)
+
+
+
+## figure of DNA
+dnaY <- seq(0.25, 0.9, length = 7)*ymax
+
 for(i in 1:7) {
     if(i < 3) {
-        col <- 'gray80'
+        col <- 'gray85'
     } else if(i < 4) {
-        col <- 'gray45'
+        col <- 'gray35'
     } else if(i < 5) {
-        col <- 'gray30'
+        col <- 'gray20'
     } else {
         col <- 'gray60'
     }
     
-    addDNA(0, i, 2, col = col)
+    addDNA(0.8*xmax, dnaY[i], 3, col = col)
 }
 
+segments(x0 = xmax*0.91, x1 = par('usr')[2], y0 = rev(dnaY), y1 = c(5, 5, 5, 4, 3.6, 2, 2), lwd = 2)
 
+
+## phylogenetic tree
+
+tre <- read.tree(text = '(A:4,(beetle:3,(C:2,(fly:1,bfly:1):1):1):1);')
+par(mar = c(0.1, 0, 0.1, 0.1))
+plot(tre, direction = 'leftwards', show.tip.label = FALSE, edge.width = 3)
+treXY <- do.call(cbind, get('last_plot.phylo', envir = .PlotPhyloEnv)[c('xx', 'yy')])[1:5, ]
+segments(x0 = 0, y0 = 5:1, x1 = 0.5, col = hsv(seq(1, 0.3, length = 5)), lwd = 4)
+segments(x0 = 0, x1 = 0.9, y0 = 3.6, lwd = 3, col = 'gray80')
+segments(x0 = 0.9, y0 = 3.6, y1 = 4, lwd = 3, col = 'gray80')
+segments(x0 = 0, x1 = 0.5, y0 = 3.6, lwd = 4, col = hsv(0.77))
+
+dev.off()
+
+
+
+## metabarcoding bottom panel
+
+pdf('subfig_metabBottom.pdf', width = 5, height = 5)
+barplot(c(4, 3, 3, 1), ylab = 'Abundance')
+axis(1, at = 0.7 + 1.2*(0:3), labels = NA)
+par(xpd = NA)
+addArth('fly', 0.7, -0.75, 0.75, col = hsv(1))
+addArth('beetle', 0.7+1.2, -0.75, 0.75, col = hsv(0.475))
+addArth('moth', 0.7+1.2*2, -0.7, 1.2, col = hsv(0.85))
+addArth('moth', 0.7+1.2*3, -0.7, 1.2, col = hsv(0.77))
+par(xpd = FALSE)
+dev.off()
