@@ -181,22 +181,22 @@ dev.off()
 
 ## metabarcoding hierrarchical small
 
-pdf('subfig_metabMod.pdf')
+pdf('subfig_metabMod.pdf', width = 5, height = 5)
 
 layout(matrix(c(1, 2, 3, 3), nrow = 2, byrow = TRUE))
 
-par(mar = c(3, 0, 0, 1) + 0.1, mgp = c(0, 0, 0), cex = 1.5)
-curve(dnorm(x), from = -2, to = 2, xlab = expression(theta[1]), ylab = '', axes = FALSE)
+par(mar = c(3, 0, 0, 1) + 0.1, mgp = c(1, 0, 0), cex = 1.5)
+curve(dnorm(x), from = -2, to = 2, xlab = expression(theta[1]), ylab = '', axes = FALSE, cex.lab = 1.5)
 polygon(seq(-2, 2, length = 100), dnorm(seq(-2, 2, length = 100)), col = 'gray80')
 axis(1, at = c(-100, 100))
 
-par(mar = c(3, 1, 0, 0) + 0.1, mgp = c(0, 0, 0), cex = 1.5)
-curve(dgamma(x, 2, 4), from = 0, to = 2, xlab = expression(theta[2]), ylab = '', axes = FALSE)
+par(mar = c(3, 1, 0, 0) + 0.1, mgp = c(1, 0, 0), cex = 1.5)
+curve(dgamma(x, 2, 4), from = 0, to = 2, xlab = expression(theta[2]), ylab = '', axes = FALSE, cex.lab = 1.5)
 polygon(seq(0, 2, length = 100), dgamma(seq(0, 2, length = 100), 2, 4), col = 'gray80')
 axis(1, at = c(-100, 100))
 
-par(mar = c(1, 4, 0, 4), mgp = c(0, 0, 0), cex = 1.5)
-curve(dexp(x), from = 0, to = 4, xlab = 'n', ylab = '', axes = FALSE)
+par(mar = c(2, 4, 0, 4), mgp = c(1, 0, 0), cex = 1.5)
+curve(dexp(x), from = 0, to = 4, xlab = 'n', ylab = '', axes = FALSE, cex.lab = 1.5)
 polygon(c(0, seq(0, 4, length = 100)), dexp(c(4, seq(0, 4, length = 100))), col = 'gray40')
 box()
 
