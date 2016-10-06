@@ -41,7 +41,7 @@ addArth <- function(arth, x, y, width, col, alpha = 1) {
         ai[, 2] <- a[, 2] - mean(a[, 2]) + y[i]
         
         polygon(ai, col = rgb(t(col2rgb(col)), maxColorValue = 255, alpha = alpha*255), 
-                border = ifelse(alpha == 1, NA, col))
+                border = ifelse(alpha == 1, 'black', col))
     }
 }
 
@@ -105,7 +105,7 @@ cylinder <- function(x, y, width, col) {
 ## metabarcoding top panel
 
 pdf('subfig_metabTop.pdf', width = 8, height = 5)
-layout(matrix(1:2, nrow = 1), widths = 5, 1)
+layout(matrix(1:2, nrow = 1), widths = 4, 1)
 
 xmax <- 15
 ymax <- 5
@@ -121,44 +121,46 @@ xy <- cbind(a*cos(r) + xmax/10, a*sin(r) + 0.9*ymax)
 set.seed(123)
 taxaXY <- sample(c(rep('beetle', 2), rep('fly', 3), rep('moth', 4)))
 
-cylinder(6, 8, 3, 'gray')
+cylinder(6, 8, 3, 'gray40')
 addArth('fly', xy[taxaXY == 'fly', 1], xy[taxaXY == 'fly', 2], 2, col = hsv(1), alpha = 0.3)
 addArth('moth', xy[taxaXY == 'moth', 1][1:2], xy[taxaXY == 'moth', 2][1:2], 3.5, col = hsv(0.85), alpha = 0.3)
 addArth('moth', xy[taxaXY == 'moth', 1][3:4], xy[taxaXY == 'moth', 2][3:4], 3.5, col = hsv(0.77), alpha = 0.3)
 addArth('beetle', xy[taxaXY == 'beetle', 1], xy[taxaXY == 'beetle', 2], 2.5, col = hsv(0.475), alpha = 0.3)
 
 
-
 ## figure of DNA
-dnaY <- seq(0.25, 0.9, length = 7)*ymax
+dnaY <- seq(1.25, ymax - 0.25, length = 7)
 
 for(i in 1:7) {
     if(i < 3) {
-        col <- 'gray85'
+        col <- 'gray50'
     } else if(i < 4) {
-        col <- 'gray35'
-    } else if(i < 5) {
         col <- 'gray20'
+    } else if(i < 5) {
+        col <- 'gray10'
     } else {
-        col <- 'gray60'
+        col <- 'gray30'
     }
     
     addDNA(0.8*xmax, dnaY[i], 3, col = col)
 }
 
-segments(x0 = xmax*0.91, x1 = par('usr')[2], y0 = rev(dnaY), y1 = c(5, 5, 5, 4, 3.6, 2, 2), lwd = 2)
+segments(x0 = xmax*0.91, x1 = par('usr')[2], y0 = rev(dnaY), y1 = c(5, 5, 5, 4, 3.6, 2, 2), 
+         col = hsv(c(1, 1, 1, 0.85, 0.77, 0.475, 0.475)), lwd = 3)
 
 
 ## phylogenetic tree
 
 tre <- read.tree(text = '(A:4,(beetle:3,(C:2,(fly:1,bfly:1):1):1):1);')
 par(mar = c(0.1, 0, 0.1, 0.1))
-plot(tre, direction = 'leftwards', show.tip.label = FALSE, edge.width = 3)
+plot(tre, direction = 'leftwards', show.tip.label = FALSE, edge.width = 4)
 treXY <- do.call(cbind, get('last_plot.phylo', envir = .PlotPhyloEnv)[c('xx', 'yy')])[1:5, ]
-segments(x0 = 0, y0 = 5:1, x1 = 0.5, col = hsv(seq(1, 0.3, length = 5)), lwd = 4)
-segments(x0 = 0, x1 = 0.9, y0 = 3.6, lwd = 3, col = 'gray80')
-segments(x0 = 0.9, y0 = 3.6, y1 = 4, lwd = 3, col = 'gray80')
-segments(x0 = 0, x1 = 0.5, y0 = 3.6, lwd = 4, col = hsv(0.77))
+segments(x0 = 0, y0 = 5:1, x1 = 0.5, col = hsv(c(1, 0.85, 0.65, 0.475, 0.168), c(1, 1, 1, 1, 0.7)), lwd = 8)
+segments(x0 = 0, x1 = 0.9, y0 = 3.6, lwd = 5)
+segments(x0 = 0.9, y0 = 3.6, y1 = 4, lwd = 5)
+segments(x0 = 0, x1 = 0.9, y0 = 3.6, lwd = 2, col = 'white')
+segments(x0 = 0.9, y0 = 3.6, y1 = 4, lwd = 2, col = 'white')
+segments(x0 = 0, x1 = 0.5, y0 = 3.6, lwd = 8, col = hsv(0.77))
 
 dev.off()
 
@@ -168,7 +170,7 @@ dev.off()
 
 pdf('subfig_metabBottom.pdf', width = 5, height = 5)
 par(cex = 1.2)
-barplot(c(4, 3, 3, 1), ylab = 'Abundance')
+barplot(c(4, 3, 3, 1), ylab = 'Abundance', col = 'black', cex.lab = 1.5, cex.axis = 1.5)
 
 par(xpd = NA)
 addArth('fly', 0.7, -0.75, 0.75, col = hsv(1))
@@ -187,17 +189,17 @@ layout(matrix(c(1, 2, 3, 3), nrow = 2, byrow = TRUE))
 
 par(mar = c(3, 0, 0, 1) + 0.1, mgp = c(1, 0, 0), cex = 1.5)
 curve(dnorm(x), from = -2, to = 2, xlab = expression(theta[1]), ylab = '', axes = FALSE, cex.lab = 1.5)
-polygon(seq(-2, 2, length = 100), dnorm(seq(-2, 2, length = 100)), col = 'gray80')
+polygon(seq(-2, 2, length = 100), dnorm(seq(-2, 2, length = 100)), col = 'gray40')
 axis(1, at = c(-100, 100))
 
 par(mar = c(3, 1, 0, 0) + 0.1, mgp = c(1, 0, 0), cex = 1.5)
 curve(dgamma(x, 2, 4), from = 0, to = 2, xlab = expression(theta[2]), ylab = '', axes = FALSE, cex.lab = 1.5)
-polygon(seq(0, 2, length = 100), dgamma(seq(0, 2, length = 100), 2, 4), col = 'gray80')
+polygon(seq(0, 2, length = 100), dgamma(seq(0, 2, length = 100), 2, 4), col = 'gray40')
 axis(1, at = c(-100, 100))
 
 par(mar = c(2, 4, 0, 4), mgp = c(1, 0, 0), cex = 1.5)
 curve(dexp(x), from = 0, to = 4, xlab = 'n', ylab = '', axes = FALSE, cex.lab = 1.5)
-polygon(c(0, seq(0, 4, length = 100)), dexp(c(4, seq(0, 4, length = 100))), col = 'gray40')
+polygon(c(0, seq(0, 4, length = 100)), dexp(c(4, seq(0, 4, length = 100))), col = 'black')
 box()
 
 dev.off()
