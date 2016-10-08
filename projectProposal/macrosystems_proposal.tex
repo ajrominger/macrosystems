@@ -1,568 +1,195 @@
-\documentclass[12pt]{article}
-\usepackage{authblk}
-\usepackage[margin=1in]{geometry}
+\documentclass[11pt]{article}
+\usepackage[top=0.9in, left=0.9in, right=0.9in, bottom=0.9in]{geometry}
 \geometry{letterpaper}
 \usepackage{graphicx}
+\usepackage{setspace}
 \usepackage{amssymb}
 \usepackage{amsmath}
+\usepackage{epstopdf}
+\usepackage{xcolor}
+\usepackage{colortbl}
+\usepackage{array}
+\usepackage[numbers]{natbib}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead{}
+\fancyhead[LO,LE]{Rominger, {\it et al.}}
+\fancyhead[RO,RE]{Project Description}
 
-\usepackage[style=nature, natbib=true, autocite = superscript]{biblatex}
-\addbibresource{../superStat.bib}
-\let\citep=\autocite
+\usepackage[T1]{fontenc}
+\usepackage{titling}
+\setlength{\droptitle}{-5em}
 
-\usepackage{lineno}
-\usepackage{paralist}
+\usepackage{wrapfig}
 
-%% for citing stuff in the supp
-\usepackage{xr}
-\externaldocument{rom_natComm_supp}
+\usepackage{multirow}
+
+%% make lists more compact
+\usepackage{enumitem}
+\setitemize{noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt}
+\setenumerate{noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt}
 
 
-\title{Punctuated non-equilibrium and niche conservatism explain
-biodiversity fluctuations through the Phanerozoic}
+%% make sections, subsections and paragraphs more compact
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{\z@}%
+                                  {-1.8ex \@plus -1ex \@minus 0.2ex}%
+                                  {0.1ex \@plus 0.2ex}%
+                                  {\normalfont\Large\bfseries}}
+\makeatother
 
-\author[1]{Andrew J. Rominger} 
-\author[2, 3, 4]{Miguel A. Fuentes}
-\author[2, 5, 6, 7, 8]{Pablo A. Marquet}
+\makeatletter
+\renewcommand\subsection{\@startsection{subsection}{1}{\z@}%
+                                  {-1.8ex \@plus -1ex \@minus 0.2ex}%
+                                  {0.1ex \@plus 0.2ex}%
+                                  {\normalfont\large\bfseries}}
+\makeatletter
 
-\affil[1]{Department of Environmental Science, Policy and Management,
-University of California, Berkeley}
-%
-\affil[2]{Santa Fe Institute, 1399 Hyde Park Road, Santa Fe, New
-Mexico 87501, US}
-%
-\affil[3]{Instituto de Investigaciones Filos\'oficas, SADAF, CONICET,
-Bulnes 642, 1428 Buenos Aires, Argentin}
-%
-\affil[4]{Facultad de Ingenier\'ia y Tecnolog\'ia, Universidad San
-Sebasti\'an, Lota 2465, Santiago 7510157, Chile}
-%
-\affil[5]{Departamento de Ecolog\'ia, Facultad de Ciencias
-Biol\'ogicas, Pontificia Universidad de Chile, Alameda 340, Santiago,
-Chile}
-%
-\affil[6]{Instituto de Ecolog\'ia y Biodiversidad, Casilla 653,
-Santiago, Chile}
-%
-\affil[7]{Laboratorio Internacional de Cambio Global (LINCGlobal),
-Pontificia Universidad Católica de Chile, Alameda 340, Santiago,
-Chile}
-%
-\affil[8]{Centro Cambio Global UC, Av.~Vicu\~na Mackenna 4860, Campus
-San Vicu\~na, Santiago, Chile}
+\makeatletter
+\renewcommand\subsubsection{\@startsection{subsection}{1}{\z@}%
+                                  {-1.8ex \@plus -1ex \@minus 0.2ex}%
+                                  {0.1ex \@plus 0.2ex}%
+                                  {\normalfont\bfseries}}
+\makeatletter
 
+\makeatletter
+\renewcommand{\paragraph}{\@startsection{paragraph}{4}{\z@}
+  {1ex \@plus 1ex \@minus .2ex}{-1em}
+  {\normalfont\normalsize\it}
+}
+\makeatother
+
+
+\title{Combining Gradients of Space and Time to Understand Biodiversity Dynamics in the Hawaiian Islands \vspace{-1.5ex}}
+\author{}
 \date{}
 
+
 \begin{document}
-
 \maketitle
+\thispagestyle{fancy} 
+\vspace{-4em}
 
-\clearpage
-\linenumbers
 
-\begin{abstract}
-Fluctuations in biodiversity, both large and small, are pervasive
-through the fossil record, yet we do not understand the processes
-generating them.
-% 
-Here we use a novel extension of theory from non-equilibrium
-statistical physics to show that three universal properties of
-macroevolution, punctuated adaptive radiation, niche conservatism and
-resultant heterogeneity of diversification rates between taxa, are
-sufficient to explain previously unaccounted for biodiversity patterns
-throughout the Phanerozoic.
-% 
-Using this theory, known as super-statistics, we identify taxonomic
-orders as largely autonomous evolutionary units, each likely
-experiencing its own unique and conserved adaptive landscape.  This
-indicates that while neutral processes could adequately explain
-within-order diversification, between-order diversification is likely
-driven by major evolutionary innovations.
-% 
-Super-statistics, has been successfully used to explain other
-complex systems including driven turbulent flows and wild stock market
-fluctuations.
-% 
-Compared to other approaches that have used simple birth-death
-processes, equilibrial dynamics or non-linear theories from complexity
-science, super-statistics is superior in its ability to account for
-both small and extreme fluctuations in fossil diversity.
-% 
-Its success opens up new research directions to better understand
-the evolutionary processes leading adaptive landscapes to be conserved
-within orders and undergo punctuated innovations between orders.
-\end{abstract}
+\section*{Synopsis}
 
-\clearpage
 
-%% Diversity changes
-Biodiversity has not remained constant nor followed a simple
-trajectory through geologic time \citep{raup1982, sepkoski1984,
-  gilinsky1994, liow2007, alroy08, alroy2010}.  Instead, it has been
-marked by fluctuations in the number of extant taxa, both positive in
-the case of net origination or negative in the case of net
-extinction. Major events, such as adaptive radiations and mass
-extinctions have received special attention \citep{benton1995,
-  Erwin1998}, but fluctuations of all sizes are ubiquitous
-\citep{sepkoski1984, alroy08, quental2013}. Predicting the magnitude
-of these fluctuations continues to illude paleobiologists and
-biodiversity theoriticians.
+\section{Background}
 
-%% What drives diversity dynamics?
-Several approaches have been taken to study the complex trajectory of
-paleo-biodiversity ranging from the hypothesis that biological systems
-self-organize to the brink of critical phase-transitions
-\citep{bak1993, sole1997} to invocations of non-linear environmental
-perturbations \citep{newman1995} and escalatory co-evolutionary
-interactions \citep{vermeij1987}. New data and analyses have not
-supported any of these hypotheses at the scale of the entire
-Phanerozoic marine invertebrate fauna \citep{kirchner1998, madin2006,
-  alroy08}. Other studies have modeled the mean trend in diversity as
-tracking a potentially evolving equilibrium \citep{sepkoski1984,
-  alroy08, alroy2010, rabosky2009ecolLett} and yet ignore the
-potential role of stochasticity and non-equilibrium dynamics in
-producing observed patterns \citep{erwin2012, liow2007,
-  quental2013}. As such, we still lack a synthetic theory of evolving
-biodiversity through the fossil record.
-%
-Here we build a parsimonious theory of diversification across an
-adaptive landscape, deriving predictions from universal
-non-equilibrial processes, and show that it accurately predicts the
-complex distribution of pervasive diversity fluctuations throughout
-the marine Phanerozoic.
+Earth systems are nearing or already past a global tipping point past which the biological diversity, fundamentally important to the functioning of all natural and human-engineered ecosystems \citep{barnosky2012}. Beyond this phase transition, the processes regulating biodiversity will change, and the dynamics of their resultant biological systems, from clades to ecosystems, will become non-equilibrial \citep{barnosky, boettinger}.  Despite the pressing need to better understand biodiversity dynamics, we still have only a very rudimentary predictive capacity; we must be able to address how has biodiversity been shaped in the past, what are the expectations as we move into the future and how will associated ecosystems adapt to global change? We must be able to tackle these questions from plots to biomes, as by their nature, phase transitions affect all scales of organization. Advances in our understanding of specific ecosystem components is also idiosyncratic.  Remote sensing and distributed biogeochemical monitoring \citep{asner, NEON} rapidly advancing ecosystem modeling, while similar large scale study of organismal processes, from genetics to populations and communities, lags behind, especially for ``dark taxa'' such as arthropods and microbes.
 
-\subsection*{Diversification in an Adaptive Landscape}
+A grand challenge in understanding the origins and future of biodiversity is to disentangle the influence of evolutionary and historical processes operating at larger spatiotemporal scales from ecological processes operating at smaller scales (Lessard et al. 2012).  Feedbacks between processes along this evolutionary-ecological continuum drive non-equilibrial biodiversity dynamics \citep{brown1971, ricklefsNeutral, rosindell, rominger2015}. The consequences of non-equilibrial dynamics are profound for ecosystem function \citep{XXX}, and based on state shifts in the geologic past, the consequence for evolution will persist for millions of years \cite{erwin}.
 
-Model: takes from classic models (simpson, wright) says
-diversification in a region of niche space is equilibrial. Constraints
-on evolutionary innovation (i.e. niche conservatism) lead to stasis in
-those niches. Underlying properties of that region of niche space
-determine rates of orig and extinct leading to different
-$\beta$. Result is different Gaussians in different regions and a jump
-process between regions (e.g. Gamma).
+What makes integrating evolutionary and ecological processes difficult is that while we can observe and test local ecological phenomena, we must usually infer evolutionary processes from current observations, often at larger spatial and temporal scales, thus modeling processes across scales is key. Efforts to reconcile the interaction of ecological and evolutionary processes have not taken this scaling approach.  Instead they largely adopt one of two methodologies, one making maximal use of extensive sets of spatial data for broad comparative studies (Chase and Myers 2011; Belmaker and Jetz 2012; Carstensen et al. 2013), another using detailed phylogenetic hypotheses across entire lineages to provide insights into change over evolutionary time coupled with data on current ecological traits (Wiens et al. 2011; Anacker and Harrison 2012; Graham et al. 2014). Both these approaches lack the ability to predict how evolutionary history influences an ecosystem’s response to environmental change and how ecological time-scale mechanisms such as dispersal and environmental filtering scale up to influence evolutionary outcomes such as adaptation, speciation and extinction.  The propensity for systems to transition into non-equilibrial states cannot be assessed given current means of synthesizing ideas from ecology with those from evolution.  A lack of cross-scale biodiversity data (from plots to landscapes and genes to species) combined with a lack of theoretical framework, limit this synthesis.
 
-This is same as super-stats. Stat mech in biodiversity has powerful
-potential.
+In this proposal we seek to develop a solution to the dearth of predictive biodiversity knowledge by testing ecological theory that identifies and predicts non-equilibrial systems in the unique eco-evolutionary natural experiment afforded by the Hawaiian archipelago.  We will use three exemplar functional groups---microbes, arthropods and plants---to understand the dynamics of vastly different ecosystem members, exploring their evolution and large-scale ecological dynamics across environmental gradients to understand responses to future change.  We propose a novel and revolutionary approach to produce massive ecological, population genetic and phylogenetic data on an unprecedented scale. We will do so by joining and building on the effort to advance macrosystems ecology already underway by the National Ecological Observatory Network.  Our project will contribute theoretical constructs for use across NEON sites and bioinformatic tools to advance the rate and dimensionality of biodiversity data gathered at these sites.
 
-Predictions
 
-Datasets
+\subsection{Theory provides a lens on non-equilibrium processes}
 
-Despite the heterogeneity of explanations of Phanerozoic
-biodiversity, consensus has emerged on three properties of
-macroevolution:
-\begin{inparaenum}[\itshape i\upshape)]
-\item gross ecological and life history attributes of clades
-  (i.e. groups of related species descending from a common ancestor)
-  are often maintained, a phenomenon known as niche conservatism
-  \citep{roy2009range, hopkins2014};
-\item long periods of niche conservatism are interrupted by adaptive
-  diversification and exploration of new ecological niche space
-  \citep{eldredgeGould1972, newman1985adaptive, hopkins2014}; and
-\item as a consequence of the interaction between their life history
-  characteristics and the dynamics of the environments they inhabit
-  \citep{vrba1983} different clades experience different rates of
-  morphological evolution, speciation and extinction
-  \citep{simpson1953, sepkoski1984, holman1989, gilinsky1994}.
-\end{inparaenum}
+The neutral theory of biodiversity and biogeography \citep[NTB;][]{hubbell2001} brought mechanistically simplified theory to the forefront of ecological research \citep{chave, rosindell}.  Recent advances have continued the approach of simplifying mechanistic assumptions, with the maximum entropy theory of ecology (METE) drawing from the probabilistic properties of large, randomly assembled systems studied in statistical physics \citep{harte2011}.  Any predictive failure of these mechanistically simple theories can be most parsimoniously attributed to their lack of non-equilibrial evolutionary process: NTB assumes slow, gradual evolution which is not supported in real communities \citep{ricklefsNeutral} and both theories ignore unique niches evolved through novel interactions among populations and between populations and their environments \citep{XXX}.
 
-%% bring up punctuated equilib is actually non-equilibrium and explain
-%% title
-Observed bursts of adaptive radiation leading to novel morphologies in
-the fossil record led Eldredge and Gould to their hypothesis of
-punctuated equilibrium \citep{eldredgeGould1972}. Here we show that
-this punctuation is actually akin to the ``super statistical theory''
-of non-equilibrium dynamics in statistical physics
-\citep{beck2003}. Super-statistics \citep{beck2003} proposes that
-non-equilibrial systems can be decomposed into locally equilibrial
-sub-systems. The distribution of equilibria across sub-systems
-determines the dynamics of the complete system \citep{beck2003}. When
-these sub-systems are superimposed the resulting system can no longer
-be described by a single equilibrial model. In the context of
-macroevolution we propose that a clade with conserved life history
-characteristics corresponds to a locally equilibrial sub-system. If a
-certain region of niche space can only contain a finite diversity of
-taxa \citep{simpson1953, gavrilets2005, rabosky2009ecolLett, price2014}
-then diversity within clades should fluctuate stochastically about
-this equilibrium due to random origination and extinction. The
-magnitude of these macroevolutionary rates should be a function of the
-life history and ecological characteristics that define that region of
-niche space. Larval type \citep{jablonski2008}, body plan
-\citep{erwin2012}, body size \citep{harnik2011}, range size
-\citep{harnik2011, foote2008paleobiol} and substrate preference
-\citep{hopkins2014} have all been shown to influence such rates. Thus
-different regions of niche space, and the clades occupying them, will
-experience different magnitudes of stochastic fluctuation in
-diversity. As clades occasionally split to fill new regions of niche
-space their punctuated diversification determines the non-equilibrium
-nature of the entire biota. Here we show that these properties of
-macroevolution are sufficient to explain the complex fluctuations of
-marine invertebrate diversity through the Phanerozoic.
+These theories predict ecological assemblages in equilibrium, after the fundamentally non-equilibrium processes of speciation, colonization and extinction have reached a stationary balance.  Not surprisingly, both theories arrive at the same predicted species abundance distribution \citep[Fisher’s log-series, long established as a null or neutral model;][]{fisher}, with NTB producing modifications to the log-series based on dispersal limitation.  We will focus on METE due to this mathematical convergence, and the greater number of testable predictions made by METE \citep{harte2011}.  Deviations from METE allow us to identify ecological systems out of equilibrium \citep{harte2011, rominger2015}.  Drivers of such non-equilibrium include rapid assembly following disturbance \citep{harte2011} and constraints imposed by evolutionary history and non-neutral adaptive differences between species that violate the statistical assumptions underlying the principle of maximum information entropy \citep{rominger2015}.  In order to harness these promising properties of METE as a non-equilibrium diagnostic tool more testing is needed to understand how exactly the ecological and evolutionary setting of a community predicts its deviation from METE.  The chronological age structure of the Hawaiian archipelago offers the perfect natural experiment to achieve this.
 
-%% connect idea of a 'statistic' to evol
-In statistical mechanics, local sub-systems can be defined by a simple
-statistical parameter $\beta$ often corresponding to inverse
-temperature. In the context of macroevolution we define $\beta$ as the
-inverse variance of a homogenous origination-extinction process, which
-will capture all relevant information about a clade's diversification
-under such a process.  The limit distribution of time averaged
-fluctuations in clade $k$'s diversity through time should be
-approximately Gaussian with variance $1/\beta_k$ (Appendix
-\ref{sec:suppLimitDist}). We posit that just as in statistical
-systems, non-equilibrium dynamics can arise from the mixing of the
-dynamics of many locally equilibrial subsystems. For marine
-Phanerozoic diversity this corresponds to mixing the dynamics of many
-clades, all being described by their unique $\beta_k$ values.  Three
-exemplar dynamics taken from a bias-corrected (see methods section)
-aggregation of the Paleobiology Database (PBDB) \citep{alroy08} are
-shown in Figure \ref{fig:pk_f}.
-%% should talk about alternatives to neutrality?  i.e. bd process but
-%% enviro could drive it too (cite Peters) but neutral drift is sufficient.
-To predict the super-statistical behavior of the entire marine
-invertebrate Phanerozoic fauna we must integrate over all possible
-local equilibria that each clade could experience. The distribution of
-$\beta_k$ values describes the probability that a given clade, chosen
-at random, will occupy a region of niche space characterized by that
-inverse variance value. The form of this stationary distribution of
-$\beta_k$ values could shed interesting light on the biological
-processes that lead different clades to different equilibria, as
-discussed below.  Figure \ref{fig:pk_f} shows the shape of this
-stationary distribution estimated from bias-corrected PBDB
-\citep{alroy08} data.
 
-%% now talk about actual data and results
-% to test our model we do all this: methods interlude
-To uncover the super-statistical nature of the marine invertebrate
-Phanerozoic fauna we analyze the distribution of diversity
-fluctuations using two canonical databased of fossil biodiversity, the
-PBDB \citep{alroy08} and Sepkoski's compendium \citep{sepkoski1992} of
-fossil marine invertebrates (results from Sepkoski's compendium are
-presented in Appendix \ref{sec:suppSepk}).  We filter PBDB
-data to include only well preserved marine invertebrates following
-previously published collection inclusion criteria \citep{alroy08,
-  alroy2010}.  We account for detection bias in the PBDB using an
-extension of the ``three timer'' correction \citep{alroy08}. ``Three
-timer'' correction accounts for the rate of failure to observe a
-genus, estimated by the number of times a gap occurs in its occurrence
-history. We extend this correction by also employing a new publication
-bias correction to help eliminate bias from preferential publication
-of novel taxa (see methods section). Results obtained from this
-correction strategy are similar to other published methods
-(Fig. \ref{fig:supp_3TPub}). Fluctuations within a clade are computed
-as the difference in standing diversity between two time intervals, or
-equivalently the number of originations minus extinctions in one
-interval.
+\subsection{Hawaii as a eco-evolutionary laboratory}
 
-%% Different potential ways of breaking up taxa into clades
-Phanerozoic biodiversity can be deconstructed and grouped into clades,
-or sub-systems, in several different ways. Lacking a full phylogenetic
-hypothesis for all marine invertebrates we use taxonomic
-classifications to identify potential sub-systems.  Taxa ideally
-represent groups of organisms that descend from a common ancestor and
-share similar ecologically and evolutionary relevant morphological
-traits \citep{mayr1965systZool, erwin2007}.  For Phanerozoic marine
-invertebrates, Holman \citep{holman1989} has shown that variance in
-diversity dynamics is less between taxa belonging to the same order
-than taxa in different orders, indicating that the taxonomic level of
-orders is a likely candidate for sub-system delineation. To evaluate
-the optimal taxonomic level for sub-system designation, we test our
-superstatistical theory using taxonomic levels from order through
-class to phylum. Additionally we compare our results to randomized
-taxonomies to confirm that observed patterns are not an artifact of
-arbitrary classification but instead represent real biologically
-relevant differences between clades.
+Remote island archipelagos provide an opportunity to integrate ecological and evolutionary processes, advancing our understanding of the regulation of biodiversity through the lens of theory.  This is particularly true when the component islands are arranged chronologically, as is found in ``hotspot'' islands, with multiple discrete volcanoes each providing elevational gradients with contrasting physiological barriers (temperature and rainfall) across the gradient, and that have incurred radically different anthropogenic impacts. Such islands not only provide simple and discrete systems, but they also offer advantages for ecological and evolutionary study because of their known age, and varying area, allowing them to serve as ``natural laboratories'' (Simon 1987; Chadwick et al. 2007; Gillespie and Clague 2009). The replicate nature of these systems provides a means for teasing apart variables so as to determine how ancient and ongoing processes of colonization, adaptation, speciation, invasion, and extinction have molded biodiversity, while the age chronology allows analysis of communities that are just becoming established, to older communities $\geq$ 5 million years. Thus, the replication of discrete elevational gradients across the chronosequence allows insights into one of the outstanding challenges in biodiversity— how do ecological processes (e.g. colonization, invasion, and ecological fitting) interact to give rise to larger and longer term processes of adaptation and species diversification? Our proposed research aims to use the Hawaiian Island chronosequence as a natural laboratory for understanding community interactions that underlie biodiversity dynamics and environmental change by incorporating new technologies and theoretical approaches, coupled with standardized sampling protocols, thus providing temporal replicates of the same ecological and evolutionary processes across gradients of elevation (Kueffer and Fernandez-Palacios 2010).
+
+Within this natural laboratory we will focus on microbes, arthropods and plants.  In native montane Hawaiian forests these broad functional groups determine the majority of ecosystem function. They also encompass a wide spectrum of ecological and evolutionary strategies, from rapid generation time to slow, vagile to dispersal limited, and allopatric and ecological speciation.  They also form well studied interaction networks driven both by ecological and evolutionary forces, with important consequences for biodiversity maintenance \citep{bascompte}.  There is also a strong foundation of research on all three groups through the research of PIs Rominger, Gillespie, Gruner and Krehenwinkel (Dimensions in Biodiversity grant on arthropods and microbes); PI Chase (plants); PI Brodie (microbes).
+
+
+\subsection{NEON site integration}
+
+Understanding how environmental change will alter the feedback between ecology and evolution and drive biodiversity out of equilibrium is at the core of our proposal. The NEON site at Puu Makaala Natural Area Reserve on Hawaii Island (which PI Giardina is instrumental in establishing) will provide the core measures needed to quantify the abiotic environment.  We will replicate these measurements across gradients of elevation and precipitation, using ground-truthed remotely sensed measurements to provide both fine grain and broad-scale environmental data products.
+
+
+\subsection{Next generation sequencing approach to macroscale biodiversity}
+
+The same ability to generate massive amount of environmental data via remote sensing does not exist for organismal ecology and evolution.  As part of our Dimensions in Biodiversity grant, PIs Rominger and Krehenwinkel are developing laboratory and bioinformatic methods to obtain sequence data, and estimates of abundance and biomass for thousands to millions of arthropods collected via ecological sampling.  As part of the current proposal this promising new approach will be developed into an open source lab protocol and software package that can be distributed across all NEON sites.
+
+
+\section{Proposed Research}
+In this section we need to tie the ideas from the background to specific objectives, questions and hypotheses.  Then we need to tie those objectives, etc. to concrete methods.  Basically, if we care about how environmental change and evolutionary history will drive communities out of equilibrium, why are we going to do XYZ?
+\subsection{Research Objectives}
+Developing open source tools to advance multi-dimensional ecological and evolutionary data generation across scales
+Quantify evolutionary and macroecological patterns across environmental and age gradients
+Evaluate environmental and evolutionary drivers of assembly
+Understand how evolutionary processes and environmental change drive communities out of equilibrium
+Scale signals of community dis-equilibrium and its consequences from local to regional
 
 
 
-\section{Results and Discussion}
-% present p_k(x|b), f(b) and P(x) fit
-At the order level in both the sampling-corrected PBDB
-(Fig. \ref{fig:pk_f}) and Sepkoski's compendium (Appendix
-\ref{sec:suppSepk}), fluctuations in genus diversity are well
-described by a Gaussian distribution (Fig. \ref{fig:pk_f}). Gaussian
-fluctuations would result from a homogeneous origination-extinction
-process under the condition of independence between
-orders. Independence could result from neutral-like processes
-\citep{hubbell2001}, where the dynamics of one taxon are unaffected by
-those of another, or from dampening mechanisms that stabilize complex
-networks of interacting taxa \citep{brose2005}. This is in direct
-contrast to the instability hypothesis underlying the self-organized
-criticality theory of paleo-biodiversity \citep{bak1993, sole1997}.
+\subsection{Significance and Rationale}
 
-We estimate the distribution of $\beta_k$'s simply as the maximum
-likelihood distribution describing the set of inverse variances for
-all orders. In both the PBDB and Sepkoski's compendium, Phanerozoic
-marine invertebrate orders clearly follow a Gamma distribution in
-their $\beta_k$ values (Fig. \ref{fig:pk_f}).  While multiple
-processes could lead to a Gamma stationary distribution
-\citep[e.g.][]{cir1985}, one interesting possibility is a
-mean-reversion process \citep{cir1985}. Mean reversion could be a
-consequence of niche conservatism if $\beta_k$ values are associated
-with a clade's physiological and life history traits, themselves
-evolving via Ornstein-Uhlenbeck-like exploration of an adaptive
-landscape \citep{cir1985, butler2004}.
 
-Using the observation of within order statistical equilibrium and
-Gamma-distributed $\beta_k$ parameters we can calculate, without
-further adjusting free parameters, the distributions of order-level
-fluctuations for the entire marine Phanerozoic, $P(x)$, as
-\begin{equation}
-  P(x) = \int_0^\infty p_k(x \mid \beta) f(\beta) d\beta \label{eq:PxInt}
-\end{equation}
-where $p_k(x \mid \beta)$ is the distribution of fluctuations within
-an order and $f(\beta)$ is the stationary distribution of inverse
-variance in the magnitude of order-level fluctuations in
-diversity. This leads to a non-Gaussian, fat-tailed prediction for
-$P(x)$ which matches both the PBDB and Sepkoski data closely
-(Fig. \ref{fig:Px} and Appendix \ref{sec:suppSepk}).
 
-To quantitatively evaluate how well the super-statistical prediction
-matches the data we constructed a 95\% confidence envelope from
-bootstrapped maximum likelihood estimates for $P(x)$. Observed
-fluctuations fall within this 95\% confidence envelope
-(Fig. \ref{fig:Px}), indicating that the data do not reject the
-super-statistical prediction. For further comparison, we fit a
-Gaussian distribution to the observed fluctuations, which corresponds
-to the equilibrium hypothesis that all orders conform to the same
-statistics. Using Akaike Information Criterion (AIC) we find that
-observed fluctuations are considerably better explained by the
-super-statistical prediction than by the Gaussian hypothesis ({\small
-  $\Delta$}AIC = 11285.18). Thus, as expected under the
-super-statitical hypothesis, the fat tailed distribution of
-fluctuations arise from the superposition of independent normal
-statistics for fluctuations within orders.
 
-%% calculating sstat at different taxonomic levels (D-stat fig)
-Computing the distribution of fluctuations using classes instead of
-orders leads to a substantially poorer fit to the observed data
-(Fig. \ref{fig:supp_PBDB_Px_cls}). We quantify this shift with the
-Kolmogorov-Smirnov statistic, which changes from 0.041 in order to
-0.062 in classes (Fig. \ref{fig:dStat}). However, if super-statistical
-theory explains the data, this worsening fit with increasing taxonomic
-scale is expected as the different classes are not well defined
-subsystems in their fluctuation dynamics. Instead, classes aggregate
-increasingly disparate groups of organisms, and thus effectively mix
-their associated Gaussian fluctuations, meaning that one statistic
-should no longer be sufficient to describe class-level dynamics. Our
-analysis indicates that orders are evolutionarily coherent and
-independent entities, with all subsumed taxa sharing key ecological
-and evolutionary attributes allowing them to diversify concertedly and
-independently from other orders. Both the good fit at the order level
-and worsening fit at higher taxonomic levels is confirmed in
-Sepkoski's compendium, which also allows analysis of phylum-level
-patterns (Fig. \ref{fig:supp_sepkPx}).
+\subsection{Methods}
 
-To further test the evolutionary coherence of orders we conducted a
-permutation experiment in which genera were randomly reassigned to
-orders while maintaining the number of genera in each order. For each
-permutation, we calculated the super-statistical prediction and the
-Kolmogorov-Smirnov statistic. The permutation simulates a null model
-in which common evolutionary history is stripped away (genera are
-placed in random orders) but the total number of observed genera per
-order is held constant.  Repeating this permutation 500 times yields a
-null distribution of Kolmogorov-Smirnov statistics that is far
-separated from the observed value (Fig. \ref{fig:dStat}) suggesting
-the good fit at the order level is not merely a statistical artifact
-of classification but carries important biological information.
+\subsubsection{Integration with NEON and sampling design across environmental and age gradients}
 
-\section{Conclusion}
+\paragraph{NEON site.}
+The goal of NEON is to provide ecological data at multiple spatial and temporal scales. We plan to use Pu'u Maka'ala Natural Area Reserve on the Big Island of Hawaii. This site is planned as a core terrestrial site. We aim to combine the data that will be collected here, with data collected at other sites across the Hawaiian Islands, in order to understand regional-scale ecological processes and how these respond to change over space and time.
 
-%% why orders
-Our analysis makes no assumption that orders should correspond to
-super-statistical subsystems, but identifies them as the appropriate
-level for marine invertebrates. Holman \citep{holman1989} has also
-shown that orders are ``evolutionarily coherent'' in that subtaxa
-within orders share common diversification dynamics. As we show,
-orders differ only in the variances of their diversity fluctuations
-(Fig. \ref{fig:pk_f}).
 
-Our study is the first to demonstrate that complex patterns in the
-sequence of origination and extinction events in the fossil record are
-the result of a simple underlying process analogous to the statistical
-mechanisms by which complexity emerges in large physical
-\citep{beck2004} and social systems \citep{fuentes2009}.  We do so by
-identifying the biological scale at which clades conform to
-equilibrial dynamics, which could result from the process of niche
-conservatism. We then show that punctuated shifts to different
-equilibria between clades, a consequence of punctuated exploration of
-niche space by newly evolving clades, leads to a characteristically
-non-equilibrial distribution of diversity fluctuations when the marine
-Phanerozoic fauna is viewed as a whole macro-system.
+\paragraph{Complementary sites.}
+We will collect data in an explicit nested way that allows integration with the NEON-generated data, while using data from the entire terrestrial region of the Hawaiian Islands to provide information on processes across multiple scales. Data will be gathered across elevation and precipitation gradients from evolutionarily old, middle aged and young islands (Kaua’i, Maui, and Hawai’i).  On each island we will establish 6 sites to span precipitation gradients from XXXXmm -- XXXXmm annual rainfall and 900 m -- 2500m elevation.  On Hawai'i Island we will use the area adjacent to the Pu'u Maka'ala NEON site as one of these 6 sites.  Each site will consist of 3 replicate plots to insure thorough coverage of local variation. The sampling locations and design are given in Figure \ref{fig:map}.
 
-%%% how this motivates future work in figuring out the details of
-%%% biotic evolution that are important for driving stasis and
-%%% punctuation
-Our work highlights the importance of both niche conservatism and
-punctuated adaptive radiation in producing the statistical behavior of
-the Phanerozoic; our theory thus provides new motivation for
-identifying the eco-evolutionary causes of innovations between
-lineages and how those innovations are eventually conserved within
-lineages. Armed with an understanding of the statistical behavior of
-diversification we can go on to examine mechanisms underlying
-additional patterns in the mean trend of biodiversity through the
-Phanerozoic. In particular, clades have been shown to wax and wane
-systematically through time \citep{liow2007,
-  quental2013}, a pattern that we cannot explain with super-statistics
-alone.
 
-%% section on thinking about meaning of beta ~ Gamma cut, may have
-%% been redundant see `#2'
+\paragraph{Sampling approach.}
+We will select sites in clearly defined ohia/koa montane, wet and mesic forest communities. The rationale here is that (i) Ohia (Metrosideros polymorpha) is the dominant canopy tree in these forests, forming a nearly continuous layer, with patches of sub-dominant koa (Acacia koa) and numerous associated understory trees, shrubs, herbs, and ferns. This forest type (and the presence of Metrosideros in particular) has been used as an important landscape feature in our ongoing work through the Hawaii Dimensions of Biodiversity. (ii) The proposed NEON site is characterized by this forest type. And (iii) Metrosideros growth rate, growth form and chemical composition (all detectable by various satellite and airborne spectroscopic techniques (Asner et al. 2006; Asner and Martin 2009; Asner et al. 2011)) reflects the coupled effects of soil age and fertility, which in turn affects the community of organisms in a given forest stand (Crews et al. 1995; Gruner 2007b). Differences in plant traits can affect the structure of an entire food web through a series of direct and indirect effects (Gruner et al. 2005; Bukovinszky et al. 2008).
 
-%% note on how sstat could be applied to other questions in eco-evo.
-Super-statistics could also be applied to other areas of evolution and
-macroecology.  For example new phylogenetic models already consider
-heterogeneous rates of diversification
-\citep[e.g.][]{rabosky2006laser}. The super-statistics of clades in
-adaptive landscapes could provide a means to build efficient models
-that jointly predict morphological change and diversification. This
-framework could also provide a new paradigm in modeling the
-distributions of diversity, abundance and resource use in non-neutral
-communities. Non-neutral models in ecology are criticized for their
-over-parameterization \citep{rosindell2011TREE}, yet a persistent
-counter argument to neutral theory \citep{hubbell2001} is the
-unrealistic assumption of ecological equivalency
-\citep{chave2004neutral} and poor prediction of real dynamics
-\citep{ricklefs2006neutral}. If ecosystems are viewed as the
-super-position of many individualistically evolving clades, each
-exploiting the environment differently and thus obeying a different
-set of non-equivalent statistics, then diversity dynamics could be
-parsimoniously predicted while incorporating real biological
-information on ecological differences between taxa.
+In each sampling replicate at each site, we will establish a ___XXXXX____ plot. Within these plots we will sample arthropod abundance and richness, plant (trees $>$ 1cm DBH) abundance and richness, and soil microbial diversity using the same methodology employed at NEON sites.  While NON focuses on ground beetles (Carabidae); mosquitoes (family Culicidae); ticks (order Ixodida), we chose to focus on all arthropods because ground beetles constitute a small proportion of native arthropod diversity in Hawaii, and there are no native mosquitos or ticks.  Specific data are as follows:
 
-\section{Methods}
+Soil Sensors and Measurements: NEON collects and produces data on nutrients, such as carbon, nitrogen and phosphorus, which move through the atmosphere, water bodies, soil, microbes, plants and animals to support understanding of nutrient cycling in a variety of ecosystems. Soil observations include sensor measurements within the tower airshed, broadly distributed collections of soil cores used for physical and biogeochemical analyses, and one-time soil characterization. NEON soil sensor measurements directly characterize soil properties, such as soil moisture and temperature, as well as relevant ancillary measurements (soil respiration, biogeochemistry and nutrient concentrations in fine root biomass). Soil sampling within plots across a site will focus on soil microbial communities (abundance and diversity), metagenomes and transcriptomes, as well as biogeochemical analyses including pH, total carbon (C), nitrogen (N), phosphorous (P) and sulfur (S). Questions that are being examined with this data include, how do changes in temperature alter decomposition rates and microbial activity in different ecosystems across a precipitation gradient? Key measurements include biomass, soil carbon and nutrient pools, carbon exchange, litterfall, decomposition, biomass production, and microbial activity.
 
-\subsection{Paleobiology Database data download and filtering}
-Data were downloaded from the Paleobiology Database (PBDB;
-www.pbdb.org) on 28 May 2013. Collections were filtered using the same
-approach as Alroy \citep{alroy08} to insure that only well preserved
-marine invertebrate occurrences were used in subsequent analysis
-resulting in 221202 genus occurrences. These were further filtered to
-exclude those occurrences without order-level taxonomy and those
-collections with age estimate resolutions outside the 10my default
-bins of the PBDB resulting in 189516 occurrences left for analysis. To
-avoid basic sampling concerns we excluded the earliest Cambrian and
-the Cenozoic.
+Terrestrial Organismal Sampling: Arthropods will be sampled across variable environments using two complementary methods: malaise-style interception traps at ground and canopy levels, and vegetation beating of understory plants. Samples will be preserved in molecular-grade ethanol for identification and metabarcoding. Plants will be sampled.....  We will measure leaf chemistry and biomass.
 
-To focus attention on the variance of fluctuations we center each
-clade's fluctuation distribution. Because ``equilibrium'' in the
-statistical mechanical sense means a system undergoes coherent,
-concerted responses to perturbation the mean trend line is of less
-interest than deviations from it. We also note that most clades are
-already close to centered and so centering has little influence on
-clade-specific fluctuation distributions.
+Remote Sensing and Measurements of Gases: The NEON site will track fluxes of gases, such as carbon dioxide (CO2) and water vapor, and collects data about physical and chemical climate conditions, such as temperature, barometric pressure and visible light or Photosynthetically Active Radiation (PAR). Sensors on the NEON tower systems track fluxes of gases (CO2, water vapor) and collects data about physical and chemical climate conditions, such as temperature, humidity, wind, and the amount of gas that is exchanged between the atmosphere and the ecosystem. Towers extend past the top of the vegetation canopy at each site to allow sensors mounted at the top and along the tower to capture the full profile of atmospheric conditions from the top of the vegetation canopy to the ground. Automated tower sensors collect data continuously to capture patterns and cycles across various time periods, ranging from seconds to years. Categories of measurements are physical climate (aerosols, precipitation, radiation, and temperature, pressure and wind; chemical climate (wet deposition, chemistry, isotopes and scalar concentrations); net ecosystem exchange: carbon dioxide (CO2) flux, soil CO flux, water vapor and latent heat flux, sensible heat, total reactive nitrogen (NO2) and ozone (O3)
 
-\subsection{Three-timer and publication bias correction} 
-\label{sec:3TP}
-We use a new and flexible method, described below, to correct for
-known sampling biases in publication-based specimen databases
-\citep{alroy08, alroy2010}.  We were motivated to use this method
-because rarefaction has been shown to under-perform compared to the
-more data-intensive shareholder quorum subsampling (SQS) method
-\citep{alroy2010}.  However, subsampling cannot be applied to small
-orders (i.e. the majority) because SQS becomes increasingly unreliable
-as sample size decreases \citep{alroy2010}.  We therefore develop a
-simple method based on first correcting for detection bias using the
-``three timer'' correction \citep{alroy08} in which the rate of failure
-to observe a genus is estimated by the number of times a gap occurs in
-the occurrence history of each genus. To eliminate further bias due to
-preferential publication of novel taxa we divide observed number of
-genera per order per time period by the expected number of genera
-given publications in that time period.  The expected number is
-calculated by regressing the log-transformed number of genera on
-log-transformed number of publications. There is a weak trend toward
-higher diversity with more publications (Fig. \ref{fig:divByPub})
-meaning that the most important correction comes from the three timer
-correction.
+Airborne Remote Sensing: We will make use of both existing and planned airborne remote sensing data which can provide information on vegetation composition and land cover and will be used in particular to examine the complex mosaic of forest structure and composition.
 
-Our new method effectively re-scales each genus occurrence from 0/1
-(absent/present), to a weighted number continuously ranging between 0
-and 1.  This method achieves similar results to more computationally
-intensive sub-sampling procedures \citep{alroy08, alroy2010}. We
-directly compare our predicted time series of global genus diversity
-with results derived from SQS \citep{alroy2010} and the raw data
-(Fig. \ref{fig:supp_3TPub}).  Our method shows minor differences with
-the SQS prediction, However, these discrepancies do not have impact
-the distribution of fluctuations (Fig. \ref{fig:supp_3TPub}) and
-super-statistical analysis on uncorrected PBDB data (see section
-\ref{sec:rawPBDB}) produces a similar result to the analysis on
-corrected PBDB data presented in the main text.
 
-\subsection{Numerical methods} \label{sec:numMeth} To fit our
-super-statistical prediction we use the method of least squares
-instead and maximum likelihood. When building the prediction for
-$P(x)$ by calculating order-level Gaussian distributions and
-integrating over them, we use least squares to fit the variance term
-to each order. We do so because orders potentially show asymmetries in
-their distribution of fluctuations. Least squares is more flexible in
-fitting such distributions compared to maximum likelihood which will
-always estimate the empirical variance as the best-fitting parameters.
 
-We also estimate $P(x)$ directly from the raw data using maximum
-likelihood to compare the fit of our super-statistical prediction and
-that of a simple Gaussian distribution using AIC. To calculate a
-likelihood-based confidence interval on our prediction we bootstrapped
-the data, subsampling fluctuations with replacement from all orders
-combined.
+\subsubsection{Quantifying evolutionary and macroecological patterns using metabarcoding}
 
-\section*{Acknowledgments}
-We thank John Harte, Rosemary Gillespie and Jun Ying Lim for helpful
-discussion. Michael Foote provided a digitized copy of Sepkoski's
-compendium. AJR thanks funding sources Fulbright Chile and the
-National Science Foundation Graduate Research Fellowship Program; MAF
-thanks FONDECYT 1140278; PM thanks support from Grant PFB-023
-(CONICYT) and ICM-P05-002.
+Next generation sequencing technology has ushered in a revolution in evolutionary biology and ecology. This revolution has not passed by taxonomy and spurred various new studies in the field of molecular barcoding. The current leap in sequencing throughput allows to routinely perform barcoding studies on bulk samples and analyzing whole ecosystems (Taberlet et al. 2012; Leray & Knowlton 2015; Gibson et al. 2014; Ji et al. 2013). The large scale recovery of species richness, food web structure, cryptic species, identification of juveniles and hidden diversity, e.g. internal parasitoids, promise unprecedented new insights into ecosystem function and assembly (Krehenwinkel et al. 2016; Shokralla et al. 2015; Shokralla et al. 2012; Kress et al. 2015; Kartzinel et al. 2015). While species richness can be routinely identified by sequencing bulk samples, estimating species abundance remains challenging (Elbrecht & Leese, 2015) and severely limits the application of metabarcoding to many studies. We are developing wet lab and bioinformatic methods to overcome this issue and revolutionize the generation of ecological and genetic data. Our pipeline consists of three steps (Fig. \ref{fig:metab}):
+Extraction and sequencing of pooled community samples
+Matching the resulting sequences to a reference phylogeny for identification
+Using Bayesian hierarchical models to reconstruct unbiased estimates of abundance
 
-\printbibliography
+Step (1) will be released as an open source lab protocol and steps (2-3) will be developed into an open source R package that allows users to implement these methods in their study systems.  We propose that our open source pipeline can be implemented across NEON sites to generate both taxonomic and phylogenetic data for focal taxa.
 
-\clearpage
 
-\section*{Figures}
+Figure \ref{fig:metab} showing pipeline for generating and analysing metabarcoding samples.
 
-\begin{figure}[!h]
-  \centering
-  \includegraphics[scale=0.8]{figs/fig_pkx-fbeta.pdf}
-  \caption[Variability in trajectories of within-order fluctuations in
-  genus diversity]{The distributions of within-order fluctuations in
-    genus diversity shown for the trajectories of three exemplar
-    orders (A) and shown as an empirical cumulative density aggregated
-    across all orders (B). To display all orders simultaneously we
-    simply collapse their fluctuation distributions by dividing by
-    their standard deviations. If orders conform to the Gaussian
-    hypothesis their scaled fluctuations should fall along the
-    cumulative density line of a normal N(0, 1) distribution, as shown
-    in (B). In (C) the distribution of inverse variances $\beta_k$
-    across all orders matches very closely to a Gamma distribution
-    (black line); exemplar orders are again highlighted.}
-  \label{fig:pk_f}
-\end{figure}
+Preliminary results from controlled experiments show there is a strong correlation between amount of DNA and total number of reads; however, this relationship is variable across taxa (Fig. \ref{fig:metabData}). A Bayesian model is able to capture this variability across taxa (Fig. \ref{fig:metabData}) and thus indicates the success of more general applications of the modeling approach to field collections. 
 
-\begin{figure}[!h]
-  \centering
-  \includegraphics[scale=1]{figs/fig_Px.pdf} 
-  \caption[Order-level distribuiton of diversity
-  fluctuations]{Distribution of fluctuations in genus diversity within
-    orders of marine invertebrates in the Paleobiology Database
-    \citep{alroy08} after bias correction. The distribution is
-    fat-tailed as compared to the maximum likelihood estimate of the
-    normal distribution (blue line).  At the order level the empirical
-    distribution of fluctuations are well described by our
-    super-statistical approach, both when computed from integrating
-    over the distribution of observed variances (red line) and when
-    fit via maximum likelihood (95\% confidence interval; red
-    shading).}
-  \label{fig:Px}
-\end{figure}
+\paragraph{(1) Extraction and sequencing of pooled community samples.}
+We will generate sequence information for mixed arthropod community samples, collected across precipitation gradients on the Hawaiian Archipelago. The samples will be roughly pre-sorted taxonomically and grouped into different body size classes to minimize the confounding factors of abundance and body size in determining amount of DNA per taxon. We will use amplicon sequencing of the COI barcoding region \citep{} which has shown the greatest reliability in preliminary trials.
 
-\begin{figure}[!h]
-  \centering
-  \includegraphics[scale=1]{figs/fig_dStat(3TP).pdf}
-  \caption[Goodness of super-statistical theory fit]{Distribution of
-    Kolmogorov-Smirnov (KS) statistics from randomly permuting genera
-    within orders (gray shading represents 95\% confidence
-    interval). Solid black line is observed KS statistic at the order
-    level, while the dashed black line shows the observed KS statistic
-    at the class level.}
-  \label{fig:dStat}
-\end{figure}
+
+\paragraph{(2) Matching the resulting sequences to a reference phylogeny for identification.}
+In order to resolve the taxonomy of sequences derived from mixed samples we are developing a library of the barcoding region for species across the Hawaiian archipelago, such that unknown sequences can be phylogenetically matched \citep{} to the reference library.  Sequences not found in the tree of all reference sequences will be grafted and their status as a unique operational taxonomic unit assessed using a cuttoff of 3% divergence (Fig. \ref{fig:metab}).  These bioinformatic steps will be included in the R package.
+
+In collaboration with taxonomist and ecologist on Hawaii, we are currently working on generating the barcode reference library for a diverse range of several hundred Hawaiian arthropod taxa. These taxa were sampled across the chronosequence of the Hawaiian Archipelago (Fig. \ref{fig:map}). DNA is extracted from each taxon and reference sequence generated for the mitochondrial COI barcoding region. To achieve a comprehensive sampling of the Hawaiian arthropod diversity, samples from environmental gradients (e.g. precipitation) will be included in this reference collection. Such gradients have been shown to have a profound influence on community composition on Hawaii (Zimmermann & Vitousek 2012).
+
+In order to build a robust phylogenetic backbone for our reference library, the genomic DNA extracts for all species will be sequenced using the Illumina HiSeq2500. An assembly of the resulting reads promises to generate near complete mitochondrial genomes and nuclear ribosomal clusters of each taxon. To support the Illumina short read assemblies, we will generate long read information by PacBio sequencing. The resulting sequence information will allow us to reconstruct a well resolved community-phylogenetic framework for ecological hypothesis testing.
+
+\paragraph{(3) Using Bayesian hierarchical models to reconstruct unbiased estimates of abundance}
+Bayesian hierarchical models permit inference of key quantities (e.g. abundance) while accounting for multiple sources of error and leveraging heterogeneous data types to facilitate inference \citep{royleDorazio}.  The goal of hierarchically modeling metabarcoding data is to estimate the abundances of species while correcting for known biases inherent in amplicon-based sequencing.  We will account for bias from copy number variation \citep{} and primer affinity \citep{} by directly modeling it, while also using data on the total number of individuals being sequenced, their body sizes, and the phylogenetic relationship between their sequences to constrain the estimates to be more accurate (Fig. \ref{fig:metabMod}).  Furthermore, information from controlled experiments (for example making moc communities of known composition and sequencing those) can be used to constrain prior distributions and obtain even more accurate abundance estimates.
+
+\subsubsection{Modeling evolutionary and environmental drivers of assembly}
+\paragraph{How environment and age Maximum entropy theory of ecology}
+
+
+%% suppresses bibliography, then make tex file to compile .bbl in separate doc
+\bibliographystyle{abbrvnat}
+\setbox0\vbox{\bibliography{../macrosystems.bib}}
+
 
 \end{document}
+
+
+
