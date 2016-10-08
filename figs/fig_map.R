@@ -12,6 +12,7 @@ gridMax <- 100
 plotMax <- 5
 microMax <- 5
 
+pdf('fig_map.pdf', width = 6, height = 4)
 
 par(mar = rep(0.1, 4))
 plot(1:gridMax, 1:gridMax, asp = 1, type = 'n', xlim = c(0, 1.8*gridMax), axes = FALSE)
@@ -64,3 +65,5 @@ segments(x0 = gridMax*1.4 + (0:microMax)*0.3*gridMax/microMax, y0 = 0, y1 = 0.3*
 arrows(x0 = gridMax*1.4, x1 = gridMax*1.7, y0 = -0.05*gridMax, angle = 90, length = 0.05, code = 3)
 boxed.labels(gridMax*1.4 + (microMax/2)*0.3*gridMax/microMax, -0.05*gridMax, labels = '10 cm',
              bg = 'white', border = FALSE)
+
+dev.off()
