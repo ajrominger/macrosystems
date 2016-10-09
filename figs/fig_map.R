@@ -1,7 +1,38 @@
 library(plotrix)
+library(RColorBrewer)
 
 setwd('~/Dropbox/Research/grants/macrosystems/figs')
 
+## =========================
+## chrono, elev, precip maps
+## =========================
+
+## set-up colors
+rain.colors <- colorRampPalette(brewer.pal(9, 'YlGnBu'))
+chrono.colors <- colorRampPalette(hsv(c(0.1, 0, 0.05), c(0.7, 0.9, 0.5), c(1, 0.8, 0.4)))
+elev.colors <- colorRampPalette(gray(c(0, 0.1, 10^seq(-0.75, 0, length = 10))))
+
+
+## get chrono and dimensions sites loaded
+eval(parse(text=c('{', readLines('~/Dropbox/hawaiiDimensions/geoData/maps/sites_map.R', n=35), '}')))
+
+## get precip
+
+## get elevation
+setwd('~/Dropbox/hawaiiDimensions/geoData/site_selection/elrange_n83')
+elev <- readOGR('.', 'elrange_n83')
+
+
+pdf('~/test.pdf')
+col.elev <- elev.colors(length(unique(rowSums(elev@data[, c('LOWELEV', 'HIGHELEV')]))))
+plot(elev, col = col.elev[as.numeric(as.factor(rowSums(elev@data[, c('LOWELEV', 'HIGHELEV')]) / 2))],
+     border = col.elev[as.numeric(as.factor(rowSums(elev@data[, c('LOWELEV', 'HIGHELEV')]) / 2))])
+dev.off()
+system('open ~/test.pdf')
+
+## ===========
+## site layout
+## ===========
 
 plotsx <- c(0, 20, 60)
 plotsy <- c(20, 60, 40)
