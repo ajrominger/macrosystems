@@ -1,19 +1,324 @@
-\begin{thebibliography}{2}
+\begin{thebibliography}{47}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
-\bibitem[Harte(2011)]{harte2011}
-J.~Harte.
-\newblock \emph{The Maximum Entropy Theory of Ecology}.
-\newblock Oxford University Press, 2011.
+\bibitem[Barnosky et~al.(2012)Barnosky, Hadly, Bascompte, Berlow, Brown,
+  Fortelius, Getz, Harte, Hastings, Marquet, et~al.]{barnosky2012}
+Anthony~D Barnosky, Elizabeth~A Hadly, Jordi Bascompte, Eric~L Berlow, James~H
+  Brown, Mikael Fortelius, Wayne~M Getz, John Harte, Alan Hastings, Pablo~A
+  Marquet, et~al.
+\newblock Approaching a state shift in earth's biosphere.
+\newblock \emph{Nature}, 486\penalty0 (7401):\penalty0 52--58, 2012.
+
+\bibitem[Asner et~al.(2012)Asner, Mascaro, Muller-Landau, Vieilledent, Vaudry,
+  Rasamoelina, Hall, and van Breugel]{asner2012}
+Gregory~P Asner, Joseph Mascaro, Helene~C Muller-Landau, Ghislain Vieilledent,
+  Romuald Vaudry, Maminiaina Rasamoelina, Jefferson~S Hall, and Michiel van
+  Breugel.
+\newblock A universal airborne lidar approach for tropical forest carbon
+  mapping.
+\newblock \emph{Oecologia}, 168\penalty0 (4):\penalty0 1147--1160, 2012.
+
+\bibitem[Kampe et~al.(2010)Kampe, Johnson, Kuester, and Keller]{NEON}
+Thomas~U Kampe, Brian~R Johnson, Michele Kuester, and Michael Keller.
+\newblock Neon: the first continental-scale ecological observatory with
+  airborne remote sensing of vegetation canopy biochemistry and structure.
+\newblock \emph{Journal of Applied Remote Sensing}, 4\penalty0 (1):\penalty0
+  043510--043510--24, 2010.
+
+\bibitem[Lessard et~al.(2012)Lessard, Belmaker, Myers, Chase, and
+  Rahbek]{lessard2012}
+Jean-Philippe Lessard, Jonathan Belmaker, Jonathan~A Myers, Jonathan~M Chase,
+  and Carsten Rahbek.
+\newblock Inferring local ecological processes amid species pool influences.
+\newblock \emph{Trends in Ecology \& Evolution}, 27\penalty0 (11):\penalty0
+  600--607, 2012.
+
+\bibitem[Brown(1971)]{brown1971}
+James~H Brown.
+\newblock Mammals on mountaintops: nonequilibrium insular biogeography.
+\newblock \emph{American Naturalist}, pages 467--478, 1971.
+
+\bibitem[Ricklefs(2006)]{ricklefs2006neutral}
+Robert~E Ricklefs.
+\newblock The unified neutral theory of biodiversity: do the numbers add up?
+\newblock \emph{Ecology}, 87\penalty0 (6):\penalty0 1424--1431, 2006.
+
+\bibitem[Rominger et~al.(2015)Rominger, Goodman, Lim, Armstrong, Becking,
+  Bennett, Brewer, Cotoras, Ewing, Harte, et~al.]{rominger2015}
+AJ~Rominger, KR~Goodman, JY~Lim, EE~Armstrong, LE~Becking, GM~Bennett,
+  MS~Brewer, DD~Cotoras, CP~Ewing, J~Harte, et~al.
+\newblock Community assembly on isolated islands: macroecology meets evolution.
+\newblock \emph{Global Ecology and Biogeography}, 2015.
+
+\bibitem[Erwin(1998)]{Erwin1998}
+Douglas~H. Erwin.
+\newblock The end and the beginning: recoveries from mass extinctions.
+\newblock \emph{Trends in Ecology and Evolution}, 13:\penalty0 344--349, 1998.
 
 \bibitem[Hubbell(2001)]{hubbell2001}
 S.~P. Hubbell.
 \newblock \emph{The unified neutral theory of biodiversity and biogeography
   (MPB-32)}, volume~32.
 \newblock Princeton University Press, 2001.
+
+\bibitem[Rosindell et~al.(2011)Rosindell, Hubbell, and
+  Etienne]{rosindell2011TREE}
+James Rosindell, Stephen~P Hubbell, and Rampal~S Etienne.
+\newblock \textit{The Unified Neutral Theory of Biodiversity and Biogeography}
+  at age ten.
+\newblock \emph{Trends in ecology \& evolution}, 26\penalty0 (7):\penalty0
+  340--348, 2011.
+
+\bibitem[Harte(2011)]{harte2011}
+J.~Harte.
+\newblock \emph{The Maximum Entropy Theory of Ecology}.
+\newblock Oxford University Press, 2011.
+
+\bibitem[Jaynes(1957)]{Jaynes1957}
+ET~Jaynes.
+\newblock {Information theory and statistical mechanics. II}.
+\newblock \emph{Physical Review}, 108\penalty0 (2):\penalty0 171--190, 1957.
+
+\bibitem[Maurer(1999)]{brian1999}
+Brian~A. Maurer.
+\newblock \emph{Untangling ecological complexity: the macroscopic perspective}.
+\newblock University of Chicago Press, 1999.
+
+\bibitem[Levin(1970)]{levin1970}
+Simon~A Levin.
+\newblock Community equilibria and stability, and an extension of the
+  competitive exclusion principle.
+\newblock \emph{American Naturalist}, pages 413--423, 1970.
+
+\bibitem[Scholz and Martin(1997)]{scholz1997}
+M~Scholz and RJ~Martin.
+\newblock Ecological equilibrium on biological activated carbon.
+\newblock \emph{Water Research}, 31\penalty0 (12):\penalty0 2959--2968, 1997.
+
+\bibitem[Rabosky(2009)]{rabosky2009}
+Daniel~L Rabosky.
+\newblock Ecological limits and diversification rate: alternative paradigms to
+  explain the variation in species richness among clades and regions.
+\newblock \emph{Ecology letters}, 12\penalty0 (8):\penalty0 735--743, 2009.
+
+\bibitem[Rabosky et~al.(2015)Rabosky, Hurlbert, President, Moderator, and
+  Price]{rabosky2015amNat}
+Daniel~L Rabosky, Allen~H Hurlbert, ASN President, Debate Moderator, and Trevor
+  Price.
+\newblock Species richness at continental scales is dominated by ecological
+  limits.
+\newblock \emph{The American Naturalist}, 185\penalty0 (5):\penalty0 572--583,
+  2015.
+
+\bibitem[Harmon and Harrison(2015)]{harmon2015amNat}
+Luke~J Harmon and Susan Harrison.
+\newblock Species diversity is dynamic and unbounded at local and continental
+  scales.
+\newblock \emph{The American Naturalist}, 185\penalty0 (5):\penalty0 584--593,
+  2015.
+
+\bibitem[Levin(1999)]{levin1999}
+Simon~A Levin.
+\newblock Towards a science of ecological management.
+\newblock \emph{Conservation Ecology}, 3\penalty0 (2):\penalty0 6, 1999.
+
+\bibitem[Simon(1987)]{simon1987}
+Chris Simon.
+\newblock Hawaiian evolutionary biology: an introduction.
+\newblock \emph{Trends in ecology \& evolution}, 2\penalty0 (7):\penalty0
+  175--178, 1987.
+
+\bibitem[Chadwick et~al.(1999)Chadwick, Derry, Vitousek, Huebert, and
+  Hedin]{chadwick1999}
+O~A Chadwick, L~A Derry, P~M Vitousek, B~J Huebert, and L~O Hedin.
+\newblock Changing sources of nutrients during four million years of ecosystem
+  development.
+\newblock \emph{Nature}, 397:\penalty0 491--497, 1999.
+
+\bibitem[Gillespie and Clague(2009)]{gillespieClague2009}
+Rosemary~G Gillespie and David~A Clague.
+\newblock \emph{Encyclopedia of islands}.
+\newblock Number~2. Univ of California Press, 2009.
+
+\bibitem[Vitousek and Farrington(1997)]{vitousek1997nutrient}
+Peter~M Vitousek and Heraldo Farrington.
+\newblock Nutrient limitation and soil development: experimental test of a
+  biogeochemical theory.
+\newblock \emph{Biogeochemistry}, 37\penalty0 (1):\penalty0 63--75, 1997.
+
+\bibitem[Juvik and Juvik(1998)]{juvik1998}
+S~P Juvik and J~O Juvik.
+\newblock \emph{Atlas of Hawai‘i}.
+\newblock University of Hawai‘i Press, Honolulu, HI, 3rd edition edition,
+  1998.
+
+\bibitem[Asner et~al.(2006)Asner, Martin, Carlson, Rascher, and
+  Vitousek]{asner2006}
+Gregory~P Asner, Roberta~E Martin, Kimberly~M Carlson, Uwe Rascher, and Peter~M
+  Vitousek.
+\newblock Vegetation--climate interactions among native and invasive species in
+  hawaiian rainforest.
+\newblock \emph{Ecosystems}, 9\penalty0 (7):\penalty0 1106--1117, 2006.
+
+\bibitem[Asner and Martin(2009)]{asner2009}
+Gregory~P Asner and Roberta~E Martin.
+\newblock Airborne spectranomics: mapping canopy chemical and taxonomic
+  diversity in tropical forests.
+\newblock \emph{Frontiers in Ecology and the Environment}, 7\penalty0
+  (5):\penalty0 269--276, 2009.
+
+\bibitem[Crews et~al.(1995)Crews, Kitayama, Fownes, Riley, Herbert,
+  Mueller-Dombois, and Vitousek]{crews1995}
+Timothy~E Crews, Kanehiro Kitayama, James~H Fownes, Ralph~H Riley, Darrell~A
+  Herbert, Dieter Mueller-Dombois, and Peter~M Vitousek.
+\newblock Changes in soil phosphorus fractions and ecosystem dynamics across a
+  long chronosequence in hawaii.
+\newblock \emph{Ecology}, 76\penalty0 (5):\penalty0 1407--1424, 1995.
+
+\bibitem[Gruner(2007)]{gruner2007}
+Daniel~S Gruner.
+\newblock Geological age, ecosystem development, and local resource constraints
+  on arthropod community structure in the hawaiian islands.
+\newblock \emph{Biological Journal of the Linnean Society}, 90\penalty0
+  (3):\penalty0 551--570, 2007.
+
+\bibitem[Gruner et~al.(2005)Gruner, Taylor, and Forkner]{gruner2005}
+Daniel~S Gruner, Andrew~D Taylor, and Rebecca~E Forkner.
+\newblock The effects of foliar pubescence and nutrient enrichment on arthropod
+  communities of metrosideros polymorpha (myrtaceae).
+\newblock \emph{Ecological Entomology}, 30\penalty0 (4):\penalty0 428--443,
+  2005.
+
+\bibitem[Bukovinszky et~al.(2008)Bukovinszky, van Veen, Jongema, and
+  Dicke]{bukovinszky2008}
+Tibor Bukovinszky, FJ~Frank van Veen, Yde Jongema, and Marcel Dicke.
+\newblock Direct and indirect effects of resource quality on food web
+  structure.
+\newblock \emph{Science}, 319\penalty0 (5864):\penalty0 804--807, 2008.
+
+\bibitem[Liebherr and Zimmerman(2000)]{Liebherr2000}
+J~K Liebherr and E~C Zimmerman.
+\newblock \emph{Hawaiian Carabidae (Coleoptera), Part 1: Introduction and Tribe
+  Platynini}, volume~16 of \emph{Insects of Hawaii}.
+\newblock University of Hawaii Press, Honolulu, HI, 2000.
+
+\bibitem[Nishida(2002)]{nishida2002}
+G.M. Nishida.
+\newblock \emph{Hawaiian terrestrial arthropod checklist. Fourth Edition}.
+\newblock Number Technical Report 22. Bishop Museum, 2002.
+
+\bibitem[Shi et~al.(2015)Shi, Nuccio, Herman, Rijkers, Estera, Li, da~Rocha,
+  He, Pett-Ridge, Brodie, et~al.]{shi2015}
+Shengjing Shi, Erin Nuccio, Donald~J Herman, Ruud Rijkers, Katerina Estera,
+  Jiabao Li, Ulisses~Nunes da~Rocha, Zhili He, Jennifer Pett-Ridge, Eoin~L
+  Brodie, et~al.
+\newblock Successional trajectories of rhizosphere bacterial communities over
+  consecutive seasons.
+\newblock \emph{MBio}, 6\penalty0 (4):\penalty0 e00746--15, 2015.
+
+\bibitem[Kembel et~al.(2012)Kembel, Wu, Eisen, and Green]{kembel2012}
+Steven~W Kembel, Martin Wu, Jonathan~A Eisen, and Jessica~L Green.
+\newblock Incorporating 16s gene copy number information improves estimates of
+  microbial diversity and abundance.
+\newblock \emph{PLoS Comput Biol}, 8\penalty0 (10):\penalty0 e1002743, 2012.
+
+\bibitem[DeLong et~al.(2010)DeLong, Okie, Moses, Sibly, and Brown]{delong2010}
+John~P DeLong, Jordan~G Okie, Melanie~E Moses, Richard~M Sibly, and James~H
+  Brown.
+\newblock Shifts in metabolic scaling, production, and efficiency across major
+  evolutionary transitions of life.
+\newblock \emph{Proceedings of the National Academy of Sciences}, 107\penalty0
+  (29):\penalty0 12941--12945, 2010.
+
+\bibitem[Austin and Vitousek(2000)]{austin2000}
+Amy~T Austin and Peter~M Vitousek.
+\newblock Precipitation, decomposition and litter decomposability of
+  metrosideros polymorpha in native forests on hawai’i.
+\newblock \emph{Journal of Ecology}, 88\penalty0 (1):\penalty0 129--138, 2000.
+
+\bibitem[Giardina et~al.(2004)Giardina, Binkley, Ryan, Fownes, and
+  Senock]{giardina2004}
+Christian~P Giardina, Dan Binkley, Michael~G Ryan, James~H Fownes, and Randy~S
+  Senock.
+\newblock Belowground carbon cycling in a humid tropical forest decreases with
+  fertilization.
+\newblock \emph{Oecologia}, 139\penalty0 (4):\penalty0 545--550, 2004.
+
+\bibitem[Rominger and Merow(2016)]{rominger2016}
+Andrew~J Rominger and Cory Merow.
+\newblock meter: an r package for testing the maximum entropy theory of
+  ecology.
+\newblock \emph{Methods in Ecology and Evolution}, 2016.
+
+\bibitem[Hefley and Hooten(2016)]{hsdm}
+Trevor~J Hefley and Mevin~B Hooten.
+\newblock Hierarchical species distribution models.
+\newblock \emph{Current Landscape Ecology Reports}, 1\penalty0 (2):\penalty0
+  87--97, 2016.
+
+\bibitem[Shokralla et~al.(2015)Shokralla, Porter, Gibson, Dobosz, Janzen,
+  Hallwachs, Golding, and Hajibabaei]{shokralla2015}
+Shadi Shokralla, Teresita~M Porter, Joel~F Gibson, Rafal Dobosz, Daniel~H
+  Janzen, Winnie Hallwachs, G~Brian Golding, and Mehrdad Hajibabaei.
+\newblock Massively parallel multiplex dna sequencing for specimen
+  identification using an illumina miseq platform.
+\newblock \emph{Scientific reports}, 5:\penalty0 9687, 2015.
+
+\bibitem[Gibson et~al.(2014)Gibson, Shokralla, Porter, King, van Konynenburg,
+  Janzen, Hallwachs, and Hajibabaei]{gibson2014}
+Joel Gibson, Shadi Shokralla, Teresita~M Porter, Ian King, Steven van
+  Konynenburg, Daniel~H Janzen, Winnie Hallwachs, and Mehrdad Hajibabaei.
+\newblock Simultaneous assessment of the macrobiome and microbiome in a bulk
+  sample of tropical arthropods through dna metasystematics.
+\newblock \emph{Proceedings of the National Academy of Sciences}, 111\penalty0
+  (22):\penalty0 8007--8012, 2014.
+
+\bibitem[Taberlet et~al.(2012)Taberlet, Coissac, Pompanon, Brochmann, and
+  Willerslev]{taberlet2012}
+Pierre Taberlet, Eric Coissac, Francois Pompanon, Christian Brochmann, and Eske
+  Willerslev.
+\newblock Towards next-generation biodiversity assessment using dna
+  metabarcoding.
+\newblock \emph{Molecular Ecology}, 21\penalty0 (8):\penalty0 2045--2050, 2012.
+
+\bibitem[Krehenwinkel et~al.(2016)Krehenwinkel, Kennedy, Pek{\'a}r, and
+  Gillespie]{krehenwinkel2016}
+Henrik Krehenwinkel, Susan Kennedy, Stano Pek{\'a}r, and Rosemary~G Gillespie.
+\newblock A cost-efficient and simple protocol to enrich prey dna from
+  extractions of predatory arthropods for large-scale gut content analysis by
+  illumina sequencing.
+\newblock \emph{Methods in Ecology and Evolution}, 2016.
+
+\bibitem[Elbrecht and Leese(2015)]{elbrecht2015}
+Vasco Elbrecht and Florian Leese.
+\newblock Can dna-based ecosystem assessments quantify species abundance?
+  testing primer bias and biomass—sequence relationships with an innovative
+  metabarcoding protocol.
+\newblock \emph{PloS one}, 10\penalty0 (7):\penalty0 e0130324, 2015.
+
+\bibitem[Zimmerman and Vitousek(2012)]{zimmerman2012}
+Naupaka~B Zimmerman and Peter~M Vitousek.
+\newblock Fungal endophyte communities reflect environmental structuring across
+  a hawaiian landscape.
+\newblock \emph{Proceedings of the National Academy of Sciences}, 109\penalty0
+  (32):\penalty0 13022--13027, 2012.
+
+\bibitem[Royle and Dorazio(2008)]{royleDorazio}
+J.~A. Royle and R.~M. Dorazio.
+\newblock \emph{Hierarchical modeling and inference in ecology: the analysis of
+  data from populations, metapopulations and communities}.
+\newblock Academic Press, 2008.
+
+\bibitem[Kurtz et~al.(2015)Kurtz, M{\"u}ller, Miraldi, Littman, Blaser, and
+  Bonneau]{kurtz2015}
+Zachary~D Kurtz, Christian~L M{\"u}ller, Emily~R Miraldi, Dan~R Littman,
+  Martin~J Blaser, and Richard~A Bonneau.
+\newblock Sparse and compositionally robust inference of microbial ecological
+  networks.
+\newblock \emph{PLoS Comput Biol}, 11\penalty0 (5):\penalty0 e1004226, 2015.
 
 \end{thebibliography}

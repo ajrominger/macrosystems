@@ -9,7 +9,9 @@
 \usepackage{xcolor}
 \usepackage{colortbl}
 \usepackage{array}
-\usepackage[numbers]{natbib}
+\usepackage{textcomp}
+\usepackage{hyperref}
+\usepackage[numbers, sort&compress]{natbib}
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhead{}
@@ -91,7 +93,7 @@ Biological diversity is nearing or already past a global tipping point
 \citep{barnosky2012}. Beyond this phase transition, the processes
 regulating biodiversity will change, and the dynamics of their
 resultant biological systems, from clades to ecosystems, will become
-non-steady state \citep{barnosky, boettinger}.  Despite the pressing
+non-steady state \citep{barnosky2012}.  Despite the pressing
 need , our level of understanding of biodiversity dynamics remains
 rudimentary .  We must be able to address how biodiversity has been
 shaped in the past, what are the expectations as we move into the
@@ -101,7 +103,7 @@ be able to tackle these questions from plots to biomes in order to
 detect and understand non-steady state dynamics. Advances in our
 understanding of specific ecosystem components are idiosyncratic.
 While remote sensing and distributed biogeochemical monitoring
-\citep{asner, NEON} are rapidly advancing ecosystem modeling, similar
+\citep{asner2012, NEON} are rapidly advancing ecosystem modeling, similar
 large scale study of organismal processes, from data generation to
 theory development, and from genetics to populations and communities,
 lags behind, especially for ``dark taxa'' such as arthropods and
@@ -109,37 +111,36 @@ microbes.
 
 Biodiversity results from both evolutionary and historical processes
 operating at larger spatiotemporal scales and ecological processes
-operating at smaller scales (Lessard et al. 2012).  Feedbacks between
+operating at smaller scales \citep{lessard2012}.  Feedbacks between
 processes along this evolutionary-ecological continuum drive
 non-steady state biodiversity dynamics \citep{brown1971,
-  ricklefsNeutral, rosindell, rominger2015}. The consequences of
-non-steady state dynamics are profound for ecosystem function
-\citep{XXX}, and based on state shifts in the geologic past, the
-consequence for evolution will persist for millions of years
-\cite{erwin}. Yet we lack approaches that synthesize across scales of
-space and evolutionary time to understand the consequences of this
-eco-evolutionary feedback process.  The propensity for systems to
-transition into non-steady states cannot be assessed given current
-means of synthesizing ideas from ecology with those from evolution.
-Additionally, a lack of cross-scale biodiversity data (from plots to
-landscapes and genes to species) combined with a lack of theoretical
-framework, limit this synthesis.
+  ricklefs2006neutral, rominger2015}. The consequences of non-steady
+state dynamics, based on state shifts in the geologic past, will
+persist for millions of years \citep{Erwin1998}. Yet we lack
+approaches that synthesize across scales of space and evolutionary
+time to understand the consequences of this eco-evolutionary feedback
+process.  The propensity for systems to transition into non-steady
+states cannot be assessed given current means of synthesizing ideas
+from ecology with those from evolution.  Additionally, a lack of
+cross-scale biodiversity data (from plots to landscapes and genes to
+species) combined with a lack of theoretical framework, limit this
+synthesis.
 
 
 \subsection{Theory provides a lens on non-steady state processes}
 
 Recent theoretical developments have brought mechanistically
 simplified theory to the forefront of ecological research
-\citep{hubbell2001, chave, rosindell, harte2011}.  These simple
+\citep{hubbell2001, rosindell2011TREE, harte2011}.  These simple
 theories have been critical because they provide robust null models
 against which to compare real biodiveristy patterns in order to
 rigorously test the importance of specific mechanisms in shaping
 biodiversity.  The maximum entropy theory of ecology
-\citep[METE][]{harte2011} provides one of the most useful null
+\citep[METE;][]{harte2011} provides one of the most useful null
 predictive frameworks because it produces many falsifiable patterns
 (the species abundance distribuiton, metabolic rate distribution,
 species area relationship and network structure) and is grounded in
-the principles of statistical mechanics \citep{harte2011, jaynes}.
+the principles of statistical mechanics \citep{harte2011, Jaynes1957}.
 METE draws from the probabilistic properties of large, randomly
 assembled systems \citep{harte2011} and thus its predictions
 constitute a community in statistical steady state.  Statistical
@@ -149,10 +150,21 @@ no additionally processes limit the system’s ability to freely explore
 this state space.  This precise definition is made more clear in Box
 1.  Statistical steady state connects to some notions from the
 literature on ecological equilibrium, specifically the condition of
-stationarity \citep{chesson} and egodicity \citep{maurer}, but is in
-no way tied \citep{harte2011} to ideas relating to equilibrium as a
-hypothesized state that ecosystems may attain or be driven away from
-\citep{}.
+stationarity and egodicity \citep{brian1999}, but is in no way tied
+\citep{harte2011} to ideas relating to equilibrium as a hypothesized
+state that ecosystems may attain or be driven away from
+\citep[e.g. not:][]{levin1970, scholz1997, rabosky2009}.
+
+Deviations from METE allow us to identify ecological systems out of
+statistical steady state \citep{harte2011, rominger2015}.  Drivers of
+such non-equilibrium include rapid assembly following disturbance
+\citep{harte2011} and constraints imposed by evolutionary history and
+non-neutral adaptive differences between species that violate the
+statistical assumptions underlying the principle of maximum
+information entropy \citep{rominger2015}.  In order to harness these
+promising properties of METE as a non-equilibrium diagnostic tool more
+testing is needed to understand how exactly the ecological and
+evolutionary setting of a community predicts its deviation from METE.
 
 \begin{wrapfigure}[]{r}{0.6\textwidth}
 \colorbox{gray!20}{
@@ -162,18 +174,18 @@ hypothesized state that ecosystems may attain or be driven away from
 
     Whether or not biodiversity dynamics are governed by stable
     equilibria remains an unsolved question in ecology and evolution
-    (Rabosky 2009; Quental and Marshall 2013; Rabosky et al. 2015;
-    Harmon and Harrison 2015). A statistical steady state exists in an
-    ecological community if changes in biodiversity occur slowly and
-    in sync with environmental changes (Harte 2011). The existence (or
+    \citep{rabosky2015amNat, harmon2015amNat}. A
+    statistical steady state exists in an ecological community if
+    changes in biodiversity occur slowly and in sync with
+    environmental changes \citep{harte2011}. The existence (or
     non-existence) of such steady states has wide ranging
     implications. For example, whether conservation should focus on
     conventional preservationalist paradigms or adaptive management
-    (Levin 1999) depends on whether biodiversity is largely in
+    \citep{levin1999} depends on whether biodiversity is largely in
     statistical steady state or not. Whether biodiversity rapidly and
     consistently tends towards a steady state determines how species
     and the communities they form will respond to global environmental
-    change (Barnosky et al. 2012).
+    change \citep{barnosky2012}.
 
     We posit that two primary classes of non-steady state exist and
     can be better understood by combining comparative population and
@@ -199,17 +211,6 @@ hypothesized state that ecosystems may attain or be driven away from
 }
 \end{wrapfigure}
 
-Deviations from METE allow us to identify ecological systems out of
-statistical steady state \citep{harte2011, rominger2015}.  Drivers of
-such non-equilibrium include rapid assembly following disturbance
-\citep{harte2011} and constraints imposed by evolutionary history and
-non-neutral adaptive differences between species that violate the
-statistical assumptions underlying the principle of maximum
-information entropy \citep{rominger2015}.  In order to harness these
-promising properties of METE as a non-equilibrium diagnostic tool more
-testing is needed to understand how exactly the ecological and
-evolutionary setting of a community predicts its deviation from METE.
-
 We propose to use islands of the Hawaiian archipeligo to better
 understand how and why ecosystems depart from steady state, the
 consequences of these departures on ecosystem function and
@@ -224,8 +225,8 @@ islands that form a geological age gradient representing snapshots of
 community assembly through evolutionary time. Such islands provide
 simple and discrete systems,of known age and varying area, allowing
 them to serve as excellent ``natural laboratories'' for ecological and
-evolutionary study in a regional context (Simon 1987; Chadwick et
-al. 2007; Gillespie and Clague 2009). Our team has a strong foundation
+evolutionary study in a regional context \citep{simon1987,
+  chadwick1999, gillespieClague2009}. Our team has a strong foundation
 of research expertise and experience across the islands on microbes
 (Brodie), arthropods (Rominger, Gillespie, Gruner and Krehenwinkel),
 plants (Chase), ecosystems (Giardina) and theory (Rominger and Chase).
@@ -241,20 +242,20 @@ characterize departure from statistical steady state.  In order to
 understand the mechanistic causes of these departures we will also
 evaluate how deviations from METE can be predicted by the ecology and
 evolution of the organisms comprising each community, testing the
-hypotheses outlined in Box 2.  We will enable this line of research by
+hypotheses outlined below.  We will enable this line of research by
 deliberately sampling plants, arthropods and microbes across multiple
 spatial scales, and across gradients of environment (precipitation and
 elevation as a surrogate for temperature) and substrate age (as a
 surrogate for both biogeochemical change and evolutionary
 development).  We will also make use of long term fertilization
-experiments \citep{vitousek} to evaluate the orthogonal roles of
-evolutionary history versus biogeochemical processes in driving
-biodiversity patterns.  Using plants, arthropods and microbes as
-discrete test cases, representing a breadth of life history strategies
-across the tree of life, we will test hypotheses (outlined in Box 2)
-about deviations from statistical steady state based on how organisms
-persist, adapt and speciate in their environments.  In order to
-understand how communities are likely to change in response to
+experiments \citep{vitousek1997nutrient} to evaluate the orthogonal
+roles of evolutionary history versus biogeochemical processes in
+driving biodiversity patterns.  Using plants, arthropods and microbes
+as discrete test cases, representing a breadth of life history
+strategies across the tree of life, we will test hypotheses (outlined
+in Box 2) about deviations from statistical steady state based on how
+organisms persist, adapt and speciate in their environments.  In order
+to understand how communities are likely to change in response to
 non-analog, anthropogenically-driven climate regimes and across
 spatial scales we will build spatially explicit models that link the
 mechanistic drivers (e.g. rapid community or population change, and
@@ -267,7 +268,7 @@ of biodiversity data gathered at these sites.
 
 \section{Proposed Research}
 
-\section{Research objectives and hypotheses}
+\subsection{Research objectives and hypotheses}
 
 Our proposed objectives and research products are organized in Figure
 \ref{fig:research}. We will use maximum entropy theory to identify
@@ -290,7 +291,7 @@ novel data generation to test hypotheses outlined below relating
 departures from statistical steady state to feedbacks between
 ecological and evolutionary processes.
 
-\paragraph{Hypotheses}
+\subsubsection{Hypotheses}
 
 \begin{itemize}
 \item Departures from statistical steady state
@@ -407,7 +408,7 @@ Hawaiian system with previous and current work.  PI Rominger, with
 co-PIs Gillespie and Gruner as collaborators and co-authors, has shown
 that deviations from METE show consistent patterns across the
 chronosequences for different arthropod guilds with different life
-history characteristics (see Box 3).  This work needs to be extended
+history characteristics (see Box 2).  This work needs to be extended
 to other members of the ecosystem to understand its generality and the
 mechanistic drivers of deviations from METE, and thus statistical
 steady state, need to be better understood and modeled into the future
@@ -422,12 +423,13 @@ to understand how ecosystems will respond to changing climates.
 The goal of NEON is to provide ecological data at multiple spatial and
 temporal scales. Our plan is anchored with the Pu'u Maka'ala Natural
 Area Reserve on the Mauna Loa volcano on the Big Island of Hawaii
-(19.553, -155.317), a Core Terrestrial site with the launch date
-planned for 2017. The site represents montane wet forest with mostly
-native vegetation dominated by the endemic tree, Metrosideros
-polymorpha (Myrtaceae). However, up to 95\% of the world’s terrestrial
-climates are represented in the greater region of the Hawaiian
-archipelago, and a single site will fail to characterize this
+(19.553\textdegree, -155.317\textdegree; Fig. \ref{fig:map}), a Core
+Terrestrial site with the launch date planned for 2017. The site
+represents montane wet forest with mostly native vegetation dominated
+by the endemic tree, {\it Metrosideros polymorpha}
+(Myrtaceae). However, up to 95\% of the world’s terrestrial climates
+are represented in the greater region of the Hawaiian archipelago
+\citep{juvik1998}, and a single site will fail to characterize this
 tremendous diversity in climate, habitats and species composition. By
 replicating core NEON protocols at carefully selected sites with
 orthogonal variation in temperature and precipitation, along a
@@ -461,36 +463,39 @@ plots to insure thorough coverage of local variation. The sampling
 locations and design are given in Figure \ref{fig:map}.
 
 
+% \begin{figure}[!htb]
+%   \centering
+%   \includegraphics[scale=1]{figs/fig_dStat(3TP).pdf}
+%   \caption{Currently shows three important variables and exisitng
+%   sampling sites (gray) as well as NEON site (triangle) and the three
+%   regions on Hawaii Island, Maui and Kauai where we will have
+%   complementary sites.  Will eventually also show }
+%   \label{fig:dStat}
+% \end{figure}
 
-% Figure \ref{fig:map}. Currently shows sampling design: big grid
-% represents entire site, green squares are plots for arthropod and
-% plant sampling, blue squares are subplots for soil microbe sampling.
-% Orange dots show location of climate and litterfall sampling.
-% Figure will also have a map of Hawaii showing all sites as well as
-% Dimensions sites
 
 \paragraph{Sampling approach and collection of organismal data.}
 We will select sites in clearly defined ohia/koa montane, wet and
 mesic forest communities. The rationale here is that (i) Ohia
-(Metrosideros polymorpha) is the dominant canopy tree in these
+({\it Metrosideros polymorpha}) is the dominant canopy tree in these
 forests, forming a nearly continuous layer, with patches of
-sub-dominant koa (Acacia koa) and numerous associated understory
+sub-dominant koa ({\it Acacia koa}) and numerous associated understory
 trees, shrubs, herbs, and ferns. This forest type (and the presence of
-Metrosideros in particular) has been used as an important landscape
+{\it Metrosideros} in particular) has been used as an important landscape
 feature in our ongoing work through the Hawaii Dimensions of
 Biodiversity, as it has for a generation of studies on long-term
 ecosystem development. This constrains sampling to vegetation and
 soils of similar physiognomy and evolutionary history, while allowing
 major climatic state factors to vary. (ii) The proposed NEON site is
-characterized by this forest type. Finally, (iii) Metrosideros growth
+characterized by this forest type. Finally, (iii) {\it Metrosideros} growth
 rate, growth form and chemical composition (all detectable by various
-satellite and airborne spectroscopic techniques (Asner et al. 2006;
-Asner and Martin 2009; Asner et al. 2011)) reflects the coupled but
-nonlinear effects of ecosystem age and fertility, which in turn
-affects the community of organisms in a given forest stand (Crews et
-al. 1995; Gruner 2007b). Differences in plant traits can affect the
-structure of an entire food web through a series of direct and
-indirect effects (Gruner et al. 2005; Bukovinszky et al. 2008).
+satellite and airborne spectroscopic techniques \citep{asner2006,
+  asner2009, asner2012} reflects the coupled but nonlinear effects of
+ecosystem age and fertility, which in turn affects the community of
+organisms in a given forest stand \citep{crews1995,
+  gruner2007}. Differences in plant traits can affect the structure of
+an entire food web through a series of direct and indirect effects
+\citep{gruner2005, bukovinszky2008}.
 
 Figure \ref{fig:site} details the proposed layout of our sampling
 plots. Within each 1-ha site, we will establish three 20-m by 20-m
@@ -511,7 +516,8 @@ protocols focus on ground beetles (Carabidae), mosquitoes (Diptera:
 Culicidae), and ticks (order Ixodida), our study will include all
 arthropods because ground beetles constitute an eclectic group of
 lineages, most often arboreal and unevenly distributed across the main
-islands, and there are no native mosquitoes or ticks.
+islands \citep{Liebherr2000}, and there are no native mosquitoes or
+ticks \citep{nishida2002}.
 
 Microbial richness and abundance will also be sampled in a gridded
 design.  Within three randomly selected quadrats in each plot we will
@@ -529,23 +535,16 @@ Earth Microbiome Project standards
 (\url{http://www.earthmicrobiome.org/emp-standard-protocols}). Ancilliary
 and meta data collection standards will follow the NEON the soil
 microbial data collection and metadata tracking worksheet
-(\url{http://goo.gl/nE9zPk}). 
-
-Microbial 16S rRNA gene data will be analyzed according to Shi et al
-(2015). Richness will be estimated using both taxonomic (OTUs) and
-phylogenetic (Faith's phylogenetic distance) metrics. Absolute
-bacterial abundances will be determined using quantitative PCR as
-described in Shi et al (2015) while relative abundances of bacterial
-taxa will be determined based on the fractions of sequence reads
-assigned to each taxon using adjustments for rRNA gene copy number
-(Kembel et al 2012).
-
-In order to relate bacterial taxa to metabolic rate we will use
-observed relationships between rRNA copy number, genome size and
-metabolic rate (DeLong et al, 2010).  Species area relationships
-(SARs) for bacterial communities will be calculated from volumes of
-0.1 cm3, 0.5 cm3, 1cm3, 10cm3.
-
+(\url{http://goo.gl/nE9zPk}).  Microbial 16S rRNA gene data will be
+analyzed according to \citet{shi2015}. Richness will be estimated
+using both taxonomic (OTUs) and phylogenetic (Faith's phylogenetic
+distance) metrics. Absolute bacterial abundances will be determined
+using quantitative PCR as described in \citep{shi2015} while relative
+abundances of bacterial taxa will be determined based on the fractions
+of sequence reads assigned to each taxon using adjustments for rRNA
+gene copy number \citep{kembel2012}.  In order to relate bacterial
+taxa to metabolic rate we will use observed relationships between rRNA
+copy number, genome size and metabolic rate \citep{delong2010}.
 
 
 
@@ -558,8 +557,9 @@ metabolic rate (DeLong et al, 2010).  Species area relationships
   temperature and moisture.  We will also measure soil physical
   characteristics, pH, total carbon, nitrogen, phosphorous and sulfur.
   We will measure monthly litterfall using litter traps as a surrogate
-  for nutrient cycling \citep{XXXX} in addition to litter chemistry
-  (pH, total carbon, nitrogen, phosphorous and sulfur).
+  for nutrient cycling \citep{austin2000, giardina2004} in addition to
+  litter chemistry (pH, total carbon, nitrogen, phosphorous and
+  sulfur) \citep{NEON}.
 \item Remote Sensing and Measurements of Gases: The NEON site will
   track fluxes of gases, such as carbon dioxide (CO2) and water vapor,
   and collects data about physical and chemical climate conditions,
@@ -588,7 +588,7 @@ metabolic rate (DeLong et al, 2010).  Species area relationships
   vegetation biochemical and biophysical properties with spectroscopy,
   vegetation structure and biomass with LiDAR, and produces high
   resolution imagery that can be subject to analyses of land use and
-  relative cover.
+  relative cover \citep{NEON}.
 \end{enumerate}
 
 
@@ -602,11 +602,11 @@ metabolic rate (DeLong et al, 2010).  Species area relationships
 
 To test our hypotheses relating age, environment and
 organism/community traints to deviations from METE we will use the R
-package meteR \citep[developed by Rominger][]{romingerMeteR} to
+package {\tt meteR} \citep[developed by Rominger][]{rominger2016} to
 evaluate the goodness of fit of METE for soil microbes, arthropods and
 plants at our sampling sites across gradients of precipitation,
 elevation and age.  Goodness of fit will be measured as the normalized
-log likelihood squared \citep[described in][]{romingerMeteR}. Using
+log likelihood squared \citep[described in][]{rominger2016}. Using
 generalized linear models we will evaluate how the goodness of fit
 varies between major groups (microbes, arthropods and plants) and as a
 function of the underlying age and environment of each site.
@@ -687,20 +687,18 @@ evolutionary biology and ecology. This revolution has not passed by
 taxonomy and spurred various new studies in the field of molecular
 barcoding. The current leap in sequencing throughput allows to
 routinely perform barcoding studies on bulk samples and analyzing
-whole ecosystems (Taberlet et al. 2012; Leray \& Knowlton 2015; Gibson
-et al. 2014; Ji et al. 2013). The large scale recovery of species
-richness, food web structure, cryptic species, identification of
-juveniles and hidden diversity, e.g. internal parasitoids, promise
-unprecedented new insights into ecosystem function and assembly
-(Krehenwinkel et al. 2016; Shokralla et al. 2015; Shokralla et
-al. 2012; Kress et al. 2015; Kartzinel et al. 2015). While species
-richness can be routinely identified by sequencing bulk samples,
-estimating species abundance remains challenging (Elbrecht \& Leese,
-2015) and severely limits the application of metabarcoding to many
-studies. We are developing wet lab and bioinformatic methods to
-overcome this issue and revolutionize the generation of ecological and
-genetic data. Our pipeline consists of three steps
-(Fig. \ref{fig:metab}):
+whole ecosystems \citep{shokralla2015, gibson2014, taberlet2012}. The
+large scale recovery of species richness, food web structure, cryptic
+species, identification of juveniles and hidden diversity,
+e.g. internal parasitoids, promise unprecedented new insights into
+ecosystem function and assembly \citep{krehenwinkel2016,
+  shokralla2015, gibson2014, taberlet2012}. While species richness can
+be routinely identified by sequencing bulk samples, estimating species
+abundance remains challenging \citep{elbrecht2015} and severely limits
+the application of metabarcoding to many studies. We are developing
+wet lab and bioinformatic methods to overcome this issue and
+revolutionize the generation of ecological and genetic data. Our
+pipeline consists of three steps (Fig. \ref{fig:metab}):
 
 \begin{enumerate}
 \item Extraction and sequencing of pooled community samples
@@ -711,7 +709,7 @@ genetic data. Our pipeline consists of three steps
 \end{enumerate}
 
 Step (1) will be released as an open source lab protocol and steps
-(2-3) will be developed into an open source R package that allows
+(2-3) will be developed into an open source {\tt R} package that allows
 users to implement these methods in their study systems.  We propose
 that our open source pipeline can be implemented across NEON sites to
 generate both taxonomic and phylogenetic data for focal taxa.
@@ -735,8 +733,8 @@ Archipelago. The samples will be roughly pre-sorted taxonomically and
 grouped into different body size classes to minimize the confounding
 factors of abundance and body size in determining amount of DNA per
 taxon. We will use amplicon sequencing of the COI barcoding region
-\citep{} which has shown the greatest reliability in preliminary
-trials.
+\citep{taberlet2012} which has shown the greatest reliability in
+preliminary trials.
 
 
 \paragraph{(2) Matching the resulting sequences to a reference
@@ -744,11 +742,11 @@ trials.
 In order to resolve the taxonomy of sequences derived from mixed
 samples we are developing a library of the barcoding region for
 species across the Hawaiian archipelago, such that unknown sequences
-can be phylogenetically matched \citep{} to the reference library.
+can be phylogenetically matched to the reference library.
 Sequences not found in the tree of all reference sequences will be
 grafted and their status as a unique operational taxonomic unit
 assessed using a cuttoff of 3\% divergence (Fig. \ref{fig:metab}).
-These bioinformatic steps will be included in the R package.
+These bioinformatic steps will be included in the {\tt R} package.
 
 In collaboration with taxonomist and ecologist on Hawaii, we are
 currently working on generating the barcode reference library for a
@@ -760,7 +758,7 @@ achieve a comprehensive sampling of the Hawaiian arthropod diversity,
 samples from environmental gradients (e.g. precipitation) will be
 included in this reference collection. Such gradients have been shown
 to have a profound influence on community composition on Hawaii
-(Zimmermann \& Vitousek 2012).
+\citep{zimmerman2012}.
 
 In order to build a robust phylogenetic backbone for our reference
 library, the genomic DNA extracts for all species will be sequenced
@@ -783,15 +781,15 @@ leveraging heterogeneous data types to facilitate inference
 \citep{royleDorazio}.  The goal of hierarchically modeling
 metabarcoding data is to estimate the abundances of species while
 correcting for known biases inherent in amplicon-based sequencing.  We
-will account for bias from copy number variation \citep{} and primer
-affinity \citep{} by directly modeling it, while also using data on
-the total number of individuals being sequenced, their body sizes, and
-the phylogenetic relationship between their sequences to constrain the
-estimates to be more accurate (Fig. \ref{fig:metabMod}).  Furthermore,
-information from controlled experiments (for example making mock
-communities of known composition and sequencing those) can be used to
-constrain prior distributions and obtain even more accurate abundance
-estimates.
+will account for bias from copy number variation and primer affinity
+\citep{elbrecht2015} by directly modeling it, while also
+using data on the total number of individuals being sequenced, their
+body sizes, and the phylogenetic relationship between their sequences
+to constrain the estimates to be more accurate
+(Fig. \ref{fig:metabMod}).  Furthermore, information from controlled
+experiments (for example making mock communities of known composition
+and sequencing those) can be used to constrain prior distributions and
+obtain even more accurate abundance estimates.
 
 
 \subsection{Quantifying networks of microbes, arthropods and plants}
@@ -810,7 +808,7 @@ established approaches \citep{kurtz2015}.
 
 
 %% suppresses bibliography, then make tex file to compile .bbl in separate doc
-\bibliographystyle{abbrvnat}
+\bibliographystyle{unsrtnat}
 \setbox0\vbox{\bibliography{../macrosystems.bib}}
 
 
