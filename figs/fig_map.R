@@ -79,8 +79,8 @@ plot(islands, add = TRUE)
 plot(sites, add=TRUE, pch=21, col='white', bg='gray')
 plot(spTransform(puum, CRS(proj4string(islands))), add=TRUE, pch=24, col='white', bg='black', cex = 2)
 
-plot(spTransform(bigI, CRS(proj4string(islands))), add = TRUE, lwd = 3, border = 'white')
-plot(spTransform(bigI, CRS(proj4string(islands))), add = TRUE, lwd = 1)
+# plot(spTransform(bigI, CRS(proj4string(islands))), add = TRUE, lwd = 3, border = 'white')
+# plot(spTransform(bigI, CRS(proj4string(islands))), add = TRUE, lwd = 1)
 
 split.screen(figs=matrix(c(0, 0.5, 0.4, 0.7), nrow=1), erase=FALSE)
 par(mar=c(2, 1, 0, 1) + 1, mgp=c(2,0.5,0), xpd=NA, bg = 'transparent')
@@ -111,8 +111,8 @@ plot(islands)
 plot(sites, add=TRUE, pch=21, col='white', bg='gray')
 plot(spTransform(puum, CRS(proj4string(islands))), add=TRUE, pch=24, col='white', bg='black', cex = 2)
 
-plot(spTransform(bigI, CRS(proj4string(islands))), add = TRUE, lwd = 3, border = 'white')
-plot(spTransform(bigI, CRS(proj4string(islands))), add = TRUE, lwd = 1)
+# plot(spTransform(bigI, CRS(proj4string(islands))), add = TRUE, lwd = 3, border = 'white')
+# plot(spTransform(bigI, CRS(proj4string(islands))), add = TRUE, lwd = 1)
 
 split.screen(figs=matrix(c(0, 0.5, 0.4, 0.7), nrow=1), erase=FALSE)
 par(mar=c(2, 1, 0, 1) + 1, mgp=c(2,0.5,0), xpd=NA, bg = 'transparent')
@@ -138,8 +138,8 @@ plot(islands)
 plot(sites, add=TRUE, pch=21, col='white', bg='gray')
 plot(spTransform(puum, CRS(proj4string(islands))), add=TRUE, pch=24, col='white', bg='black', cex = 2)
 
-plot(spTransform(bigI, CRS(proj4string(islands))), add = TRUE, lwd = 3, border = 'white')
-plot(spTransform(bigI, CRS(proj4string(islands))), add = TRUE, lwd = 1)
+# plot(spTransform(bigI, CRS(proj4string(islands))), add = TRUE, lwd = 3, border = 'white')
+# plot(spTransform(bigI, CRS(proj4string(islands))), add = TRUE, lwd = 1)
 
 split.screen(figs=matrix(c(0, 0.5, 0.4, 0.7), nrow=1), erase=FALSE)
 par(mar=c(2, 1, 0, 1) + 1, mgp=c(2,0.5,0), xpd=NA, bg = 'transparent')
