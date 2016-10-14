@@ -31,7 +31,8 @@ age.val[age.unit == 'yr'] <- (2015 - age.val[age.unit == 'yr']) / 10^6
 ## get precip
 setwd('~/Dropbox/hawaiiDimensions/geodata/site_selection/StateRFGrids_mm2/staterf_mmann')
 precip <- raster('w001001.adf')
-
+precipP <- rasterToPolygons(cut(precip, breaks = 20), dissolve = TRUE)
+precipP <- spTransform(precipP, CRS(proj4string(islands)))
 
 ## get elevation
 setwd('~/Dropbox/hawaiiDimensions/geoData/site_selection/elrange_n83')
@@ -39,13 +40,25 @@ elev <- readOGR('.', 'elrange_n83')
 elev <- spTransform(elev, CRS(proj4string(islands)))
 
 
+## get puu makaala and focal region boundaries
+puum <- SpatialPoints(matrix(c(-155.241361, 19.506630), nrow = 1), 
+                      CRS('+proj=longlat +ellps=WGS84 +towgs84=0,0,0,0,0,0,0 +no_defs'))
+bigI <- matrix(c(-155.4, -155.14, -155.14, -155.4,
+                 19.595, 19.595, 19.34, 19.34), ncol = 2)
+bigI <- SpatialPolygons(
+    Srl = list(Polygons(srl = list(Polygon(bigI)), ID = 0)), 
+    pO = 1L, 
+    proj4string = CRS('+proj=longlat +ellps=WGS84 +towgs84=0,0,0,0,0,0,0 +no_defs'))
+
+
 ## =========================
 ## plot maps and site layout
 ## =========================
 
+
 setwd('~/Dropbox/Research/grants/macrosystems/figs')
 
-jpeg(filename='fig_map.jpg', width=10, height=12, units='in', res=40)
+jpeg(filename='fig_map.jpg', width=10, height=12, units='in', res=400)
 close.screen(all.screens = TRUE)
 
 split.screen(figs=matrix(c(0, 1, 0.6, 1,
@@ -57,15 +70,19 @@ split.screen(figs=matrix(c(0, 1, 0.6, 1,
 
 par(mar=rep(0, 4), bg = 'transparent')
 plot(islands, col = 'gray30')
-# plot(hi.geo.poly[hi.geo.poly$age_cluster > 0, ],
-#      col = chrono.colors(9)[hi.geo.poly$age_cluster[hi.geo.poly$age_cluster > 0]],
-#      border = chrono.colors(9)[hi.geo.poly$age_cluster[hi.geo.poly$age_cluster > 0]],
-#      add = TRUE)
-# plot(islands, add = TRUE)
-# 
-# plot(sites, add=TRUE, pch=21, col='white', bg='black')
+plot(hi.geo.poly[!is.na(age.val), ],
+     col = chrono.colors(15)[hi.geo.poly$AGE_GROUP[!is.na(age.val)] + 1],
+     border = chrono.colors(15)[hi.geo.poly$AGE_GROUP[!is.na(age.val)] + 1],
+     add = TRUE)
+plot(islands, add = TRUE)
 
-split.screen(figs=matrix(c(0, 0.5, 0.5, 0.8), nrow=1), erase=FALSE)
+plot(sites, add=TRUE, pch=21, col='white', bg='gray')
+plot(spTransform(puum, CRS(proj4string(islands))), add=TRUE, pch=24, col='white', bg='black', cex = 2)
+
+plot(spTransform(bigI, CRS(proj4string(islands))), add = TRUE, lwd = 3, border = 'white')
+plot(spTransform(bigI, CRS(proj4string(islands))), add = TRUE, lwd = 1)
+
+split.screen(figs=matrix(c(0, 0.5, 0.4, 0.7), nrow=1), erase=FALSE)
 par(mar=c(2, 1, 0, 1) + 1, mgp=c(2,0.5,0), xpd=NA, bg = 'transparent')
 plot(1, xlim=c(min(age.val, na.rm = TRUE), 6.4), ylim=c(0, 1.5), log='x',type='n',
      axes = FALSE, xlab='Substrate age (My)', ylab='', xaxs='i', yaxs='i')
@@ -91,9 +108,13 @@ plot(elev, col = col.elev[as.numeric(as.factor(rowSums(elev@data[, c('LOWELEV', 
      add = TRUE)
 plot(islands)
 
-plot(sites, add=TRUE, pch=21, col='white', bg='black')
+plot(sites, add=TRUE, pch=21, col='white', bg='gray')
+plot(spTransform(puum, CRS(proj4string(islands))), add=TRUE, pch=24, col='white', bg='black', cex = 2)
 
-split.screen(figs=matrix(c(0, 0.5, 0.5, 0.8), nrow=1), erase=FALSE)
+plot(spTransform(bigI, CRS(proj4string(islands))), add = TRUE, lwd = 3, border = 'white')
+plot(spTransform(bigI, CRS(proj4string(islands))), add = TRUE, lwd = 1)
+
+split.screen(figs=matrix(c(0, 0.5, 0.4, 0.7), nrow=1), erase=FALSE)
 par(mar=c(2, 1, 0, 1) + 1, mgp=c(2,0.5,0), xpd=NA, bg = 'transparent')
 plot(1, xlim=c(0, max(elev$HIGHELEV) * 0.3048), ylim=c(0, 1.5),type='n',
      axes = FALSE, xlab='Elevation (m)', ylab='', xaxs='i', yaxs='i')
@@ -110,22 +131,20 @@ close.screen(4)
 
 screen(3, new = FALSE)
 par(mar=rep(0, 4), bg = 'transparent')
-plot(spTransform(islands, CRS(proj4string(precip))))
-rasterImage(precip, add = TRUE, legend = FALSE)
+plot(islands)
+plot(precipP, col = rain.colors(20)[precipP$layer], border = rain.colors(20)[precipP$layer], add = TRUE)
+plot(islands)
 
-split.screen(figs=matrix(c(0, 1, 0.6, 1,
-                           0, 1, 0.3, 0.7,
-                           0, 1, 0, 0.4), nrow = 3, byrow = TRUE), erase=FALSE)
-screen(3, new = FALSE)
-par(mar = rep(0, 4), bg = 'transparent')
-plot(spTransform(islands, CRS(proj4string(precip))))
+plot(sites, add=TRUE, pch=21, col='white', bg='gray')
+plot(spTransform(puum, CRS(proj4string(islands))), add=TRUE, pch=24, col='white', bg='black', cex = 2)
 
-plot(spTransform(sites, CRS(proj4string(precip))), add=TRUE, pch=21, col='white', bg='black')
+plot(spTransform(bigI, CRS(proj4string(islands))), add = TRUE, lwd = 3, border = 'white')
+plot(spTransform(bigI, CRS(proj4string(islands))), add = TRUE, lwd = 1)
 
-split.screen(figs=matrix(c(0, 0.5, 0.5, 0.8), nrow=1), erase=FALSE)
+split.screen(figs=matrix(c(0, 0.5, 0.4, 0.7), nrow=1), erase=FALSE)
 par(mar=c(2, 1, 0, 1) + 1, mgp=c(2,0.5,0), xpd=NA, bg = 'transparent')
 plot(1, xlim=range(values(precip), na.rm = TRUE), ylim=c(0, 1.5),type='n',
-     axes = FALSE, xlab='Substrate age (My)', ylab='', xaxs='i', yaxs='i')
+     axes = FALSE, xlab='Annual precipitation (mm)', ylab='', xaxs='i', yaxs='i')
 
 a <- seq(par('usr')[1], par('usr')[2], length = 21)
 rect(xleft = a[-1], xright = a[-21], ybottom = 0, ytop = 0.6, col = rain.colors(20), border = NA)
@@ -138,4 +157,15 @@ dev.off()
 close.screen(all.screens = TRUE)
 
 
+## =======================
+## map of one focal region
+## =======================
 
+precipSub <- gIntersection(precipP, spTransform(bigI, CRS(proj4string(islands))))
+elevSub <- gIntersection(elev, spTransform(bigI, CRS(proj4string(islands))))
+
+pdf('fig_submap.pdf', width = 4, height = 4)
+plot(precipSub, col = rain.colors(20)[precipSub$layer], border = rain.colors(20)[precipSub$layer], add = TRUE)
+plot(elevSub, add = TRUE)
+plot(spTransform(puum, CRS(proj4string(islands))), add=TRUE, pch=24, col='white', bg='black', cex = 2)
+dev.off()
