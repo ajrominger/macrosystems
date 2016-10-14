@@ -1,0 +1,19 @@
+\begin{thebibliography}{2}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Harte(2011)]{harte2011}
+J.~Harte.
+\newblock \emph{The Maximum Entropy Theory of Ecology}.
+\newblock Oxford University Press, 2011.
+
+\bibitem[Hubbell(2001)]{hubbell2001}
+S.~P. Hubbell.
+\newblock \emph{The unified neutral theory of biodiversity and biogeography
+  (MPB-32)}, volume~32.
+\newblock Princeton University Press, 2001.
+
+\end{thebibliography}

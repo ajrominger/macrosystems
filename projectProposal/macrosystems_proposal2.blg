@@ -1,0 +1,69 @@
+This is BibTeX, Version 0.99d (TeX Live 2015)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: macrosystems_proposal2.aux
+The style file: abbrvnat.bst
+Database file #1: ../macrosystems.bib.bib
+Warning--I didn't find a database entry for "barnosky2012"
+Warning--I didn't find a database entry for "barnosky"
+Warning--I didn't find a database entry for "boettinger"
+Warning--I didn't find a database entry for "asner"
+Warning--I didn't find a database entry for "NEON"
+Warning--I didn't find a database entry for "brown1971"
+Warning--I didn't find a database entry for "ricklefsNeutral"
+Warning--I didn't find a database entry for "rosindell"
+Warning--I didn't find a database entry for "rominger2015"
+Warning--I didn't find a database entry for "XXX"
+Warning--I didn't find a database entry for "erwin"
+Warning--I didn't find a database entry for "chave"
+Warning--I didn't find a database entry for "jaynes"
+Warning--I didn't find a database entry for "chesson"
+Warning--I didn't find a database entry for "maurer"
+Warning--I didn't find a database entry for ""
+Warning--I didn't find a database entry for "vitousek"
+Warning--I didn't find a database entry for "XXXX"
+Warning--I didn't find a database entry for "romingerMeteR"
+Warning--I didn't find a database entry for "hsdm"
+Warning--I didn't find a database entry for "royleDorazio"
+Warning--I didn't find a database entry for "kurtz2015"
+You've used 2 entries,
+            2773 wiz_defined-function locations,
+            630 strings with 5015 characters,
+and the built_in function-call counts, 628 in all, are:
+= -- 45
+> -- 20
+< -- 3
++ -- 8
+- -- 6
+* -- 35
+:= -- 107
+add.period$ -- 6
+call.type$ -- 2
+change.case$ -- 6
+chr.to.int$ -- 2
+cite$ -- 4
+duplicate$ -- 40
+empty$ -- 65
+format.name$ -- 8
+if$ -- 125
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 4
+newline$ -- 18
+num.names$ -- 8
+pop$ -- 23
+preamble$ -- 1
+purify$ -- 6
+quote$ -- 0
+skip$ -- 26
+stack$ -- 0
+substring$ -- 4
+swap$ -- 3
+text.length$ -- 1
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 12
+warning$ -- 0
+while$ -- 6
+width$ -- 0
+write$ -- 32
+(There were 22 warnings)
