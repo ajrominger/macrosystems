@@ -38,12 +38,14 @@ polygon(c(plotsx[3]+grid, plotsx[3]+grid, 1.3*gridMax, 1.3*gridMax),
 
 ## plot
 
+rect(gridMax*1.3, gridMax/2, gridMax*1.8, gridMax, col = hsv(0.43, 0.6, 0.7, 0.8))
+
 segments(x0 = gridMax*1.3 + (0:plotMax)*gridMax/(2*plotMax), y0 = gridMax/2, y1 = gridMax)
 segments(x0 = gridMax*1.3, x1 = 1.8*gridMax, 
          y0 = gridMax/2 + (0:plotMax)*gridMax/(2*plotMax))
 rect(quadsx*gridMax/(2*plotMax) + gridMax*1.3, quadsy*gridMax/(2*plotMax) + gridMax/2, 
      (quadsx + 1)*gridMax/(2*plotMax) + gridMax*1.3, (quadsy + 1)*gridMax/(2*plotMax) + gridMax/2,
-     col = hsv(0.6, 0.5, 0.9))
+     col = hsv(0, 0.3, 0.3))
 
 
 arrows(x0 = gridMax*1.3, x1 = gridMax*1.8, y0 = 1.05*gridMax, angle = 90, length = 0.05, code = 3)
@@ -51,24 +53,42 @@ boxed.labels(gridMax*1.3 + (plotMax/2)*gridMax/(2*plotMax), 1.05*gridMax, labels
              bg = 'white', border = FALSE)
 
 
-polygon(c(quadsx[3]*gridMax/(2*plotMax) + gridMax*1.3, (quadsx[3]+1)*gridMax/(2*plotMax) + gridMax*1.3,
-          gridMax*1.7, gridMax*1.4),
+polygon(c(quadsx[3]*gridMax/(2*plotMax) + gridMax*1.1, (quadsx[3]+1)*gridMax/(2*plotMax) + gridMax*1.1,
+          gridMax*1.4, gridMax*1.1),
         c(quadsy[3]*gridMax/(2*plotMax) + gridMax/2, quadsy[3]*gridMax/(2*plotMax) + gridMax/2,
           gridMax*0.3, gridMax*0.3),
-        col = hsv(0.6, 0.5, 0.9, alpha = 0.5), border = NA)
+        col = hsv(0, 0.3, 0.3, 0.5), border = NA)
 
 ## env sampling sites
 points((quadsx+0.5)*gridMax/(2*plotMax) + gridMax*1.3, (quadsy+0.5)*gridMax/(2*plotMax) + gridMax/2, 
        pch = 21, bg = hsv(0.11, 0.7), cex = 1.2)
 
 
+
+## litter/soil plot
+
+rect(gridMax*1.1, 0, gridMax*1.4, 0.3*gridMax, col = hsv(0, 0.3, 0.3, 0.8))
+
+segments(x0 = gridMax*1.1, x1 = gridMax*1.4, y0 = (0:4)*0.3*gridMax/4)
+segments(x0 = gridMax*1.1 + (0:4)*0.3*gridMax/4, y0 = 0, y1 = 0.3*gridMax)
+
+arrows(x0 = gridMax*1.1, x1 = gridMax*1.4, y0 = -0.05*gridMax, angle = 90, length = 0.05, code = 3)
+boxed.labels(gridMax*1.1 + (4/2)*0.3*gridMax/4, -0.05*gridMax, labels = '4 m',
+             bg = 'white', border = FALSE)
+
+polygon(x = c(gridMax*1.1 + 3.5*0.3*gridMax/4, gridMax*1.6, gridMax*1.6), 
+        y = c(1.5*0.3*gridMax/4, 0.05*gridMax + c(0, microMax)*0.2*gridMax/microMax),
+        col = hsv(0.6, 0.5, 0.9, alpha = 0.5), border = NA)
+
 ## mibrobe plot
 
-segments(x0 = gridMax*1.4, x1 = gridMax*1.7, y0 = (0:microMax)*0.3*gridMax/microMax)
-segments(x0 = gridMax*1.4 + (0:microMax)*0.3*gridMax/microMax, y0 = 0, y1 = 0.3*gridMax)
+rect(gridMax*1.6, 0.05*gridMax, gridMax*1.8, 0.25*gridMax, col = hsv(0.6, 0.5, 0.9, 0.8))
 
-arrows(x0 = gridMax*1.4, x1 = gridMax*1.7, y0 = -0.05*gridMax, angle = 90, length = 0.05, code = 3)
-boxed.labels(gridMax*1.4 + (microMax/2)*0.3*gridMax/microMax, -0.05*gridMax, labels = '10 cm',
+segments(x0 = gridMax*1.6, x1 = gridMax*1.8, y0 = 0.05*gridMax + (0:microMax)*0.2*gridMax/microMax)
+segments(x0 = gridMax*1.6 + (0:microMax)*0.2*gridMax/microMax, y0 = 0.05*gridMax, y1 = 0.25*gridMax)
+
+arrows(x0 = gridMax*1.6, x1 = gridMax*1.8, y0 = 0*gridMax, angle = 90, length = 0.05, code = 3)
+boxed.labels(gridMax*1.6 + (microMax/2)*0.2*gridMax/microMax, 0*gridMax, labels = '10cm',
              bg = 'white', border = FALSE)
 
 dev.off()
