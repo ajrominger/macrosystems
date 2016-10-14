@@ -44,7 +44,7 @@ elev <- spTransform(elev, CRS(proj4string(islands)))
 puum <- SpatialPoints(matrix(c(-155.241361, 19.506630), nrow = 1), 
                       CRS('+proj=longlat +ellps=WGS84 +towgs84=0,0,0,0,0,0,0 +no_defs'))
 bigI <- matrix(c(-155.4, -155.14, -155.14, -155.4,
-                 19.595, 19.595, 19.34, 19.34), ncol = 2)
+                 19.595, 19.595, 19.32, 19.32), ncol = 2)
 bigI <- SpatialPolygons(
     Srl = list(Polygons(srl = list(Polygon(bigI)), ID = 0)), 
     pO = 1L, 
@@ -161,11 +161,18 @@ close.screen(all.screens = TRUE)
 ## map of one focal region
 ## =======================
 
-precipSub <- gIntersection(precipP, spTransform(bigI, CRS(proj4string(islands))))
-elevSub <- gIntersection(elev, spTransform(bigI, CRS(proj4string(islands))))
+bigI <- matrix(c(-155.4, -155.14, -155.14, -155.4,
+                 19.595, 19.595, 19.28, 19.28), ncol = 2)
+bigI <- SpatialPolygons(
+    Srl = list(Polygons(srl = list(Polygon(bigI)), ID = 0)), 
+    pO = 1L, 
+    proj4string = CRS('+proj=longlat +ellps=WGS84 +towgs84=0,0,0,0,0,0,0 +no_defs'))
+
+
 
 pdf('fig_submap.pdf', width = 4, height = 4)
-plot(precipSub, col = rain.colors(20)[precipSub$layer], border = rain.colors(20)[precipSub$layer], add = TRUE)
-plot(elevSub, add = TRUE)
+plot(spTransform(bigI, CRS(proj4string(islands))))
+plot(precipP, col = rain.colors(20)[precipP$layer], border = rain.colors(20)[precipP$layer], add = TRUE)
+plot(elev, add = TRUE)
 plot(spTransform(puum, CRS(proj4string(islands))), add=TRUE, pch=24, col='white', bg='black', cex = 2)
 dev.off()
