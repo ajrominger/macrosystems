@@ -17,7 +17,7 @@ gridMax <- 100
 plotMax <- 5
 microMax <- 5
 
-pdf('fig_map.pdf', width = 6, height = 4)
+pdf('fig_site.pdf', width = 6, height = 4)
 
 par(mar = rep(0.1, 4))
 plot(1:gridMax, 1:gridMax, asp = 1, type = 'n', xlim = c(0, 1.8*gridMax), axes = FALSE)
