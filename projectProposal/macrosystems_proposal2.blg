@@ -5,45 +5,45 @@ The style file: unsrtnat.bst
 Database file #1: ../macrosystems.bib.bib
 Warning--there's a number but no series in gillespieClague2009
 Warning--there's a number but no series in nishida2002
-You've used 47 entries,
+You've used 72 entries,
             2481 wiz_defined-function locations,
-            848 strings with 13584 characters,
-and the built_in function-call counts, 19343 in all, are:
-= -- 1567
-> -- 1111
-< -- 32
-+ -- 426
-- -- 332
-* -- 1624
-:= -- 3135
-add.period$ -- 143
-call.type$ -- 47
-change.case$ -- 87
-chr.to.int$ -- 47
-cite$ -- 49
-duplicate$ -- 909
-empty$ -- 1722
-format.name$ -- 405
-if$ -- 4028
+            990 strings with 20105 characters,
+and the built_in function-call counts, 31513 in all, are:
+= -- 2451
+> -- 2094
+< -- 39
++ -- 780
+- -- 636
+* -- 2813
+:= -- 5234
+add.period$ -- 236
+call.type$ -- 72
+change.case$ -- 137
+chr.to.int$ -- 72
+cite$ -- 74
+duplicate$ -- 1390
+empty$ -- 2641
+format.name$ -- 742
+if$ -- 6492
 int.to.chr$ -- 1
-int.to.str$ -- 48
-missing$ -- 55
-newline$ -- 243
-num.names$ -- 141
-pop$ -- 370
+int.to.str$ -- 73
+missing$ -- 80
+newline$ -- 386
+num.names$ -- 216
+pop$ -- 530
 preamble$ -- 1
-purify$ -- 47
+purify$ -- 72
 quote$ -- 0
-skip$ -- 525
+skip$ -- 794
 stack$ -- 0
-substring$ -- 1043
-swap$ -- 117
-text.length$ -- 6
+substring$ -- 1574
+swap$ -- 174
+text.length$ -- 7
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 305
+type$ -- 480
 warning$ -- 2
-while$ -- 161
+while$ -- 245
 width$ -- 0
-write$ -- 614
+write$ -- 975
 (There were 2 warnings)

@@ -1,4 +1,4 @@
-\begin{thebibliography}{47}
+\begin{thebibliography}{72}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -12,6 +12,37 @@ Anthony~D Barnosky, Elizabeth~A Hadly, Jordi Bascompte, Eric~L Berlow, James~H
   Marquet, et~al.
 \newblock Approaching a state shift in earth's biosphere.
 \newblock \emph{Nature}, 486\penalty0 (7401):\penalty0 52--58, 2012.
+
+\bibitem[Heffernan et~al.(2014)Heffernan, Soranno, Angilletta, Buckley, Gruner,
+  Keitt, Kellner, Kominoski, Rocha, Xiao, Harms, Goring, Koenig, McDowell,
+  Powell, Richardson, Stow, Vargas, and Weathers]{heffernan2014}
+James~B Heffernan, Patricia~A Soranno, Michael~J Angilletta, Lauren~B Buckley,
+  Daniel~S Gruner, Tim~H Keitt, James~R Kellner, John~S Kominoski, Adrian~V
+  Rocha, Jingfeng Xiao, Tamara~K Harms, Simon~J Goring, Lauren~E Koenig,
+  William~H McDowell, Heather Powell, Andrew~D Richardson, Craig~A Stow,
+  Rodrigo Vargas, and Kathleen~C Weathers.
+\newblock Macrosystems ecology: understanding ecological patterns and processes
+  at continental scales.
+\newblock \emph{Frontiers in Ecology and the Environment}, 12\penalty0
+  (1):\penalty0 5--14, 2014.
+\newblock ISSN 1540-9295.
+\newblock \doi{doi:10.1890/130017}.
+\newblock URL \url{http://dx.doi.org/10.1890/130017}.
+
+\bibitem[Soranno et~al.(2014)Soranno, Cheruvelil, Bissell, Bremigan, Downing,
+  Fergus, Filstrup, Henry, Lottig, Stanley, Stow, Tan, Wagner, and
+  Webster]{soranno2014}
+Patricia~A Soranno, Kendra~S Cheruvelil, Edward~G Bissell, Mary~T Bremigan,
+  John~A Downing, Carol~E Fergus, Christopher~T Filstrup, Emily~N Henry, Noah~R
+  Lottig, Emily~H Stanley, Craig~A Stow, Pang-Ning Tan, Tyler Wagner, and
+  Katherine~E Webster.
+\newblock Cross-scale interactions: quantifying multi-scaled cause–effect
+  relationships in macrosystems.
+\newblock \emph{Frontiers in Ecology and the Environment}, 12\penalty0
+  (1):\penalty0 65--73, 2014.
+\newblock ISSN 1540-9295.
+\newblock \doi{doi:10.1890/120366}.
+\newblock URL \url{http://dx.doi.org/10.1890/120366}.
 
 \bibitem[Asner et~al.(2012)Asner, Mascaro, Muller-Landau, Vieilledent, Vaudry,
   Rasamoelina, Hall, and van Breugel]{asner2012}
@@ -28,6 +59,23 @@ Thomas~U Kampe, Brian~R Johnson, Michele Kuester, and Michael Keller.
   airborne remote sensing of vegetation canopy biochemistry and structure.
 \newblock \emph{Journal of Applied Remote Sensing}, 4\penalty0 (1):\penalty0
   043510--043510--24, 2010.
+
+\bibitem[Levy et~al.(2014)Levy, Ball, Bond-Lamberty, Cheruvelil, Finley,
+  Lottig, Punyasena, Xiao, Zhou, Buckley, Filstrup, Keitt, Kellner, Knapp,
+  Richardson, Tcheng, Toomey, Vargas, Voordeckers, Wagner, and
+  Williams]{levy2014}
+Ofir Levy, Becky~A Ball, Ben Bond-Lamberty, Kendra~S Cheruvelil, Andrew~O
+  Finley, Noah~R Lottig, Surangi~W Punyasena, Jingfeng Xiao, Jizhong Zhou,
+  Lauren~B Buckley, Christopher~T Filstrup, Tim~H Keitt, James~R Kellner,
+  Alan~K Knapp, Andrew~D Richardson, David Tcheng, Michael Toomey, Rodrigo
+  Vargas, James~W Voordeckers, Tyler Wagner, and John~W Williams.
+\newblock Approaches to advance scientific understanding of macrosystems
+  ecology.
+\newblock \emph{Frontiers in Ecology and the Environment}, 12\penalty0
+  (1):\penalty0 15--23, 2014.
+\newblock ISSN 1540-9295.
+\newblock \doi{doi:10.1890/130019}.
+\newblock URL \url{http://dx.doi.org/10.1890/130019}.
 
 \bibitem[Lessard et~al.(2012)Lessard, Belmaker, Myers, Chase, and
   Rahbek]{lessard2012}
@@ -150,6 +198,13 @@ Peter~M Vitousek and Heraldo Farrington.
   biogeochemical theory.
 \newblock \emph{Biogeochemistry}, 37\penalty0 (1):\penalty0 63--75, 1997.
 
+\bibitem[Gruner(2007)]{gruner2007}
+Daniel~S Gruner.
+\newblock Geological age, ecosystem development, and local resource constraints
+  on arthropod community structure in the hawaiian islands.
+\newblock \emph{Biological Journal of the Linnean Society}, 90\penalty0
+  (3):\penalty0 551--570, 2007.
+
 \bibitem[Juvik and Juvik(1998)]{juvik1998}
 S~P Juvik and J~O Juvik.
 \newblock \emph{Atlas of Hawai‘i}.
@@ -178,13 +233,6 @@ Timothy~E Crews, Kanehiro Kitayama, James~H Fownes, Ralph~H Riley, Darrell~A
 \newblock Changes in soil phosphorus fractions and ecosystem dynamics across a
   long chronosequence in hawaii.
 \newblock \emph{Ecology}, 76\penalty0 (5):\penalty0 1407--1424, 1995.
-
-\bibitem[Gruner(2007)]{gruner2007}
-Daniel~S Gruner.
-\newblock Geological age, ecosystem development, and local resource constraints
-  on arthropod community structure in the hawaiian islands.
-\newblock \emph{Biological Journal of the Linnean Society}, 90\penalty0
-  (3):\penalty0 551--570, 2007.
 
 \bibitem[Gruner et~al.(2005)Gruner, Taylor, and Forkner]{gruner2005}
 Daniel~S Gruner, Andrew~D Taylor, and Rebecca~E Forkner.
@@ -248,6 +296,24 @@ Christian~P Giardina, Dan Binkley, Michael~G Ryan, James~H Fownes, and Randy~S
   fertilization.
 \newblock \emph{Oecologia}, 139\penalty0 (4):\penalty0 545--550, 2004.
 
+\bibitem[Asner et~al.(2016)Asner, Sousan, Knapp, Selmants, Martin, Hughes, and
+  Giardina]{asner2016}
+Gregory~P Asner, Sinan Sousan, David~E Knapp, Paul~C Selmants, Roberta~E
+  Martin, R~Flint Hughes, and Christian~P Giardina.
+\newblock Rapid forest carbon assessments of oceanic islands: a case study of
+  the hawaiian archipelago.
+\newblock \emph{Carbon balance and management}, 11\penalty0 (1):\penalty0 1,
+  2016.
+
+\bibitem[Broadbent et~al.(2014)Broadbent, Zambrano, Asner, Field, Rosenheim,
+  Kennedy-Bowdoin, Knapp, Burke, Giardina, and Cordell]{broadbent2014}
+Eben~N Broadbent, Ang{\'e}lica M~Almeyda Zambrano, Gregory~P Asner,
+  Christopher~B Field, Brad~E Rosenheim, Ty~Kennedy-Bowdoin, David~E Knapp,
+  David Burke, Christian Giardina, and Susan Cordell.
+\newblock Linking rainforest ecophysiology and microclimate through fusion of
+  airborne lidar and hyperspectral imagery.
+\newblock \emph{Ecosphere}, 5\penalty0 (5):\penalty0 1--37, 2014.
+
 \bibitem[Rominger and Merow(2016)]{rominger2016}
 Andrew~J Rominger and Cory Merow.
 \newblock meter: an r package for testing the maximum entropy theory of
@@ -259,6 +325,14 @@ Trevor~J Hefley and Mevin~B Hooten.
 \newblock Hierarchical species distribution models.
 \newblock \emph{Current Landscape Ecology Reports}, 1\penalty0 (2):\penalty0
   87--97, 2016.
+
+\bibitem[Krehenwinkel et~al.(2016)Krehenwinkel, Kennedy, Pek{\'a}r, and
+  Gillespie]{krehenwinkel2016}
+Henrik Krehenwinkel, Susan Kennedy, Stano Pek{\'a}r, and Rosemary~G Gillespie.
+\newblock A cost-efficient and simple protocol to enrich prey dna from
+  extractions of predatory arthropods for large-scale gut content analysis by
+  illumina sequencing.
+\newblock \emph{Methods in Ecology and Evolution}, 2016.
 
 \bibitem[Shokralla et~al.(2015)Shokralla, Porter, Gibson, Dobosz, Janzen,
   Hallwachs, Golding, and Hajibabaei]{shokralla2015}
@@ -284,14 +358,6 @@ Pierre Taberlet, Eric Coissac, Francois Pompanon, Christian Brochmann, and Eske
 \newblock Towards next-generation biodiversity assessment using dna
   metabarcoding.
 \newblock \emph{Molecular Ecology}, 21\penalty0 (8):\penalty0 2045--2050, 2012.
-
-\bibitem[Krehenwinkel et~al.(2016)Krehenwinkel, Kennedy, Pek{\'a}r, and
-  Gillespie]{krehenwinkel2016}
-Henrik Krehenwinkel, Susan Kennedy, Stano Pek{\'a}r, and Rosemary~G Gillespie.
-\newblock A cost-efficient and simple protocol to enrich prey dna from
-  extractions of predatory arthropods for large-scale gut content analysis by
-  illumina sequencing.
-\newblock \emph{Methods in Ecology and Evolution}, 2016.
 
 \bibitem[Elbrecht and Leese(2015)]{elbrecht2015}
 Vasco Elbrecht and Florian Leese.
@@ -320,5 +386,156 @@ Zachary~D Kurtz, Christian~L M{\"u}ller, Emily~R Miraldi, Dan~R Littman,
 \newblock Sparse and compositionally robust inference of microbial ecological
   networks.
 \newblock \emph{PLoS Comput Biol}, 11\penalty0 (5):\penalty0 e1004226, 2015.
+
+\bibitem[Cheruvelil et~al.(2014)Cheruvelil, Soranno, Weathers, Hanson, Goring,
+  Filstrup, and Read]{cheruvelil2014}
+Kendra~S Cheruvelil, Patricia~A Soranno, Kathleen~C Weathers, Paul~C Hanson,
+  Simon~J Goring, Christopher~T Filstrup, and Emily~K Read.
+\newblock Creating and maintaining high-performing collaborative research
+  teams: the importance of diversity and interpersonal skills.
+\newblock \emph{Frontiers in Ecology and the Environment}, 12\penalty0
+  (1):\penalty0 31--38, 2014.
+\newblock ISSN 1540-9295.
+\newblock \doi{doi:10.1890/130001}.
+\newblock URL \url{http://dx.doi.org/10.1890/130001}.
+
+\bibitem[Goring et~al.(2014)Goring, Weathers, Dodds, Soranno, Sweet,
+  Cheruvelil, Kominoski, Rüegg, Thorn, and Utz]{goring2014}
+Simon~J Goring, Kathleen~C Weathers, Walter~K Dodds, Patricia~A Soranno, Lynn~C
+  Sweet, Kendra~S Cheruvelil, John~S Kominoski, Janine Rüegg, Alexandra~M
+  Thorn, and Ryan~M Utz.
+\newblock Improving the culture of interdisciplinary collaboration in ecology
+  by expanding measures of success.
+\newblock \emph{Frontiers in Ecology and the Environment}, 12\penalty0
+  (1):\penalty0 39--47, 2014.
+\newblock ISSN 1540-9295.
+\newblock \doi{doi:10.1890/120370}.
+\newblock URL \url{http://dx.doi.org/10.1890/120370}.
+
+\bibitem[Burkle and Knight(2012)]{burkle2012}
+Laura~A Burkle and Tiffany~M Knight.
+\newblock Shifts in pollinator composition and behavior cause slow interaction
+  accumulation with area in plant--pollinator networks.
+\newblock \emph{Ecology}, 93\penalty0 (11):\penalty0 2329--2335, 2012.
+
+\bibitem[Chase and Knight(2013)]{chase2013}
+Jonathan~M Chase and Tiffany~M Knight.
+\newblock Scale-dependent effect sizes of ecological drivers on biodiversity:
+  why standardised sampling is not enough.
+\newblock \emph{Ecology letters}, 16\penalty0 (s1):\penalty0 17--26, 2013.
+
+\bibitem[Powell et~al.(2013)Powell, Chase, and Knight]{powell2013}
+Kristin~I Powell, Jonathan~M Chase, and Tiffany~M Knight.
+\newblock Invasive plants have scale-dependent effects on diversity by altering
+  species-area relationships.
+\newblock \emph{Science}, 339\penalty0 (6117):\penalty0 316--318, 2013.
+
+\bibitem[Schuler et~al.(2015)Schuler, Chase, and Knight]{schuler2015}
+Matthew~S Schuler, Jonathan~M Chase, and Tiffany~M Knight.
+\newblock More individuals drive the species energy--area relationship in an
+  experimental zooplankton community.
+\newblock \emph{Oikos}, 124\penalty0 (8):\penalty0 1065--1070, 2015.
+
+\bibitem[Gillespie and Roderick(2014)]{gillespie2014}
+RG~Gillespie and GK~Roderick.
+\newblock Geology and climate drive diversification.
+\newblock \emph{Nature}, 509:\penalty0 207--298, 2014.
+
+\bibitem[Shaw and Gillespie(2016)]{shaw2016}
+Kerry~L Shaw and Rosemary~G Gillespie.
+\newblock Comparative phylogeography of oceanic archipelagos: Hotspots for
+  inferences of evolutionary process.
+\newblock \emph{Proceedings of the National Academy of Sciences}, 113\penalty0
+  (29):\penalty0 7986--7993, 2016.
+
+\bibitem[Gillespie(2016)]{gillespie2016}
+Rosemary~G Gillespie.
+\newblock Island time and the interplay between ecology and evolution in
+  species diversification.
+\newblock \emph{Evolutionary applications}, 9\penalty0 (1):\penalty0 53--73,
+  2016.
+
+\bibitem[Brewer et~al.(2015)Brewer, Carter, Croucher, and
+  Gillespie]{brewer2015}
+Michael~S Brewer, Rebecca~A Carter, Peter~JP Croucher, and Rosemary~G
+  Gillespie.
+\newblock Shifting habitats, morphology, and selective pressures: developmental
+  polyphenism in an adaptive radiation of hawaiian spiders.
+\newblock \emph{Evolution}, 69\penalty0 (1):\penalty0 162--178, 2015.
+
+\bibitem[Brewer et~al.(2014)Brewer, Cotoras, Croucher, and
+  Gillespie]{brewer2014}
+Michael~S Brewer, Darko~D Cotoras, Peter~JP Croucher, and Rosemary~G Gillespie.
+\newblock New sequencing technologies, the development of genomics tools, and
+  their applications in evolutionary arachnology.
+\newblock \emph{Journal of Arachnology}, 42\penalty0 (1):\penalty0 1--15, 2014.
+
+\bibitem[Warren et~al.(2015)Warren, Simberloff, Ricklefs, Aguil{\'e}e,
+  Condamine, Gravel, Morlon, Mouquet, Rosindell, Casquet, et~al.]{warren2015}
+Ben~H Warren, Daniel Simberloff, Robert~E Ricklefs, Robin Aguil{\'e}e, Fabien~L
+  Condamine, Dominique Gravel, H{\'e}l{\`e}ne Morlon, Nicolas Mouquet, James
+  Rosindell, Juliane Casquet, et~al.
+\newblock Islands as model systems in ecology and evolution: prospects fifty
+  years after macarthur-wilson.
+\newblock \emph{Ecology Letters}, 18\penalty0 (2):\penalty0 200--217, 2015.
+
+\bibitem[GILLESPIE(2013)]{gillespie2013}
+ROSEMARY~G GILLESPIE.
+\newblock From testing patterns to understanding processes in spiders and
+  related arachnids.
+\newblock \emph{Spider Research in the 21st Century: Trends \& Perspectives},
+  page 154, 2013.
+
+\bibitem[Massol et~al.(2011)Massol, Gravel, Mouquet, Cadotte, Fukami, and
+  Leibold]{massol2011}
+F~Massol, D~Gravel, N~Mouquet, M~W Cadotte, T~Fukami, and M~A Leibold.
+\newblock Linking community and ecosystem dynamics through spatial ecology.
+\newblock \emph{Ecology Letters}, 14\penalty0 (3):\penalty0 313--323, 2011.
+
+\bibitem[Vaughn et~al.(2013)Vaughn, Asner, and Giardina]{vaughn2013}
+Nicholas~R Vaughn, Gregory~P Asner, and Christian~P Giardina.
+\newblock Polar grid fraction as an estimator of forest canopy structure using
+  airborne lidar.
+\newblock \emph{International Journal of Remote Sensing}, 34\penalty0
+  (21):\penalty0 7464--7473, 2013.
+
+\bibitem[Knowlton et~al.(2014)Knowlton, Flaspohler, McInerney, and
+  Fleischer]{knowlton2014}
+Jessie~L Knowlton, David~J Flaspohler, N~C~Rotzel McInerney, and Robert~C
+  Fleischer.
+\newblock First record of hybridization in the hawaiian honeycreepers: 'i'iwi
+  (vestiaria coccinea) × 'apapane (himatione sanguinea).
+\newblock \emph{Wilson Journal of Ornithology}, 126\penalty0 (3):\penalty0
+  562--568, 2014.
+\newblock ISSN 1559-4491.
+\newblock \doi{doi:10.1676/13-054.1}.
+\newblock URL \url{http://dx.doi.org/10.1676/13-054.1}.
+
+\bibitem[Vaughn et~al.(2014)Vaughn, Asner, and Giardina]{vaughn2014}
+Nicholas~R Vaughn, Gregory~P Asner, and Christian~P Giardina.
+\newblock Centennial impacts of fragmentation on the canopy structure of
+  tropical montane forest.
+\newblock \emph{Ecological Applications}, 24\penalty0 (7):\penalty0 1638--1650,
+  2014.
+
+\bibitem[Vaughn et~al.(2015)Vaughn, Asner, and Giardina]{vaughn2015}
+Nicholas~R Vaughn, Gregory~P Asner, and Christian~P Giardina.
+\newblock Long-term fragmentation effects on the distribution and dynamics of
+  canopy gaps in a tropical montane forest.
+\newblock \emph{Ecosphere}, 6\penalty0 (12):\penalty0 art271, 2015.
+
+\bibitem[Knowlton et~al.(2016)Knowlton, Flaspohler, Paxton, Fukami, Giardina,
+  Gruner, and Rankin]{knowlton2016}
+J~L Knowlton, D~J Flaspohler, E~H Paxton, T~Fukami, C~P Giardina, D~S Gruner,
+  and E~E~W Rankin.
+\newblock Movements of four native hawaiian birds across a naturally fragmented
+  landscape.
+\newblock \emph{Journal of Avian Biology}, in press, 2016.
+
+\bibitem[Vannette et~al.(2016)Vannette, Leopold, and Fukami]{vannette2016}
+Rachel~L Vannette, Devin~R Leopold, and Tadashi Fukami.
+\newblock Forest area and connectivity influence root-associated fungal
+  communities in a fragmented landscape.
+\newblock \emph{Ecology}, 97\penalty0 (9):\penalty0 2374--2383, 2016.
 
 \end{thebibliography}

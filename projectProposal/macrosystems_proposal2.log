@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  14 OCT 2016 00:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  14 OCT 2016 17:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -473,27 +473,27 @@ Package: parskip 2001/04/09 non-zero parskip adjustments
 (./macrosystems_proposal2.aux)
 \openout1 = `macrosystems_proposal2.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 81.
-LaTeX Font Info:    ... okay on input line 81.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 81.
-LaTeX Font Info:    ... okay on input line 81.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 81.
-LaTeX Font Info:    ... okay on input line 81.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 81.
-LaTeX Font Info:    ... okay on input line 81.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 81.
-LaTeX Font Info:    ... okay on input line 81.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 81.
-LaTeX Font Info:    ... okay on input line 81.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 81.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 81.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 90.
+LaTeX Font Info:    ... okay on input line 90.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 90.
+LaTeX Font Info:    ... okay on input line 90.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 90.
+LaTeX Font Info:    ... okay on input line 90.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 90.
+LaTeX Font Info:    ... okay on input line 90.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 90.
+LaTeX Font Info:    ... okay on input line 90.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 90.
+LaTeX Font Info:    ... okay on input line 90.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 90.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 90.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 81.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 81.
-LaTeX Font Info:    ... okay on input line 81.
+LaTeX Font Info:    ... okay on input line 90.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 90.
+LaTeX Font Info:    ... okay on input line 90.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -544,7 +544,7 @@ LaTeX Font Info:    ... okay on input line 81.
 \everyMPtoPDFconversion=\toks27
 )
 \AtBeginShipoutBox=\box31
-Package hyperref Info: Link coloring OFF on input line 81.
+Package hyperref Info: Link coloring OFF on input line 90.
  (/usr/local/texlive/2015/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
@@ -553,24 +553,28 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count122
 )
-LaTeX Info: Redefining \ref on input line 81.
-LaTeX Info: Redefining \pageref on input line 81.
-LaTeX Info: Redefining \nameref on input line 81.
+LaTeX Info: Redefining \ref on input line 90.
+LaTeX Info: Redefining \pageref on input line 90.
+LaTeX Info: Redefining \nameref on input line 90.
 
 (./macrosystems_proposal2.out) (./macrosystems_proposal2.out)
 \@outlinefile=\write3
 \openout3 = `macrosystems_proposal2.out'.
 
-LaTeX Font Info:    Try loading font information for U+msa on input line 82.
+LaTeX Font Info:    Try loading font information for U+msa on input line 91.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 82.
+LaTeX Font Info:    Try loading font information for U+msb on input line 91.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
+Overfull \hbox (13.26108pt too wide) in paragraph at lines 221--223
+[][][][][][][]
+ []
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
@@ -580,99 +584,121 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 [1{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 ]
-Overfull \hbox (13.26108pt too wide) in paragraph at lines 211--212
-[][][][][][][] 
+Underfull \hbox (badness 2351) in paragraph at lines 225--246
+\T1/cmr/m/n/10.95 tems (Gi-a-r-dina), molec-u-lar bi-ol-ogy
  []
 
+[2] <../figs/fig_research.pdf, id=130, 1232.96915pt x 587.17102pt>
+File: ../figs/fig_research.pdf Graphic file (type pdf)
 
-Underfull \hbox (badness 2103) in paragraph at lines 234--268
-[]\T1/cmr/m/n/10.95 We will char-ac-ter-ize the eco-log-i-cal
+<use ../figs/fig_research.pdf>
+Package pdftex.def Info: ../figs/fig_research.pdf used on input line 287.
+(pdftex.def)             Requested size: 493.17892pt x 234.86424pt.
+
+Overfull \hbox (8.96904pt too wide) in paragraph at lines 287--292
+ [][] 
  []
 
+[3 <../figs/fig_research.pdf>] [4]
+<../figs/fig_concept.pdf, id=169, 1022.74387pt x 544.55043pt>
+File: ../figs/fig_concept.pdf Graphic file (type pdf)
 
-Underfull \hbox (badness 2376) in paragraph at lines 234--268
-\T1/cmr/m/n/10.95 com-mu-ni-ties, in-clud-ing their abun-
- []
+<use ../figs/fig_concept.pdf>
+Package pdftex.def Info: ../figs/fig_concept.pdf used on input line 462.
+(pdftex.def)             Requested size: 306.82552pt x 163.36638pt.
+ [5]
+<../figs/fig_meteAll.pdf, id=177, 765.99039pt x 483.93248pt>
+File: ../figs/fig_meteAll.pdf Graphic file (type pdf)
 
-[2]
+<use ../figs/fig_meteAll.pdf>
+Package pdftex.def Info: ../figs/fig_meteAll.pdf used on input line 503.
+(pdftex.def)             Requested size: 306.39073pt x 193.56955pt.
+ [6 <../figs/fig_concept.pdf> <../figs/fig_meteAll.pdf>] <../figs/fig_meteExplc
+.pdf, id=249, 748.70009pt x 374.95552pt>
+File: ../figs/fig_meteExplc.pdf Graphic file (type pdf)
 
-LaTeX Warning: Reference `fig:research' on page 3 undefined on input line 274.
+<use ../figs/fig_meteExplc.pdf>
+Package pdftex.def Info: ../figs/fig_meteExplc.pdf used on input line 540.
+(pdftex.def)             Requested size: 299.47473pt x 149.97954pt.
+ [7 <../figs/fig_meteExplc.pdf>]
+<../figs/fig_bigMap.pdf, id=294, 1027.84pt x 770.88pt>
+File: ../figs/fig_bigMap.pdf Graphic file (type pdf)
 
-[3]
+<use ../figs/fig_bigMap.pdf>
+Package pdftex.def Info: ../figs/fig_bigMap.pdf used on input line 603.
+(pdftex.def)             Requested size: 462.52373pt x 346.89279pt.
+ [8 <../figs/fig_bigMap.pdf>]
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 682.
 
-LaTeX Warning: Reference `fig:map' on page 4 undefined on input line 389.
-
-[4]
-
-LaTeX Warning: Reference `fig:map' on page 5 undefined on input line 426.
-
-
-LaTeX Warning: Reference `fig:map' on page 5 undefined on input line 456.
-
-
-LaTeX Warning: Reference `fig:map' on page 5 undefined on input line 463.
-
-[5]
-
-LaTeX Warning: Reference `fig:site' on page 6 undefined on input line 500.
-
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 535.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-) [6] [7]
+) [9] [10]
+<../figs/fig_metab.pdf, id=403, 770.77408pt x 827.08333pt>
+File: ../figs/fig_metab.pdf Graphic file (type pdf)
 
-LaTeX Warning: Reference `fig:metab' on page 8 undefined on input line 701.
-
-
-LaTeX Warning: Reference `fig:metabData' on page 8 undefined on input line 724.
-
-
-
-LaTeX Warning: Reference `fig:metabData' on page 8 undefined on input line 725.
-
-
-[8]
-
-LaTeX Warning: Reference `fig:metab' on page 9 undefined on input line 748.
+<use ../figs/fig_metab.pdf>
+Package pdftex.def Info: ../figs/fig_metab.pdf used on input line 845.
+(pdftex.def)             Requested size: 231.23401pt x 248.1269pt.
+ [11 <../figs/fig_metab.pdf>] [12] [13]
+Overfull \hbox (3.96434pt too wide) in paragraph at lines 1062--1085
+ []\T1/cmr/m/it/10.95 Chase:[] \T1/cmr/m/n/10.95 DEB 0949984 Mech-a-nisms of sp
+ecies-area re-la-tion-ships in Ozark glades. 2010-2015, $748,046.00
+ []
 
 
-LaTeX Warning: Reference `fig:map' on page 9 undefined on input line 755.
+Overfull \hbox (1.46556pt too wide) in paragraph at lines 1087--1112
+\T1/cmr/m/n/10.95 Hawai-ian lin-eages. 2013-2018 (PI; co-PIs John Harte, Ras-mu
+s Nielsen, Patrick O’-Grady), $1,181,407
+ []
 
-
-LaTeX Warning: Reference `fig:metabMod' on page 9 undefined on input line 789.
-
-(./macrosystems_proposal2.bbl)
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 815.
- [9]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 815.
+[14] (./macrosystems_proposal2.bbl)
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1151.
+ [15]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1151.
  (./macrosystems_proposal2.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 815.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 815.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1151.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1151.
 
+Package rerunfilecheck Info: File `macrosystems_proposal2.out' has not changed.
 
-Package rerunfilecheck Warning: File `macrosystems_proposal2.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `macrosystems_proposal2.out':
-(rerunfilecheck)             Before: 033D252E14659EFE5DA02FF814EDA0AB;979
-(rerunfilecheck)             After:  8E7412F7F7B56E94C470670F0BE6643A;1053.
-
-LaTeX Warning: There were undefined references.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 815.
+(rerunfilecheck)             Checksum: A3CADB3D4D1AEDB4E1F9B25A00514093;1166.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1151.
  ) 
 Here is how much of TeX's memory you used:
- 8728 strings out of 493089
- 125241 string characters out of 6134842
- 238593 words of memory out of 5000000
- 11980 multiletter control sequences out of 15000+600000
+ 8863 strings out of 493089
+ 127722 string characters out of 6134842
+ 258956 words of memory out of 5000000
+ 12084 multiletter control sequences out of 15000+600000
  16580 words of font info for 48 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,11n,43p,342b,654s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{cite.kurtz2015} has been referenced but does not 
+ 42i,11n,43p,1064b,590s stack positions out of 5000i,500n,10000p,200000b,80000s
+pdfTeX warning (dest): name{cite.vannette2016} has been referenced but does n
+ot exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.massol2011} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.gillespie2013} has been referenced but does no
+t exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.gillespie2014} has been referenced but does no
+t exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.schuler2015} has been referenced but does not 
 exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.burkle2012} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.goring2014} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.cheruvelil2014} has been referenced but does n
+ot exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.kurtz2015} has been referenced but does not ex
+ist, replaced by a fixed one
 
 pdfTeX warning (dest): name{cite.royleDorazio} has been referenced but does not
  exist, replaced by a fixed one
@@ -683,20 +709,23 @@ t exist, replaced by a fixed one
 pdfTeX warning (dest): name{cite.elbrecht2015} has been referenced but does not
  exist, replaced by a fixed one
 
-pdfTeX warning (dest): name{cite.krehenwinkel2016} has been referenced but does
- not exist, replaced by a fixed one
-
 pdfTeX warning (dest): name{cite.taberlet2012} has been referenced but does not
  exist, replaced by a fixed one
 
-pdfTeX warning (dest): name{cite.shokralla2015} has been referenced but does no
-t exist, replaced by a fixed one
+pdfTeX warning (dest): name{cite.krehenwinkel2016} has been referenced but does
+ not exist, replaced by a fixed one
 
 pdfTeX warning (dest): name{cite.hsdm} has been referenced but does not exist, 
 replaced by a fixed one
 
 pdfTeX warning (dest): name{cite.rominger2016} has been referenced but does not
  exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.broadbent2014} has been referenced but does no
+t exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.asner2016} has been referenced but does not ex
+ist, replaced by a fixed one
 
 pdfTeX warning (dest): name{cite.giardina2004} has been referenced but does not
  exist, replaced by a fixed one
@@ -725,9 +754,6 @@ not exist, replaced by a fixed one
 pdfTeX warning (dest): name{cite.gruner2005} has been referenced but does not e
 xist, replaced by a fixed one
 
-pdfTeX warning (dest): name{cite.gruner2007} has been referenced but does not e
-xist, replaced by a fixed one
-
 pdfTeX warning (dest): name{cite.crews1995} has been referenced but does not ex
 ist, replaced by a fixed one
 
@@ -739,6 +765,9 @@ ist, replaced by a fixed one
 
 pdfTeX warning (dest): name{cite.juvik1998} has been referenced but does not ex
 ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.gruner2007} has been referenced but does not e
+xist, replaced by a fixed one
 
 pdfTeX warning (dest): name{cite.vitousek1997nutrient} has been referenced but 
 does not exist, replaced by a fixed one
@@ -788,38 +817,23 @@ ist, replaced by a fixed one
 pdfTeX warning (dest): name{cite.lessard2012} has been referenced but does not 
 exist, replaced by a fixed one
 
+pdfTeX warning (dest): name{cite.levy2014} has been referenced but does not exi
+st, replaced by a fixed one
+
 pdfTeX warning (dest): name{cite.NEON} has been referenced but does not exist, 
 replaced by a fixed one
 
 pdfTeX warning (dest): name{cite.asner2012} has been referenced but does not ex
 ist, replaced by a fixed one
 
+pdfTeX warning (dest): name{cite.soranno2014} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.heffernan2014} has been referenced but does no
+t exist, replaced by a fixed one
+
 pdfTeX warning (dest): name{cite.barnosky2012} has been referenced but does not
  exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.3.7} has been referenced but does not ex
-ist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.3.6} has been referenced but does not ex
-ist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.3.5} has been referenced but does not ex
-ist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.3.4} has been referenced but does not ex
-ist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.3.3} has been referenced but does not ex
-ist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.3.2} has been referenced but does not ex
-ist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.3.1} has been referenced but does not ex
-ist, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.3} has been referenced but does not exist, 
-replaced by a fixed one
 
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/
 usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</u
@@ -834,10 +848,10 @@ ive/2015/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texliv
 e/2015/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb></usr/local/texlive/
 2015/texmf-dist/fonts/type1/public/cm-super/sfti1095.pfb></usr/local/texlive/20
 15/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb>
-Output written on macrosystems_proposal2.pdf (9 pages, 225835 bytes).
+Output written on macrosystems_proposal2.pdf (15 pages, 6562146 bytes).
 PDF statistics:
- 290 PDF objects out of 1000 (max. 8388607)
- 265 compressed objects within 3 object streams
- 88 named destinations out of 1000 (max. 500000)
- 89 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 588 PDF objects out of 1000 (max. 8388607)
+ 494 compressed objects within 5 object streams
+ 112 named destinations out of 1000 (max. 500000)
+ 143 words of extra memory for PDF output out of 10000 (max. 10000000)
 
