@@ -44,38 +44,12 @@ Patricia~A Soranno, Kendra~S Cheruvelil, Edward~G Bissell, Mary~T Bremigan,
 \newblock \doi{doi:10.1890/120366}.
 \newblock URL \url{http://dx.doi.org/10.1890/120366}.
 
-\bibitem[Asner et~al.(2012)Asner, Mascaro, Muller-Landau, Vieilledent, Vaudry,
-  Rasamoelina, Hall, and van Breugel]{asner2012}
-Gregory~P Asner, Joseph Mascaro, Helene~C Muller-Landau, Ghislain Vieilledent,
-  Romuald Vaudry, Maminiaina Rasamoelina, Jefferson~S Hall, and Michiel van
-  Breugel.
-\newblock A universal airborne lidar approach for tropical forest carbon
-  mapping.
-\newblock \emph{Oecologia}, 168\penalty0 (4):\penalty0 1147--1160, 2012.
-
 \bibitem[Kampe et~al.(2010)Kampe, Johnson, Kuester, and Keller]{NEON}
 Thomas~U Kampe, Brian~R Johnson, Michele Kuester, and Michael Keller.
 \newblock Neon: the first continental-scale ecological observatory with
   airborne remote sensing of vegetation canopy biochemistry and structure.
 \newblock \emph{Journal of Applied Remote Sensing}, 4\penalty0 (1):\penalty0
   043510--043510--24, 2010.
-
-\bibitem[Levy et~al.(2014)Levy, Ball, Bond-Lamberty, Cheruvelil, Finley,
-  Lottig, Punyasena, Xiao, Zhou, Buckley, Filstrup, Keitt, Kellner, Knapp,
-  Richardson, Tcheng, Toomey, Vargas, Voordeckers, Wagner, and
-  Williams]{levy2014}
-Ofir Levy, Becky~A Ball, Ben Bond-Lamberty, Kendra~S Cheruvelil, Andrew~O
-  Finley, Noah~R Lottig, Surangi~W Punyasena, Jingfeng Xiao, Jizhong Zhou,
-  Lauren~B Buckley, Christopher~T Filstrup, Tim~H Keitt, James~R Kellner,
-  Alan~K Knapp, Andrew~D Richardson, David Tcheng, Michael Toomey, Rodrigo
-  Vargas, James~W Voordeckers, Tyler Wagner, and John~W Williams.
-\newblock Approaches to advance scientific understanding of macrosystems
-  ecology.
-\newblock \emph{Frontiers in Ecology and the Environment}, 12\penalty0
-  (1):\penalty0 15--23, 2014.
-\newblock ISSN 1540-9295.
-\newblock \doi{doi:10.1890/130019}.
-\newblock URL \url{http://dx.doi.org/10.1890/130019}.
 
 \bibitem[Lessard et~al.(2012)Lessard, Belmaker, Myers, Chase, and
   Rahbek]{lessard2012}
@@ -107,6 +81,11 @@ Douglas~H. Erwin.
 \newblock The end and the beginning: recoveries from mass extinctions.
 \newblock \emph{Trends in Ecology and Evolution}, 13:\penalty0 344--349, 1998.
 
+\bibitem[Harte(2011)]{harte2011}
+J.~Harte.
+\newblock \emph{The Maximum Entropy Theory of Ecology}.
+\newblock Oxford University Press, 2011.
+
 \bibitem[Hubbell(2001)]{hubbell2001}
 S.~P. Hubbell.
 \newblock \emph{The unified neutral theory of biodiversity and biogeography
@@ -121,17 +100,41 @@ James Rosindell, Stephen~P Hubbell, and Rampal~S Etienne.
 \newblock \emph{Trends in ecology \& evolution}, 26\penalty0 (7):\penalty0
   340--348, 2011.
 
-\bibitem[Harte(2011)]{harte2011}
-J.~Harte.
-\newblock \emph{The Maximum Entropy Theory of Ecology}.
-\newblock Oxford University Press, 2011.
+\bibitem[Rominger and Merow(2016)]{rominger2016}
+Andrew~J Rominger and Cory Merow.
+\newblock meter: an r package for testing the maximum entropy theory of
+  ecology.
+\newblock \emph{Methods in Ecology and Evolution}, 2016.
+
+\bibitem[McGill(2003)]{mcgill2003}
+Brian McGill.
+\newblock Strong and weak tests of macroecological theory.
+\newblock \emph{Oikos}, 102\penalty0 (3):\penalty0 679--685, 2003.
 
 \bibitem[Jaynes(1957)]{Jaynes1957}
 ET~Jaynes.
 \newblock {Information theory and statistical mechanics. II}.
 \newblock \emph{Physical Review}, 108\penalty0 (2):\penalty0 171--190, 1957.
 
-\bibitem[Maurer(1999)]{brian1999}
+\bibitem[Simon(1987)]{simon1987}
+Chris Simon.
+\newblock Hawaiian evolutionary biology: an introduction.
+\newblock \emph{Trends in ecology \& evolution}, 2\penalty0 (7):\penalty0
+  175--178, 1987.
+
+\bibitem[Chadwick et~al.(1999)Chadwick, Derry, Vitousek, Huebert, and
+  Hedin]{chadwick1999}
+O~A Chadwick, L~A Derry, P~M Vitousek, B~J Huebert, and L~O Hedin.
+\newblock Changing sources of nutrients during four million years of ecosystem
+  development.
+\newblock \emph{Nature}, 397:\penalty0 491--497, 1999.
+
+\bibitem[Gillespie and Clague(2009)]{gillespieClague2009}
+Rosemary~G Gillespie and David~A Clague.
+\newblock \emph{Encyclopedia of islands}.
+\newblock Number~2. Univ of California Press, 2009.
+
+\bibitem[Maurer(1999)]{maurer1999}
 Brian~A. Maurer.
 \newblock \emph{Untangling ecological complexity: the macroscopic perspective}.
 \newblock University of Chicago Press, 1999.
@@ -153,50 +156,27 @@ Daniel~L Rabosky.
   explain the variation in species richness among clades and regions.
 \newblock \emph{Ecology letters}, 12\penalty0 (8):\penalty0 735--743, 2009.
 
-\bibitem[Rabosky et~al.(2015)Rabosky, Hurlbert, President, Moderator, and
-  Price]{rabosky2015amNat}
-Daniel~L Rabosky, Allen~H Hurlbert, ASN President, Debate Moderator, and Trevor
-  Price.
-\newblock Species richness at continental scales is dominated by ecological
-  limits.
-\newblock \emph{The American Naturalist}, 185\penalty0 (5):\penalty0 572--583,
-  2015.
-
-\bibitem[Harmon and Harrison(2015)]{harmon2015amNat}
-Luke~J Harmon and Susan Harrison.
-\newblock Species diversity is dynamic and unbounded at local and continental
-  scales.
-\newblock \emph{The American Naturalist}, 185\penalty0 (5):\penalty0 584--593,
-  2015.
-
 \bibitem[Levin(1999)]{levin1999}
 Simon~A Levin.
 \newblock Towards a science of ecological management.
 \newblock \emph{Conservation Ecology}, 3\penalty0 (2):\penalty0 6, 1999.
-
-\bibitem[Simon(1987)]{simon1987}
-Chris Simon.
-\newblock Hawaiian evolutionary biology: an introduction.
-\newblock \emph{Trends in ecology \& evolution}, 2\penalty0 (7):\penalty0
-  175--178, 1987.
-
-\bibitem[Chadwick et~al.(1999)Chadwick, Derry, Vitousek, Huebert, and
-  Hedin]{chadwick1999}
-O~A Chadwick, L~A Derry, P~M Vitousek, B~J Huebert, and L~O Hedin.
-\newblock Changing sources of nutrients during four million years of ecosystem
-  development.
-\newblock \emph{Nature}, 397:\penalty0 491--497, 1999.
-
-\bibitem[Gillespie and Clague(2009)]{gillespieClague2009}
-Rosemary~G Gillespie and David~A Clague.
-\newblock \emph{Encyclopedia of islands}.
-\newblock Number~2. Univ of California Press, 2009.
 
 \bibitem[Vitousek and Farrington(1997)]{vitousek1997nutrient}
 Peter~M Vitousek and Heraldo Farrington.
 \newblock Nutrient limitation and soil development: experimental test of a
   biogeochemical theory.
 \newblock \emph{Biogeochemistry}, 37\penalty0 (1):\penalty0 63--75, 1997.
+
+\bibitem[Gillespie(2010)]{gillespie2010popgen}
+John~H Gillespie.
+\newblock \emph{Population genetics: a concise guide}.
+\newblock JHU Press, 2010.
+
+\bibitem[Gavenda(1992)]{gavenda1992}
+Robert~T Gavenda.
+\newblock \emph{Hawaiian quaternary paleoenvironments: A review of geological,
+  pedological, and botanical evidence.}
+\newblock University of Hawai'i Press, 1992.
 
 \bibitem[Gruner(2007)]{gruner2007}
 Daniel~S Gruner.
@@ -225,6 +205,15 @@ Gregory~P Asner and Roberta~E Martin.
   diversity in tropical forests.
 \newblock \emph{Frontiers in Ecology and the Environment}, 7\penalty0
   (5):\penalty0 269--276, 2009.
+
+\bibitem[Asner et~al.(2012)Asner, Mascaro, Muller-Landau, Vieilledent, Vaudry,
+  Rasamoelina, Hall, and van Breugel]{asner2012}
+Gregory~P Asner, Joseph Mascaro, Helene~C Muller-Landau, Ghislain Vieilledent,
+  Romuald Vaudry, Maminiaina Rasamoelina, Jefferson~S Hall, and Michiel van
+  Breugel.
+\newblock A universal airborne lidar approach for tropical forest carbon
+  mapping.
+\newblock \emph{Oecologia}, 168\penalty0 (4):\penalty0 1147--1160, 2012.
 
 \bibitem[Crews et~al.(1995)Crews, Kitayama, Fownes, Riley, Herbert,
   Mueller-Dombois, and Vitousek]{crews1995}
@@ -313,12 +302,6 @@ Eben~N Broadbent, Ang{\'e}lica M~Almeyda Zambrano, Gregory~P Asner,
 \newblock Linking rainforest ecophysiology and microclimate through fusion of
   airborne lidar and hyperspectral imagery.
 \newblock \emph{Ecosphere}, 5\penalty0 (5):\penalty0 1--37, 2014.
-
-\bibitem[Rominger and Merow(2016)]{rominger2016}
-Andrew~J Rominger and Cory Merow.
-\newblock meter: an r package for testing the maximum entropy theory of
-  ecology.
-\newblock \emph{Methods in Ecology and Evolution}, 2016.
 
 \bibitem[Hefley and Hooten(2016)]{hsdm}
 Trevor~J Hefley and Mevin~B Hooten.

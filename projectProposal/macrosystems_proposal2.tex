@@ -69,9 +69,9 @@
 
 %% make stuff in mini page look ok
 \makeatletter
-\usepackage{parskip}
-\setlength{\parindent}{15pt}
-\setlength{\parskip}{0pt}
+% \usepackage{parskip}
+% \setlength{\parindent}{15pt}
+% \setlength{\parskip}{\baselineskip}
 \newcommand{\@minipagerestore}{
   \setlength{\parskip}{0pt}
   \setlength{\parindent}{15pt}
@@ -103,20 +103,18 @@ Biological diversity is nearing or already past a global tipping point
 regulating biodiversity will change, and the dynamics of their
 resultant biological systems, from clades to ecosystems, will become
 non-steady state \citep{barnosky2012}.  Despite the pressing need, our
-level of understanding of biodiversity dynamics remains rudimentary .
+level of understanding of biodiversity dynamics remains rudimentary.
 We must be able to address how biodiversity has been shaped in the
 past, what are the expectations as we move into the future, and how
 will associated ecosystems respond to global change. Phase transitions
 operate across spatial scales and so we must be able to tackle these
 questions from plots to biomes in order to detect and understand
-non-steady state dynamics \citep{heffernan2014, soranno2014}. Advances
-in our understanding of specific ecosystem components are
-idiosyncratic.  While remote sensing and distributed biogeochemical
-monitoring \citep{asner2012, NEON} are rapidly advancing ecosystem
-modeling, similar large scale study of organismal processes, from data
-generation to theory development, and from genetics to populations and
-communities, lags behind, especially for ``dark taxa'' such as
-arthropods and microbes \citep{levy2014}.
+non-steady state dynamics \citep{heffernan2014, soranno2014}. The
+National Ecological Observatory Network (NEON) has laid the foundation
+for this kind of cross-scale monitoring \citep{heffernan2014, NEON}.
+What is needed now is a tool that allows us to diagnose and predict
+which biological assembles, across scales, are being driving out of
+steady state into alternate dynamics.
 
 Biodiversity results from both evolutionary and historical processes
 operating at larger spatiotemporal scales and ecological processes
@@ -124,16 +122,25 @@ operating at smaller scales \citep{lessard2012}.  Feedbacks between
 processes along this evolutionary-ecological continuum drive
 non-steady state biodiversity dynamics \citep{brown1971,
   ricklefs2006neutral, rominger2015}. The consequences of non-steady
-state dynamics, based on state shifts in the geologic past, will
-persist for millions of years \citep{Erwin1998}. Yet we lack
-approaches that synthesize across scales of space and evolutionary
-time to understand the consequences of this eco-evolutionary feedback
-process.  The propensity for systems to transition into non-steady
-states cannot be assessed given current means of synthesizing ideas
-from ecology with those from evolution.  Additionally, a lack of
-cross-scale biodiversity data (from plots to landscapes and genes to
-species) combined with a lack of theoretical framework, limit this
-synthesis.
+state dynamics, based on state shifts in the geologic past, persist
+for millions of years \citep{Erwin1998}. Yet we lack approaches that
+synthesize across scales of space and evolutionary time to understand
+the consequences of this eco-evolutionary feedback process.  The
+propensity for systems to transition into non-steady states cannot be
+assessed given current means of synthesizing ideas from ecology with
+those from evolution.  Additionally, a lack of cross-scale
+biodiversity data (from plots to landscapes and genes to species)
+combined with a lack of theoretical framework, limit this synthesis.
+{\bf We will use the maximum entropy theory of ecology
+  \citep[METE;][]{harte2011} as a null model to identify communities
+  out of steady state and understand the mechanistic drivers of
+  departures from steady state.  We will combine this approach with
+  the intensive data collection efforts of NEON, as well as our
+  complementary advances in bioinformatic approaches to generating
+  large-scale biodiversity data. We will implement our theory-based,
+  quantitative framework in the natural eco-evolutionary experiment of
+  the Hawaiian archipelago.}
+%% modeling???
 
 
 \subsection{Theory provides a lens on non-steady state processes}
@@ -143,109 +150,118 @@ simplified theory to the forefront of ecological research
 \citep{hubbell2001, rosindell2011TREE, harte2011}.  These simple
 theories have been critical because they provide robust null models
 against which to compare real biodiversity patterns in order to
-rigorously test the importance of specific mechanisms in shaping
-biodiversity.  The maximum entropy theory of ecology
-\citep[METE;][]{harte2011} provides one of the most useful null
-predictive frameworks because it produces many falsifiable patterns
-(the species abundance distribution, metabolic rate distribution,
-species area relationship and network structure) and is grounded in
-the principles of statistical mechanics \citep{harte2011, Jaynes1957}.
-METE draws from the probabilistic properties of large, randomly
-assembled systems \citep{harte2011} and thus its predictions
-constitute a community in statistical steady state.  Statistical
-steady state means specifically that a system is governed by only a
-few simple state variables, which constitute a state space, and that
-no additionally processes limit the system’s ability to freely explore
-this state space.  This precise definition is made more clear in Box
-1.  Statistical steady state connects to some notions from the
-literature on ecological equilibrium, specifically the condition of
-stationarity and ergodicity \citep{brian1999}, but is in no way tied
-\citep{harte2011} to ideas relating to equilibrium as a hypothesized
-state that ecosystems may attain or be driven away from
-\citep[e.g. not:][]{levin1970, scholz1997, rabosky2009}.
-
+rigorously identify which systems deviate from null expectations and
+what specific biological mechanisms drive those deviations
+\citep{rosindell2011TREE, harte2011, rominger2016}.  METE
+\citep{harte2011} provides one of the most useful null predictive
+frameworks because it produces multiple falsifiable predictions
+(making falsifications of the theory more informative
+\citep{mcgill2003}). Box 1 details the testable predictions of METE.
+METE is grounded in the principles of statistical mechanics
+\citep{harte2011, Jaynes1957}, drawing from the probabilistic
+properties of large, randomly assembled systems
+\citep{harte2011}. Thus its predictions constitute a community in
+statistical steady state.  Statistical steady state means specifically
+that a system is governed by only a few simple state variables, which
+constitute a state space, and that no additional processes limit the
+system's ability to freely explore this state space (see Box 2).
 Deviations from METE allow us to identify ecological systems out of
 statistical steady state \citep{harte2011, rominger2015}.  Drivers of
 such non-equilibrium include rapid assembly following disturbance
 \citep{harte2011} and constraints imposed by evolutionary history and
 non-neutral adaptive differences between species that violate the
 statistical assumptions underlying the principle of maximum
-information entropy \citep{rominger2015}.  In order to harness these
-promising properties of METE as a non-equilibrium diagnostic tool more
-testing is needed to understand how exactly the ecological and
-evolutionary setting of a community predicts its deviation from METE.
+information entropy \citep{rominger2015}.
 
-\begin{wrapfigure}[]{r}{0.6\textwidth}
-\vspace{-20pt}
+\begin{wrapfigure}[]{l}{0.6\textwidth}
+\vspace{-5pt}
 \colorbox{gray!20}{
-  \begin{minipage}{0.6\textwidth}
+  \begin{minipage}{0.55\textwidth}
     \noindent    
-    {\bf Box 1: Statistical Steady State}
-
-    Whether or not biodiversity dynamics are governed by stable
-    equilibria remains an unsolved question in ecology and evolution
-    \citep{rabosky2015amNat, harmon2015amNat}. A
-    statistical steady state exists in an ecological community if
-    changes in biodiversity occur slowly and in sync with
-    environmental changes \citep{harte2011}. The existence (or
-    non-existence) of such steady states has wide ranging
-    implications. For example, whether conservation should focus on
-    conventional preservationist paradigms or adaptive management
-    \citep{levin1999} depends on whether biodiversity is largely in
-    statistical steady state or not. Whether biodiversity rapidly and
-    consistently tends towards a steady state determines how species
-    and the communities they form will respond to global environmental
-    change \citep{barnosky2012}.
-
-    We posit that two primary classes of non-steady state exist and
-    can be better understood by combining comparative population and
-    phylogenetic insights across multiple species and ecological
-    theory. The first class of non-steady state occurs when a
-    biological assemblage is undergoing succession following
-    disturbance or formation of new habitat; in this case populations
-    of most species in the community and species composition itself
-    will be in flux due to the stochasticity of immigration and small
-    population sizes. In such a situation the assemblage may be
-    expected to eventually converge on a steady state. Recovery from
-    disturbance, range expansion following climate change and primary
-    succession are all potential examples of such non-steady
-    state. The second case occurs when novel mechanisms actively drive
-    an assemblage away from steady state; such mechanisms could
-    include escalatory species interactions or rapid diversification
-    and adaptation in the face of newfound selective pressures. In
-    both cases idealized ecological theory should fail to predict the
-    static biodiversity patterns of the system and departures from
-    population genetic theory should indicate what demographic
-    dynamics are associated with the failure of ecological theory.
+    {\bf Box 1: Null model predictions from METE} 
+    
+    METE uses simple state variables to capture information about a
+    community and develop a null model for it.  These state variables
+    are the total number of species ($S_0$), the total number of
+    individuals ($N_0$), the total summed metabolic rate of those
+    individuals ($E_0$), and the total area ($A_0$) over which the
+    community was sampled.  METE mathematically achieves the most
+    parsimonious, probabilistic allocation of those state variables in
+    order to predict the species abundance distribution (SAD),
+    individual metabolic rate distribution (MRD), and the species area
+    relationship (SAR) \citep{harte2011}. This theoretical framework
+    is detailed in the below figure.
+    
+    \begin{center}
+      \includegraphics[scale=0.325]{../figs/fig_meteFramework.pdf}
+    \end{center}
+    \vspace{2pt}
   \end{minipage}
 }
-\vspace{-20pt}
+\vspace{-5pt}
 \end{wrapfigure}
 
-We propose to use islands of the Hawaiian archipelago to better
-understand how and why ecosystems depart from steady state, the
-consequences of these departures on ecosystem function and
-biodiversity dynamics, including nutrient cycling and invasibility,
-and finally, how maximum entropy theory can be used as a tool to
-identify these departures.  Remote island archipelagos provide an
-opportunity to integrate ecological and evolutionary processes,
-advancing our understanding of the regulation of biodiversity through
-the lens of theory.  This is particularly true when the component
-islands are arranged chronologically, as is found in ``hotspot''
-islands that form a geological age gradient representing snapshots of
-community assembly through evolutionary time. Such islands provide
-simple and discrete systems,of known age and varying area, allowing
-them to serve as excellent ``natural laboratories'' for ecological and
-evolutionary study in a regional context \citep{simon1987,
-  chadwick1999, gillespieClague2009}. Our team has a strong foundation
-of research expertise and experience across the islands on microbes
-(Brodie, Ceja-Navarro), arthropods (Rominger, Gillespie, Gruner and
+\textbf{We propose to use islands of the Hawaiian archipelago to
+  understand how and why ecosystems depart from steady state and the
+  consequences of these departures on biodiversity dynamics and
+  invasibility.}  Remote island archipelagos provide an opportunity to
+integrate ecological and evolutionary processes, advancing our
+understanding of the regulation of biodiversity through the lens of
+theory.  This is particularly true when the component islands are
+arranged chronologically, as is found in ``hotspot'' islands that form
+a geological age gradient representing snapshots of community assembly
+through evolutionary time. Such islands provide simple and discrete
+systems,of known age and varying area, allowing them to serve as
+excellent ``natural laboratories'' for ecological and evolutionary
+study in a regional context \citep{simon1987, chadwick1999,
+  gillespieClague2009}. Our team has a strong foundation of research
+expertise and experience across the islands on microbes (Brodie,
+Ceja-Navarro), arthropods (Rominger, Gillespie, Gruner and
 Krehenwinkel), plants (Chase), ecosystems (Giardina), molecular
 biology (Brodie, Ceja-Navarro, Krehenwinkel), and theory (Rominger,
 Chase).
 
+%
+\begin{wrapfigure}{r}{0.45\textwidth}
+\vspace{-50pt}
+\colorbox{gray!20}{
+  \begin{minipage}{0.45\textwidth}
+    \noindent    
+    {\bf Box 2: Statistical Steady State} 
+
+    A statistical steady state exists in an ecological community if
+    changes in biodiversity occur slowly and in sync with
+    environmental changes \citep{harte2011}. This condition is
+    independent of the specific biological mechanisms mediating the
+    interaction of biodiversity with its environment, so long as those
+    mechanisms do not constitute information beyond the state
+    variables (see Box 1) of the system. An example of such additional
+    information would be specialized co-evolution between herbivores
+    and plants that lead to more uniform allocation of primary
+    productivity across consumers than expected by chance.  The idea
+    of statistical steady state connects with previously explored
+    ecological theory on stationarity and ergodicity
+    \citep{maurer1999}, but is not tied to notions of equilibrium as a
+    hypothesized state that ecosystem rate processes may attain or be
+    driven away from \citep[e.g. not:][]{levin1970, scholz1997,
+      rabosky2009}.
+
+    The existence (or non-existence) of such steady states has wide
+    ranging implications. For example, whether conservation should
+    focus on conventional preservationist paradigms or adaptive
+    management \citep{levin1999} depends on whether biodiversity is
+    largely in statistical steady state or not. Whether biodiversity
+    rapidly and consistently tends towards a steady state determines
+    how species and the communities they form will respond to global
+    environmental change \citep{barnosky2012}.
+  \end{minipage}
+}
+\vspace{-10pt}
+\end{wrapfigure}
+%
+
 We will characterize the ecological communities, including their
-abundance, diversity and network structure, associated with three
+abundance, diversity, and network structure, associated with three
 critical stages in nutrient cycling: 1) Living plants, the arthropods
 they support and the microbes supported by both; 2) Plant and animal
 detritus and its associated arthropod and microbial communities; and
@@ -256,57 +272,47 @@ understand the mechanistic causes of these departures we will also
 evaluate how deviations from METE can be predicted by the ecology and
 evolution of the organisms comprising each community, testing the
 hypotheses outlined below.  We will enable this line of research by
-deliberately sampling plants, arthropods and microbes across multiple
-spatial scales, and across gradients of environment (precipitation and
+sampling plants, arthropods and microbes across multiple spatial
+scales, and across gradients of environment (precipitation and
 elevation as a surrogate for temperature) and substrate age (as a
 surrogate for both biogeochemical change and evolutionary
 development).  We will also make use of long term fertilization
 experiments \citep[see letter of
-collaboration;][]{vitousek1997nutrient} to evaluate the orthogonal
-roles of evolutionary history versus biogeochemical processes in
-driving biodiversity patterns.  Using plants, arthropods and microbes
-as discrete test cases, representing a breadth of life history
-strategies across the tree of life, we will test hypotheses (outlined
-in Box 2) about deviations from statistical steady state based on how
-organisms persist, adapt and speciate in their environments.  In order
-to understand how communities are likely to change in response to
-non-analog, anthropogenically-driven climate regimes and across
-spatial scales we will build spatially explicit models that link the
-mechanistic drivers (e.g. rapid community or population change, and
-evolutionary novelty) of deviation from statistical steady state to
-remotely sensed data and detailed ecosystem characterizations taken at
-the NEON site in Hawaii, and our complementary sampling locations. Our
-project will contribute theoretical constructs for use across NEON
-sites and bioinformatic tools to advance the rate and dimensionality
-of biodiversity data gathered at these sites.
+collaboration;][]{vitousek1997nutrient} to evaluate the roles of
+evolutionary history versus biogeochemical processes in driving
+biodiversity patterns.  Using plants, arthropods and microbes as
+discrete test cases, representing a breadth of life history strategies
+across the tree of life, we will test hypotheses (outlined in section
+\ref{sec:hyp}) about deviations from statistical steady state based on
+how organisms persist, adapt and speciate in their environments.  
+{\bf In order to understand how communities are likely to change in
+  response to non-analog, anthropogenically-driven climate regimes and
+  across spatial scales we will build spatially explicit models that
+  link the mechanistic drivers (e.g. rapid community or population
+  change, and evolutionary novelty) of deviation from statistical
+  steady state to remotely sensed data and detailed ecosystem
+  characterizations taken at the NEON site in Hawaii, and our
+  complementary sampling locations. Our project will contribute
+  theoretical constructs for use across NEON sites and bioinformatic
+  tools to advance the rate and dimensionality of biodiversity data
+  gathered at these sites.}
 
 \section{Proposed Research}
-
-\begin{figure}[!htb]
-  \centering
-  \includegraphics[scale=0.4]{../figs/fig_research.pdf}
-  \caption{Conceptual network illustrating how we will achieve
-    modeling and synthesis goals using diverse data resources, novel
-    data and software products, and integration with the NEON site in
-    Hawai'i. Synthesis approaches are further detailed in Figure
-    \ref{fig:concept}.}
-  \label{fig:research}
-\end{figure}
 
 \subsection{Research objectives and hypotheses}
 
 Our proposed research approach is organized in Figure
 \ref{fig:research}.  We have four core research objectives:
 \begin{itemize}
-\item[RO1] Understand how deviations from statistical steady state
+\item[{\bf RO1}] Describe how deviations from statistical steady state
   (measured by METE) relate to ecosystem age, environmental
   variables and invasion.
-\item[RO2] Model niches and interaction networks with respect to
+\item[{\bf RO2}] Model niches and interaction networks with respect to
   age, environment and phylogenetic information.
-\item[RO3] Combine RO1 and RO2 to model invasion potential and
-  deviations from statistical steady state across spatial scales
-  and into future climate scenarios.
-\item[RO4] Develop open source lab protocols and software to rapidly
+\item[{\bf RO3}] Combine {\bf RO1} and {\bf RO2} to model invasion
+  potential and deviations from statistical steady state across
+  spatial scales and into future climate scenarios.
+\item[{\bf RO4}] Develop open source lab protocols and software to rapidly
   advance generation and analysis of multidimensional biodiversity
   data (taxonomic, genetic and phylogenetic) that can be applied
   across NEON sites.
@@ -326,12 +332,23 @@ the abiotic niches of all taxa (plants, arthropods and microbes) for
 which sufficient data are available.  We will use these reconstructed
 niches to understand patterns of specialization and generalization,
 how these ecological states evolve, and their consequences for the
-steady state of biological assemblages.  Finally, we will use novel
-bioinformatic approaches to generate massive genetic and phylogenetic
-data for all communities sampled; these data will allow us to put
-networks, niches and deviations from statistical steady state in a
-phylogenetic framework to evaluate evolutionary signals in observed
-patterns.
+steady state of biological assemblages.  Finally, we will develop a
+new bioinformatic approaches to generate massive genetic and
+phylogenetic data for all communities sampled; these data will allow
+us to analyze networks, niches and deviations from statistical steady
+state in a phylogenetic framework to evaluate evolutionary signals in
+observed patterns.
+
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[scale=0.4]{../figs/fig_research.pdf}
+  \caption{Conceptual network illustrating how we will achieve
+    modeling and synthesis goals using diverse data resources, novel
+    data and software products, and integration with the NEON site in
+    Hawai'i. Synthesis approaches are further detailed in Figure
+    \ref{fig:concept}.}
+  \label{fig:research}
+\end{figure}
 
 To forecast these mechanistic drivers of departure from statistical
 steady state into future, non-analog environments we will model
@@ -352,70 +369,66 @@ steady state to feedbacks between ecological and evolutionary
 processes.
 
 \subsubsection{Hypotheses}
+\label{sec:hyp}
 
 \begin{itemize}
-\item Departures from statistical steady state
+\item Departures from statistical steady state ({\bf RO1}):
   \begin{itemize}
-  \item[H1] Deviations from METE are largely predicted by age along
+  \item[{\bf H1}] We predict that deviations from METE will be largely predicted by age along
     the chronosequence. These deviations will be driven primarily by
-    two processes related to evolutionary assembly of biotas: (H2a)
+    two processes related to the evolutionary assembly of biotas: ({\bf H1a})
     primary succession (both by long distance dispersal and
-    speciation) of newly formed habitats; and (H2b) adaptive evolution
+    speciation) in newly formed habitats; and ({\bf H1b}) adaptive evolution
     leading to unique constraints on assembly not consistent with
     statistical steady state
     \begin{itemize}
-    \item[H1a] will be more relevant for generalist taxa, especially
-      those that are dispersal limited, on young substrates
-      (e.g. detritivores in Fig. \ref{fig:meteAll}).
+    \item[{\bf H1a}] leads us to predict deviations from METE on young
+      substrates and for generalist taxa, especially those that are
+      dispersal limited (e.g. detritivores in Fig. \ref{fig:meteAll}).
+      Additionally, we predict a negative correlation between the
+      breadth of reconstructed abiotic niches and deviation from METE
+    \item[{\bf H1b}] leads us to predict deviations in communities
+      dominated by specialist taxa in old communities once they have
+      established intricate evolutionary relationships with their
+      coexisting species and environments (e.g. as seen in herbivores
+      in Fig. \ref{fig:meteAll} and our previous published work
+      \citep{rominger2015}). Based on this hypothesis we further
+      predict
       \begin{itemize}
-      \item We predict greatest deviations for communities
-        dominated by generalist taxa on young substrates
-      \item We predict a positive correlation between deviations
-        from METE and measures of spatial turnover, both taxonomic
-        and genetic (e.g. as seen in Fig. \ref{fig:meteExplc}).
-      \item We predict a negative correlation between the breadth
-        of reconstructed abiotic niches and deviation from METE
+      \item a positive correlation between network specialization and
+        deviation from METE
+      \item a negative correlation between phylogenetic diversity and
+        deviation from METE
       \end{itemize}
-    \item[H1b] will be most relevant for specialist taxa once they
-      have established intricate evolutionary relationships with
-      their coexisting species and environments.
-      \begin{itemize}
-      \item We predict greatest deviations from METE for communities
-        dominated by specialist taxa on old substrates (e.g. as seen
-        in herbivores in Fig. \ref{fig:meteAll} and through our
-        network analysis in \citet{rominger2015})
-      \item We predict a positive correlation between network
-        specialization and deviation from METE
-      \item We predict a negative correlation between phylogenetic
-        diversity and deviation from METE
-      \end{itemize}
-    \item[H1c]  Because niche specialization and dispersal
-      limitation both likely result in strong spatial structuring
-      of communities, measures of spatial turnover and deviations
-      from METE should be correlated across all ages along the
-      chronosequence
-    \item[H1d] Because rapid population expansion, population
-      contraction, limited dispersal and local adaptation all lead
-      to low allelic diversity within populations we predict
-      genetic diversity to be negatively correlated with deviation
-      from METE
+    \item[{\bf H1c}] Because adaptive evolution resulting in niche
+      specialization and dispersal limitation both likely result in
+      strong spatial structuring of communities, measures of spatial
+      turnover and deviations from METE should be positively
+      correlated (e.g. as seen in Fig. \ref{fig:meteExplc}).
+    \item[{\bf H1d}] Because rapid population expansion, population
+      contraction, limited dispersal and local adaptation all lead to
+      low allelic diversity within populations
+      \citep{gillespie2010popgen}, genetic diversity should be
+      negatively correlated with deviation from METE.
     \end{itemize}
-  \item[H2] Given the climatic stability of Hawai'i since the last
-    glacial maximum, we predict deviations from METE should not depend
-    on environmental variables after accounting for ecosystem age.
-    This includes the prediction that in long term fertilization
-    experiments, fertilized communities will conform to the same
-    patterns as their unfertilized control communities of the same age
-    regardless of underlying nutrient availability
-  \item[H3] However, with rapidly changing climates we do expect
+  \item[{\bf H2}] Given the climatic stability of Hawai'i since the
+    last glacial maximum \citep{gavenda1992}, we predict deviations
+    from METE should not depend on environmental variables after
+    accounting for ecosystem age.  This includes the prediction that
+    in long term fertilization experiments, fertilized communities
+    will conform to the same patterns as their unfertilized control
+    communities of the same age regardless of underlying nutrient
+    availability.
+  \item[{\bf H3}] However, with rapidly changing climates we do expect
     environmental variables to predict modeled deviations from
     statistical steady state. Specifically, with the creation of novel
     environments and loss of existing environments due to
     anthropogenic climate change, we expect rapid population changes
     and exacerbated constraints on movement due to unique evolutionary
     adaptations to previously stable environments.  Thus we predict
-    novel climatic conditions to drive future deviations from METE.
-  \item[H4] We predict that in disturbed systems statistical steady
+    novel climatic conditions to drive future deviations from
+    METE. Modeling this prediction corresponds to {\bf RO3}.
+  \item[{\bf H4}] We predict that in disturbed systems, statistical steady
     state will be achieved only through rapid assembly of novel
     ecosystems (i.e. communities dominated by highly vagile invasive
     taxa).  Thus deviations from statistical steady state are expected
@@ -423,38 +436,50 @@ processes.
     systems to statistical steady state.  This hypothesis leads to
     further hypotheses:
     \begin{itemize}
-    \item[H4a] Community phylogenetic, niche occupancy and network
+    \item[{\bf H4a}] Community phylogenetic, niche occupancy and network
       position of invasive species will be similar to generalist taxa
-      the form communities conforming to METE
-    \item[H4b] Models including proportion of a community dominated by
-      invasives will help explain deviations from METE that cannot be
-      otherwise explained by age and environmental explanatory
-      variables.
-    \item[H4c] Repeated surveys of communities will show that systems
-      deviation from statistical steady state in previous census now
-      contain higher proportions of invasives compared to those closer
-      to statistical steady state.  This hypothesis cannot yet bet
-      tested, but our proposed research lays the groundwork for long
-      term ecological monitoring.
+      that form communities conforming to METE
+    \item[{\bf H4b}] Models including level of invasion as an
+      explanatory variable will help explain deviations from METE that
+      cannot be otherwise explained by age and environment.
+    \item[{\bf H4c}] Repeated surveys of communities will show that
+      systems previously deviating from statistical steady state in
+      prior censuses now contain higher proportions of invasives
+      compared to those closer to statistical steady state.  This
+      hypothesis cannot yet be tested, but our proposed research lays
+      the groundwork for long term ecological monitoring.
     \end{itemize}
   \end{itemize}
-\item Evolution of niches and networks
+\item Evolution of niches and networks ({\bf RO2})
   \begin{itemize}
-  \item[H5] We predict that niches will become more constrained
-    across evolutionary time
+  \item[{\bf H5}] We predict that niches will become more constrained
+    across evolutionary time, leading to the further predictions that:
     \begin{itemize}
-    \item[H5a] Reconstructed niches will be smaller for taxa endemic to older islands
-    \item[H5b] Spatial turnover will be stronger across gradients on older islands
-    \item[H5c] We predict networks will become more specialized
-      across evolutionary time
+    \item[{\bf H5a}] reconstructed niches will be smaller for taxa endemic to older islands
+    \item[{\bf H5b}] spatial turnover will be stronger across gradients on older islands
+    \item[{\bf H5c}] networks will become more specialized across
+      evolutionary time \citep[supported by our previous work on
+      network evolution][]{rominger2015}
     \end{itemize}
-  \item[H6] Closely related taxa will overlap in niche space if they
-    occupy broad distributions across abiotic environments and
-    generalist network positions, whereas specialist taxa will show
-    phylogenetic signals of over-dispersion owing to adaptive
-    differentiation.
+  \item[{\bf H6}] We predict that closely related taxa will overlap in
+    niche space if they occupy broad distributions across abiotic
+    environments and generalist network positions, whereas specialist
+    taxa will show phylogenetic signals of over-dispersion owing to
+    adaptive differentiation.
   \end{itemize}
 \end{itemize}
+
+Tests of the first four hypotheses ({\bf H1}--{\bf H4}; {\bf RO1})
+will be used to understand how deviations from statistical steady
+state result from the evolutionary and ecological characteristics of a
+community.  Tests of hypotheses {\bf H5} and {\bf H6} ({\bf RO2}) will
+be used to illuminate how those eco-evolutionary drivers themselves
+respond to environmental constraints across space and through
+evolutionary time.  Quantifying these eco-evolutionary patterns and
+mechanisms is permitted by {\bf RO4}. Combining the insights of both
+sets of hypotheses will allow us to model deviations from statistical
+steady state and resultant changes in invasion potential across space
+and into future climate scenarios ({\bf RO3}).
 
 
 \begin{figure}[!htb]
@@ -562,7 +587,7 @@ Area Reserve on the Mauna Loa volcano on the Big Island of Hawaii
 Terrestrial site with the launch date planned for 2017. The site
 represents montane wet forest with mostly native vegetation dominated
 by the endemic tree, {\it Metrosideros polymorpha}
-(Myrtaceae). However, 95\% of the world’s terrestrial climates
+(Myrtaceae). However, 95\% of the world's terrestrial climates
 are represented in the greater region of the Hawaiian archipelago
 \citep{juvik1998}, and a single site will fail to characterize this
 tremendous diversity in climate, habitats and species composition. By
@@ -696,9 +721,10 @@ copy number, genome size and metabolic rate \citep{delong2010}.
 \paragraph{Environmental and biogeochemical data.}
 In order to characterize the environment experienced by our focal
 organisms and model deviations from statistical steady state,
-achieving research objectives RO1--3, and testing hypotheses H2--6, we
-will replicate select NEON measurements and instrumentation, and make
-use of remotely sensed data products.
+achieving research objectives {\bf RO1}--{\bf RO3}, and testing
+hypotheses {\bf H1}--{\bf H6}, we will replicate select NEON
+measurements and instrumentation, and make use of remotely sensed data
+products.
 
 \begin{enumerate}
 \item Plot-level measurements: In each microbial sampling quadrant we
@@ -727,7 +753,7 @@ use of remotely sensed data products.
   following known approaches with which Giardina is integrally
   involved \citep[e.g.,][]{broadbent2014, asner2016}.  These spatial
   products, both derived by NEON and adapted by our interdisciplinary
-  group, will be used to achieve RO1 and RO2---modeling statistical
+  group, will be used to achieve {\bf RO1} and {\bf RO2}---modeling statistical
   steady state and its eco-evolutionary drivers across space.
 \end{enumerate}
 
@@ -741,20 +767,20 @@ use of remotely sensed data products.
   environment and age}
 
 To test our hypotheses relating age, environment and
-organism/community traits to deviations from METE (RO1 and H1--4) we
-will use the {\tt R} package {\tt meteR} \citep[developed by
-Rominger][]{rominger2016} to evaluate the goodness of fit of METE for
-soil microbes, arthropods, plants, and microbial associates of
-arthropods and plants at our sampling sites across gradients of
-precipitation, elevation and age.  Goodness of fit will be measured as
-the normalized log likelihood squared \citep[described
+organism/community traits to deviations from METE ({\bf RO1} and {\bf
+  H1}--{\bf H4}) we will use the {\tt R} package {\tt meteR}
+\citep[developed by Rominger][]{rominger2016} to evaluate the goodness
+of fit of METE for soil microbes, arthropods, plants, and microbial
+associates of arthropods and plants at our sampling sites across
+gradients of precipitation, elevation and age.  Goodness of fit will
+be measured as the normalized log likelihood squared \citep[described
 in][]{rominger2016}. Using generalized linear models we will evaluate
 how the goodness of fit varies between major groups (microbes,
 arthropods and plants) and as a function of the underlying age and
 environment of each site.
 
 To further explore the relative importance of age as a proxy for
-evolution versus biogeochemical environment (hypothesis H2) we will
+evolution versus biogeochemical environment (hypothesis {\bf H2}) we will
 use Vitousek's long term fertilization experiments \citep[see letter
 of collaboration;][]{vitousek1997nutrient} to test whether alleviating
 nutrient limitations in old and young plots changes the the way in
@@ -767,23 +793,23 @@ which arthropod and microbial communities deviate or conform to METE.
 We will develop a Bayesian hierarchical modeling framework to
 understand how ecological and evolutionary drivers of deviations from
 statistical steady state depend on local and regional environments
-(RO1 and hypotheses H5--6).  In all models we will incorporate
-explanatory environmental variables as spatial averages with an
-exponentially decaying distance weighted function.  Each variable will
-receive maximum weight at the point location of the specimen and
-exponentially less weight as distance from the point location
-increases.  The exponential rate of decay will be fit as a free
-parameter in our Bayesian hierarchical model.
+({\bf RO2} and hypotheses {\bf H5}--{\bf H6}).  In all models we will
+incorporate explanatory environmental variables as spatial averages
+with an exponentially decaying distance weighted function.  Each
+variable will receive maximum weight at the point location of the
+specimen and exponentially less weight as distance from the point
+location increases.  The exponential rate of decay will be fit as a
+free parameter in our Bayesian hierarchical model.
 
 We will use island age as an explanatory variable interacting with
 environment to evaluate how the niche occupancy and network position
-of each species changes with evolutionary age (hypothesis H5).
+of each species changes with evolutionary age (hypothesis {\bf H5}).
 Because we will have phylogenetic data from metabarcoding for all
 species we will evaluate patterns of niche occupancy and network
 position in a phylogenetic framework, testing hypotheses of whether
 closely related taxa overlap or diverge in niche occupancy, and
 whether more recently diverged species tend to be generalists or
-specialists (hypothesis H6).
+specialists (hypothesis {\bf H6}).
 
 To test whether the niche spaces of taxa change across the
 chronosequence we will build probabilistic niche models for all
@@ -813,16 +839,29 @@ between component taxa.
 Once we understand the connections between network structure, niche
 occupancy, population size change, evolutionary diversification and
 deviation from statistical steady state, we can use our models for
-niches, networks and their phylogenetic context to project these
+niches, networks, and their phylogenetic context to project these
 drivers into the future, predicting where (at a regional scale)
-statistical steady stead will be violated (RO3).  Using our
+statistical steady stead will be violated ({\bf RO3}).  Using our
 understanding of how statistical steady state contributes to
-invasibility of a community (RO1 and hypothesis H4) we will also be
-able to model invasion risk across scales and into future climate
-scenarios.
+invasibility of a community ({\bf RO1} and hypothesis {\bf H4}) we
+will also be able to model invasion risk across scales and into future
+climate scenarios.
 
 \subsubsection{Quantifying evolutionary and macroecological patterns
   using metabarcoding}
+
+%
+\begin{wrapfigure}{L}{0.5\textwidth}
+  \label{fig:metab}
+  \vspace{-10pt}
+  \begin{center}
+    \includegraphics[scale=0.3]{../figs/fig_metab.pdf}
+  \end{center}
+  \caption{Pipeline for generating and analyzing metabarcoding
+    samples.}
+  \vspace{0pt}
+\end{wrapfigure}
+%
 
 Next generation sequencing technology has ushered in a revolution in
 evolutionary biology and ecology. The large scale recovery of species
@@ -835,20 +874,8 @@ sequencing bulk samples, estimating species abundance remains
 challenging \citep{elbrecht2015} and severely limits the application
 of metabarcoding to many studies. We are developing wet lab and
 bioinformatic methods to overcome this issue and revolutionize the
-generation of ecological and genetic data (RO4). We will apply this
+generation of ecological and genetic data ({\bf RO4}). We will apply this
 approach primarily to bulk arthropod collections, while complementary
-%
-\begin{wrapfigure}[]{l}{0.5\textwidth}
-  \label{fig:metab}
-  \vspace{-10pt}
-  \begin{center}
-    \includegraphics[scale=0.3]{../figs/fig_metab.pdf}
-  \end{center}
-  \caption{Pipeline for generating and analyzing metabarcoding
-    samples.}
-  \vspace{0pt}
-\end{wrapfigure}
-%
 approaches will be used to reconstruct microbial diversity, and
 networks between plants, arthropods and microbes. Our novel pipeline
 consists of three steps (Fig. \ref{fig:metab}):
@@ -1023,7 +1050,7 @@ for such activities. The primary areas we plan to develop are:
   empower the next generation of land managers in Hawai'i.
 \item Land Management Professionals. Fieldwork in Hawaii will be timed
   to coincide with the annual Hawaii Conservation Conference, the
-  largest gathering of people ($>>1000$ participants) actively involved
+  largest gathering of people ($\gg 1000$ participants) actively involved
   in the protection and management of Hawaii's environment (see
   \url{hawaiiconservation.org}). The goal of the conference is to
   foster interaction between natural resource managers and the
@@ -1072,16 +1099,16 @@ sampling. This grant funded a long-term, large-scale experiment in
 experimentally restored Ozark Glade communities. Population and
 community-level patterns were monitored, providing important
 implications for understanding, and trying to mitigate, biodiversity
-loss from small habitats, especially loss of rare species. Broader
-impacts. The primary impact of this research outside of basic
-understanding of restoration ecology principles was to engage cohorts
-of undergraduate and high school students (many from underrepresented
-groups) in genuine research experiences at the field station. More
-than 50 such students participated in research in these glades over
-the course of the experiment, as well as 5 PhD students and 3
-postdoctoral fellows. Papers to date: \citep{burkle2012, chase2013,
-  powell2013, schuler2015}, with 6 others currently submitted or in
-revision.
+loss from small habitats, especially loss of rare species. {\bf
+  Broader Impacts:} The primary impact of this research outside of
+basic understanding of restoration ecology principles was to engage
+cohorts of undergraduate and high school students (many from
+underrepresented groups) in genuine research experiences at the field
+station. More than 50 such students participated in research in these
+glades over the course of the experiment, as well as 5 PhD students
+and 3 postdoctoral fellows. Papers to date: \citep{burkle2012,
+  chase2013, powell2013, schuler2015}, with 6 others currently
+submitted or in revision.
 
  
 \paragraph{Gillespie:} DEB 1241253 Dimensions: A community level
@@ -1091,7 +1118,7 @@ to UC Berkeley (collaborators in Cornell, University of Hawaii Hilo, U
 Maryland, Pacific Ecoinformatics, for a total award of
 \$1,999,910). Intellectual Merit. This project aims to transform
 understanding of the impact of the dynamic community on biodiversity
-by integrating (1) evolutionary models and (2) macro-ecological
+by integrating (1) evolutionary models, and (2) macro-ecological
 theory. The synergy between the two approaches is made possible
 through the use of a habitat chronosequence, and corresponding
 space-for-time substitution, provided by the dynamic geomorphology of
@@ -1101,14 +1128,14 @@ while creating an mtDNA barcode library and testing metabarcoding
 approaches. From these data we are estimating macroecological metrics
 and conducting food web analysis. For focal lineages, genomic data is
 providing information on population differentiation over the island
-chronology for different trophic groups. Broader Impacts. new species
-are being discovered and research is integrated into education;
-trained 7 postdocs, 10 graduate students, 14 undergraduates, and one
-high school student in the last year and gave $> 11$ presentations at
-scientific meetings. To date this work has produced 10 papers
-\citep{rominger2016, rominger2015, krehenwinkel2016, gillespie2014,
-  shaw2016, gillespie2016, brewer2015, brewer2014, warren2015,
-  gillespie2013}.
+chronology for different trophic groups. {\bf Broader Impacts:} New
+species are being discovered and research is integrated into
+education; trained 7 postdocs, 10 graduate students, 14
+undergraduates, and one high school student in the last year and gave
+$> 11$ presentations at scientific meetings. To date this work has
+produced 10 papers \citep{rominger2016, rominger2015,
+  krehenwinkel2016, gillespie2014, shaw2016, gillespie2016,
+  brewer2015, brewer2014, warren2015, gillespie2013}.
 
 \paragraph{Gruner:} DEB-1020007 Collaborative Research: Interactive
 effects of predation and ecosystem size on arthropod food webs in
@@ -1127,17 +1154,16 @@ evidence for non-consumptive effects of rats in altering bird foraging
 behavior and their impacts on arthropods. This work has produced 10
 peer-reviewed papers \citep{massol2011, vaughn2013, knowlton2014,
   vaughn2014, vaughn2015, knowlton2016, vannette2016}, with three more
-in review or in revision.
-
-More than 25 undergraduate students participated as interns and paid
-assistants in this research. Two students were mentored through the
-Pacific Internship Programs for Exploring Science (PIPES) program,
-which is committed to recruiting and retaining local Hawaiian students
-in research. Three students completed MS degrees at University of
-Hawaii Hilo (Phifer, 2012; Mueller et al. In review; Wilson Rankin et
-al. In review), one PhD project is ongoing at Stanford University, and
-three postdocs were mentored and placed in subsequent positions. The
-project was featured in volume 16 (2012) of the {\it Natural Inquirer}, a
+in review or in revision. {\bf Broader Impacts:} More than 25
+undergraduate students participated as interns and paid assistants in
+this research. Two students were mentored through the Pacific
+Internship Programs for Exploring Science (PIPES) program, which is
+committed to recruiting and retaining local Hawaiian students in
+research. Three students completed MS degrees at University of Hawaii
+Hilo (Phifer, 2012; Mueller et al. In review; Wilson Rankin et al. In
+review), one PhD project is ongoing at Stanford University, and three
+postdocs were mentored and placed in subsequent positions. The project
+was featured in volume 16 (2012) of the {\it Natural Inquirer}, a
 middle school science education journal produced by the US Forest
 Service.
 
